@@ -519,3 +519,12 @@ printenv
 sudo ./bin/sysinfo.sh -p
 exit
 sudo shutdown now
+sudo vim .gitignore 
+git add .
+git commit -m "Git"
+git push
+git pull
+git push
+sudo apt install bfg
+exit
+sudo shutdown now

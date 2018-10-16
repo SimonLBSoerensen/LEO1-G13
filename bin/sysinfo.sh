@@ -187,10 +187,11 @@ make_help()
 	 	Returns 0 unless an invalid option is given
 	_EOF_
 }
-
+make_sys_usage(){
+	echo "sysinfo usage: $(basename $0) [-p]"
+}
 ##### Main
-#TODO Make option --help with getopts
-while getopts 'ph' OPTION; do
+while getopts 'ph-:' OPTION; do
 	case "$OPTION" in
 		p)
 			echo "$(make_plain)"
@@ -198,8 +199,18 @@ while getopts 'ph' OPTION; do
 		h)
 			echo "$(make_help)"
 			;;
+		-)
+			if [ $OPTARG = "help" ]; then
+				echo "$(make_help)"
+			elif [ $OPTARG = "plain" ]; then
+				echo "$(make_plain)"
+			else
+				echo "$(make_sys_usage)"
+				exit 1
+			fi
+			;;
 		?)
-			echo "sysinfo usage: $(basename $0) [-p]"
+			echo "$(make_sys_usage)"
 			exit 1
 			;;
 	esac		
