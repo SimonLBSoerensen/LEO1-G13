@@ -4,7 +4,7 @@
 PAGE_TITLE="System information for $HOSTNAME"
 TIME=$(date +"%H:%M:%S %d/%m/%y %Z" ) 
 SYSTEM_LOAD_AVERAGE=$(cat /proc/loadavg)
-
+VERSION=2.1
 ##### Functions
 
 welcome_string()
@@ -167,6 +167,7 @@ make_html()
 				$(running_processes)
 			</pre>
 		</div>
+		<pre style="text-align: center;">sysinfo.sh v$VERSION</pre>
 	   </body>
 	   </html>
 	_EOF_
@@ -185,6 +186,8 @@ make_help()
 		
 	 	Exit Status:
 	 	Returns 0 unless an invalid option is given
+
+	 	Script verison: v$VERSION
 	_EOF_
 }
 make_sys_usage(){

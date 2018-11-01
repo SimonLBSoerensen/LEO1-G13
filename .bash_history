@@ -528,3 +528,166 @@ git push
 sudo apt install bfg
 exit
 sudo shutdown now
+sudo ./bin/sysinfo.sh --help
+sudo ./bin/sysinfo.sh --plain
+sudo ./bin/sysinfo.sh --monky
+sudo ./bin/sysinfo.sh --help
+sudo ./bin/sysinfo.sh --plain
+exit
+sudo vim bin/sysinfo.sh 
+git add .
+git commit -m "--help option"
+git push
+sudo shutdown now
+ifconfig
+hostname -I
+ifconfig
+exit
+udo vim /etc/wpa_supplicant/wpa_supplicant.conf 
+sudo wpa_supplicant -Dnl80211 -iwlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B
+ifconfig
+top -bn 1 | grep wpa
+kill 326
+sudo kill 326
+sudo wpa_supplicant -Dnl80211 -iwlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B
+ifconfig
+ping 8.8.8.8
+shutdown
+sudo shutdown
+sudo shutdown "now"
+hostname -I
+ifconfig
+hostname -I
+hostname
+hostname -i
+hostname -I
+HOSTNAME -I
+man hostname
+HOSTNAME -s
+hostname -s
+echo hostname -I
+echo $hostname -I
+echo $(hostname -I)
+sudo dhclient wlan0
+ping 10.126.40.158
+sudo ping 10.126.40.158
+ifconfig
+hostname -I
+top -bn 1 | grep wpa
+sudo kill 327
+sudo wpa_supplicant -Dnl80211 -iwlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B
+hostname -I
+ifconfig
+sudo vim /etc/wpa_supplicant/wpa_supplicant.conf 
+top -bn 1 | grep wpa
+sudo kill 586
+sudo wpa_supplicant -Dnl80211 -iwlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B
+ifconfig
+hostname -I
+sudo vim /etc/wpa_supplicant/wpa_supplicant.conf 
+top -bn 1 | grep wpa
+sudo kill 681
+sudo wpa_supplicant -Dnl80211 -iwlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B
+hostname -I
+ifconfig
+hostname -I
+sudo apt-get update
+ifconfig
+sudo wpa_supplicant -Dnl80211 -iwlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B
+reboot
+sudo reboot
+ifconfig
+hostname -I
+sudo wpa_supplicant -Dnl80211 -iwlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B
+top -bn 1 | grep wpa
+sudo kill 325
+sudo wpa_supplicant -Dnl80211 -iwlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B
+ifconfig
+hostname -I
+
+sudo vim /etc/wpa_supplicant/wpa_supplicant.conf 
+top -bn 1 | grep wpa
+sudo kill 502
+sudo wpa_supplicant -Dnl80211 -iwlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B
+ifconfig
+hostname -I
+sudo vim /etc/wpa_supplicant/wpa_supplicant.conf 
+top -bn 1 | grep wpa
+sudo kill 559
+sudo wpa_supplicant -Dnl80211 -iwlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B
+ifconfig
+hostname -I
+ifconfig
+hostname -I
+sudo vim /etc/wpa_supplicant/wpa_supplicant.conf 
+hostname -I
+ping 10.126.37.2
+lightptd
+man lightptd
+man lighttpd
+/www
+/etc/www
+cd /var/www/cgi
+ls
+hostname -I
+cd ..
+cd html
+ls
+cd ..
+ls -l
+chown -R www-data:www-data cgi
+sudo chown -R www-data:www-data cgi
+ls -l
+lighttpd-enable-mod cgi
+service lighttpd force-reload
+sudo service lighttpd force-reload
+¨sudo lighttpd-enable-mod cgi
+sudo lighttpd-enable-mod cgi
+sudo service lighttpd force-reload
+sudo lighttpd-enable-mod cgi
+sudo vim /etc/lighttpd/conf-enabled/10-cgi.conf
+sudo lighttpd-enable-mod cgi
+sudo service lighttpd force-reload
+hostname -I
+ls
+ls -l
+chown -R www-data:www-data cgi-bin
+sudo chown -R www-data:www-data cgi-bin
+sudo chown -R www-data:www-data html
+ls -l
+sudo shutdown "now"
+ifconfog
+ifconfig
+hostname -I
+top -bn 1 | grep g_
+sudo ifconfig -a
+sudo vim /etc/network/interfaces
+sudo ifdown usb0
+sudo ifup usb0
+sudo ifconfig -a
+sudo vim /etc/network/interfaces
+sudo ifup usb0
+sudo vim /etc/network/interfaces
+sudo ifup usb0
+sudo vim /etc/network/interfaces
+sudo ifup usb0
+sudo ifdown usb0
+sudo ifup usb0
+ifconfig
+sudo ifup --ignore-errors wlan0
+sudo ifup --ignore-errors usb0
+sudo ifup usb0
+sudo vim /etc/network/interfaces
+sudo ifup usb0
+sudo vim /etc/network/interfaces
+sudo reboot
+ping -c 5 google.com
+ping -c 5 www.google.com
+ping -c 5 10.0.0.0
+ifconfig -a
+raspi-config 
+sudo raspi-config 
+ifconfig
+sudo vim /etc/network/interfaces
+reboot 
+sudo reboot 
