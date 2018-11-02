@@ -765,3 +765,27 @@ sudo reboot
 sudo echo "$(~/bin/sysinfo.sh)" | ssmtp simonlyckbjaert@hotmail.com
 sudo echo "$(~/bin/sysinfo.sh -p)" | ssmtp simonlyckbjaert@hotmail.com
 sudo shutdown now
+ls
+cat dead.letter 
+man rf
+man rv
+im ~/bin/sysinfo.sh 
+sudo vim ~/bin/sysinfo.sh 
+sudo vim ~/bin/shutdownServer.sh 
+ls ~/bin/
+clear
+sudo vim ~/bin/sysinfo.sh 
+git add .
+git commit -m "sysinfo.sh v2.2 small fix"
+git push
+w
+echo $USER
+echo $USERS
+echo $(top -bn 1)
+echo "$(top -bn 1)"
+echo $(top -bn 1)
+echo "$(top -bn 1)"
+echo "$(top -bn 1)" | cw -l
+echo "$(top -bn 1)" | wc -l
+w
+sudo shutdown now

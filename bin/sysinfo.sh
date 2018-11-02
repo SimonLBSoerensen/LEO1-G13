@@ -4,7 +4,7 @@
 PAGE_TITLE="System information for $HOSTNAME"
 TIME=$(date +"%H:%M:%S %d/%m/%y %Z" ) 
 SYSTEM_LOAD_AVERAGE=$(cat /proc/loadavg)
-VERSION=2.2
+VERSION=2.21
 ##### Functions
 
 welcome_string()
@@ -14,8 +14,8 @@ welcome_string()
 	else
 		user=" with IP: $REMOTE_ADDR"
 	fi
-	velcome="Information fetch for user$user at $TIME"
-	echo $velcome	
+	welcome="Information fetch for user$user at $TIME"
+	echo $welcome	
 }
 
 system_uptime()
@@ -40,7 +40,7 @@ system_load_average15min()
 	echo $load
 }
 
-currently_users()
+current_users()
 {
 	wRun=$(w)
 	nLines=$(echo "$wRun" | wc -l)
@@ -92,7 +92,7 @@ make_plain()
 	echo "Free RAM: $(free_ram)"
 	echo "Disk use: $(disk_use)"
 	
-	echo "Current useres on system:"
+	echo "Current users on system:"
 	echo "$(currently_users)"
 	
 	echo "Current running processes:"
@@ -157,7 +157,7 @@ make_html()
 		<p style="text-align: center;">Users on system:</p>
 		<div style="text-align: center;">
 			<pre style="display: inline-block; text-align: left;">
-				$(currently_users)
+				$(current_users)
 			</pre>	
 		</div>
 	
