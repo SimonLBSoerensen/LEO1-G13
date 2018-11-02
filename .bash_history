@@ -691,3 +691,77 @@ ifconfig
 sudo vim /etc/network/interfaces
 reboot 
 sudo reboot 
+hostname -I
+sudo vim ~/bin/sysinfo.sh 
+hotsname -I
+hostname -I
+git add .
+git commit -m "verison number add"
+git push
+ifconfig -a
+sysinfo.sh 
+sysinfo.sh -plain
+sysinfo.sh --plain
+sysinfo.sh --help
+sysinfo.sh -h
+sysinfo.sh -acbd
+sysinfo.sh -p
+sysinfo.sh --plain
+at ~/bin/sysinfo.sh 
+sudo vim ~/bin/sysinfo.sh 
+hostname -I
+ifcondif -a
+ifconfig -a
+sudo ysinfo.sh 
+sudo vim ~/bin/sysinfo.sh 
+ifconfig -a
+exit
+ifconfig
+sysinfo.sh -h
+exit
+apt install -y ssmtp
+sudo apt install -y ssmtp
+sudo vim /etc/ssmtp/ssmtp.conf 
+service sendmail stop
+sudo service sendmail stop
+chkconfig sendmail off
+mkdir /root/.bakup
+sudo mkdir /root/.bakup
+mv /usr/sbin/sendmail /root/.bakup
+sudo mv /usr/sbin/sendmail /root/.bakup
+sudo ln -s /usr/local/ssmtp/sbin/ssmtp /usr/sbin/sendmail
+echo "This is a test" | mail -s "Test" simonlyckbjaert@hotmail.com
+sudo apt install mail
+man mail
+mail
+sudo apt-get install -y mailutils
+sudo vim /etc/ssmtp/ssmtp.conf 
+echo "This is a test" | mail -s "Test" simonlyckbjaert@hotmail.com
+sudo echo "This is a test" | mail -s "Test" simonlyckbjaert@hotmail.com
+sudo echo "This is a test" | mail simonlyckbjaert@hotmail.com
+service sendmail stop
+sudo service sendmail stop
+chkconfig sendmail off
+sudo mv /etc/ssmtp/ssmtp.conf /etc/ssmtp/ssmtp.conf.bak
+sudo vim /etc/ssmtp/ssmtp.conf
+sudo groupadd ssmtp
+sudo chown :ssmtp /etc/ssmtp/ssmtp.conf
+sudo chown :ssmtp /usr/sbin/ssmtp 
+sudo chmod 640 /etc/sbin/ssmtp.conf 
+sudo chmod 640 /etc/ssmtp/ssmtp.conf
+sudo chmod g+s /usr/sbin/ssmtp 
+
+man mail
+mail --help
+sudo echo "This is a test" | ssmtp simonlyckbjaert@hotmail.com
+sudo echo "My ip is $(hostname -I)" | ssmtp simonlyckbjaert@hotmail.com
+sudo vim /etc/init.d
+sudo vim /etc/rc.local 
+man ssmtp
+ssmtp --help
+ssmtp -h
+ssmtp -s
+sudo reboot
+sudo echo "$(~/bin/sysinfo.sh)" | ssmtp simonlyckbjaert@hotmail.com
+sudo echo "$(~/bin/sysinfo.sh -p)" | ssmtp simonlyckbjaert@hotmail.com
+sudo shutdown now

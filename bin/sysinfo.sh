@@ -4,7 +4,7 @@
 PAGE_TITLE="System information for $HOSTNAME"
 TIME=$(date +"%H:%M:%S %d/%m/%y %Z" ) 
 SYSTEM_LOAD_AVERAGE=$(cat /proc/loadavg)
-VERSION=2.1
+VERSION=2.2
 ##### Functions
 
 welcome_string()
@@ -12,7 +12,7 @@ welcome_string()
 	if [ -z "$REMOTE_ADDR" ]; then
 		user=": $USER"
 	else
-		user=" with ip: $REMOTE_ADDR"
+		user=" with IP: $REMOTE_ADDR"
 	fi
 	velcome="Information fetch for user$user at $TIME"
 	echo $velcome	
