@@ -11,6 +11,8 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
+:wq
+|2,0,1541159224,,"wq"
 :!q
 |2,0,1539609362,,"!q"
 :.
@@ -23,8 +25,6 @@
 |2,0,1539599787,,"exit"
 :q
 |2,0,1539599741,,"q"
-:wq
-|2,0,1539599721,,"wq"
 :!wq
 |2,0,1539599705,,"!wq"
 :q!
@@ -53,36 +53,50 @@
 |3,1,36,0,1,0,1539599836,"e"
 
 # File marks:
-'0  82  51  /var/www/cgi/sysinfo.sh
-|4,48,82,51,1539609493,"/var/www/cgi/sysinfo.sh"
-'1  9  29  /etc/lighttpd/conf-enabled/10-cgi.conf
-|4,49,9,29,1539599917,"/etc/lighttpd/conf-enabled/10-cgi.conf"
-'2  1  19  /boot/cmdline.txt
-|4,50,1,19,1538910298,"/boot/cmdline.txt"
-'3  4  9  ~/bin/seq2.sh
-|4,51,4,9,1538843585,"~/bin/seq2.sh"
-'4  5  1  ~/bin/seq2.sh
-|4,52,5,1,1538843564,"~/bin/seq2.sh"
-'5  4  1  ~/bin/seq2.sh
-|4,53,4,1,1538843564,"~/bin/seq2.sh"
-'6  10  11  ~/bin/seq2.sh
-|4,54,10,11,1538843532,"~/bin/seq2.sh"
-'7  9  11  ~/bin/seq2.sh
-|4,55,9,11,1538843532,"~/bin/seq2.sh"
+'0  1  11  ~/file2
+|4,48,1,11,1541159224,"~/file2"
+'1  82  51  /var/www/cgi/sysinfo.sh
+|4,49,82,51,1539609493,"/var/www/cgi/sysinfo.sh"
+'2  9  29  /etc/lighttpd/conf-enabled/10-cgi.conf
+|4,50,9,29,1539599917,"/etc/lighttpd/conf-enabled/10-cgi.conf"
+'3  1  19  /boot/cmdline.txt
+|4,51,1,19,1538910298,"/boot/cmdline.txt"
+'4  4  9  ~/bin/seq2.sh
+|4,52,4,9,1538843585,"~/bin/seq2.sh"
+'5  5  1  ~/bin/seq2.sh
+|4,53,5,1,1538843564,"~/bin/seq2.sh"
+'6  4  1  ~/bin/seq2.sh
+|4,54,4,1,1538843564,"~/bin/seq2.sh"
+'7  10  11  ~/bin/seq2.sh
+|4,55,10,11,1538843532,"~/bin/seq2.sh"
 '8  9  11  ~/bin/seq2.sh
 |4,56,9,11,1538843532,"~/bin/seq2.sh"
-'9  8  11  ~/bin/seq2.sh
-|4,57,8,11,1538843532,"~/bin/seq2.sh"
+'9  9  11  ~/bin/seq2.sh
+|4,57,9,11,1538843532,"~/bin/seq2.sh"
 
 # Jumplist (newest first):
+-'  1  11  ~/file2
+|4,39,1,11,1541159224,"~/file2"
 -'  82  51  /var/www/cgi/sysinfo.sh
 |4,39,82,51,1539609493,"/var/www/cgi/sysinfo.sh"
+-'  82  51  /var/www/cgi/sysinfo.sh
+|4,39,82,51,1539609493,"/var/www/cgi/sysinfo.sh"
+-'  1  0  /var/www/cgi/sysinfo.sh
+|4,39,1,0,1539609278,"/var/www/cgi/sysinfo.sh"
 -'  1  0  /var/www/cgi/sysinfo.sh
 |4,39,1,0,1539609278,"/var/www/cgi/sysinfo.sh"
 -'  9  29  /etc/lighttpd/conf-enabled/10-cgi.conf
 |4,39,9,29,1539599917,"/etc/lighttpd/conf-enabled/10-cgi.conf"
 -'  9  29  /etc/lighttpd/conf-enabled/10-cgi.conf
 |4,39,9,29,1539599917,"/etc/lighttpd/conf-enabled/10-cgi.conf"
+-'  9  29  /etc/lighttpd/conf-enabled/10-cgi.conf
+|4,39,9,29,1539599917,"/etc/lighttpd/conf-enabled/10-cgi.conf"
+-'  9  29  /etc/lighttpd/conf-enabled/10-cgi.conf
+|4,39,9,29,1539599917,"/etc/lighttpd/conf-enabled/10-cgi.conf"
+-'  1  0  /etc/lighttpd/conf-enabled/10-cgi.conf
+|4,39,1,0,1539599483,"/etc/lighttpd/conf-enabled/10-cgi.conf"
+-'  1  0  /etc/lighttpd/conf-enabled/10-cgi.conf
+|4,39,1,0,1539599483,"/etc/lighttpd/conf-enabled/10-cgi.conf"
 -'  1  0  /etc/lighttpd/conf-enabled/10-cgi.conf
 |4,39,1,0,1539599483,"/etc/lighttpd/conf-enabled/10-cgi.conf"
 -'  1  0  /etc/lighttpd/conf-enabled/10-cgi.conf
@@ -95,6 +109,30 @@
 |4,39,1,19,1538910298,"/boot/cmdline.txt"
 -'  1  19  /boot/cmdline.txt
 |4,39,1,19,1538910298,"/boot/cmdline.txt"
+-'  1  19  /boot/cmdline.txt
+|4,39,1,19,1538910298,"/boot/cmdline.txt"
+-'  1  19  /boot/cmdline.txt
+|4,39,1,19,1538910298,"/boot/cmdline.txt"
+-'  1  19  /boot/cmdline.txt
+|4,39,1,19,1538910298,"/boot/cmdline.txt"
+-'  1  19  /boot/cmdline.txt
+|4,39,1,19,1538910298,"/boot/cmdline.txt"
+-'  4  9  ~/bin/seq2.sh
+|4,39,4,9,1538843585,"~/bin/seq2.sh"
+-'  4  9  ~/bin/seq2.sh
+|4,39,4,9,1538843585,"~/bin/seq2.sh"
+-'  4  9  ~/bin/seq2.sh
+|4,39,4,9,1538843585,"~/bin/seq2.sh"
+-'  4  9  ~/bin/seq2.sh
+|4,39,4,9,1538843585,"~/bin/seq2.sh"
+-'  4  9  ~/bin/seq2.sh
+|4,39,4,9,1538843585,"~/bin/seq2.sh"
+-'  4  9  ~/bin/seq2.sh
+|4,39,4,9,1538843585,"~/bin/seq2.sh"
+-'  4  9  ~/bin/seq2.sh
+|4,39,4,9,1538843585,"~/bin/seq2.sh"
+-'  4  9  ~/bin/seq2.sh
+|4,39,4,9,1538843585,"~/bin/seq2.sh"
 -'  4  9  ~/bin/seq2.sh
 |4,39,4,9,1538843585,"~/bin/seq2.sh"
 -'  4  9  ~/bin/seq2.sh
@@ -127,6 +165,38 @@
 |4,39,5,1,1538843570,"~/bin/seq2.sh"
 -'  5  1  ~/bin/seq2.sh
 |4,39,5,1,1538843570,"~/bin/seq2.sh"
+-'  5  1  ~/bin/seq2.sh
+|4,39,5,1,1538843570,"~/bin/seq2.sh"
+-'  5  1  ~/bin/seq2.sh
+|4,39,5,1,1538843570,"~/bin/seq2.sh"
+-'  5  1  ~/bin/seq2.sh
+|4,39,5,1,1538843570,"~/bin/seq2.sh"
+-'  5  1  ~/bin/seq2.sh
+|4,39,5,1,1538843570,"~/bin/seq2.sh"
+-'  5  1  ~/bin/seq2.sh
+|4,39,5,1,1538843570,"~/bin/seq2.sh"
+-'  5  1  ~/bin/seq2.sh
+|4,39,5,1,1538843570,"~/bin/seq2.sh"
+-'  5  1  ~/bin/seq2.sh
+|4,39,5,1,1538843570,"~/bin/seq2.sh"
+-'  5  1  ~/bin/seq2.sh
+|4,39,5,1,1538843570,"~/bin/seq2.sh"
+-'  4  1  ~/bin/seq2.sh
+|4,39,4,1,1538843564,"~/bin/seq2.sh"
+-'  4  1  ~/bin/seq2.sh
+|4,39,4,1,1538843564,"~/bin/seq2.sh"
+-'  4  1  ~/bin/seq2.sh
+|4,39,4,1,1538843564,"~/bin/seq2.sh"
+-'  4  1  ~/bin/seq2.sh
+|4,39,4,1,1538843564,"~/bin/seq2.sh"
+-'  4  1  ~/bin/seq2.sh
+|4,39,4,1,1538843564,"~/bin/seq2.sh"
+-'  4  1  ~/bin/seq2.sh
+|4,39,4,1,1538843564,"~/bin/seq2.sh"
+-'  4  1  ~/bin/seq2.sh
+|4,39,4,1,1538843564,"~/bin/seq2.sh"
+-'  4  1  ~/bin/seq2.sh
+|4,39,4,1,1538843564,"~/bin/seq2.sh"
 -'  4  1  ~/bin/seq2.sh
 |4,39,4,1,1538843564,"~/bin/seq2.sh"
 -'  4  1  ~/bin/seq2.sh
@@ -175,108 +245,49 @@
 |4,39,10,11,1538843542,"~/bin/seq2.sh"
 -'  9  11  ~/bin/seq2.sh
 |4,39,9,11,1538843542,"~/bin/seq2.sh"
+-'  10  11  ~/bin/seq2.sh
+|4,39,10,11,1538843542,"~/bin/seq2.sh"
 -'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843532,"~/bin/seq2.sh"
--'  8  11  ~/bin/seq2.sh
-|4,39,8,11,1538843532,"~/bin/seq2.sh"
+|4,39,9,11,1538843542,"~/bin/seq2.sh"
+-'  10  11  ~/bin/seq2.sh
+|4,39,10,11,1538843542,"~/bin/seq2.sh"
 -'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843532,"~/bin/seq2.sh"
--'  8  11  ~/bin/seq2.sh
-|4,39,8,11,1538843532,"~/bin/seq2.sh"
+|4,39,9,11,1538843542,"~/bin/seq2.sh"
+-'  10  11  ~/bin/seq2.sh
+|4,39,10,11,1538843542,"~/bin/seq2.sh"
 -'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843532,"~/bin/seq2.sh"
--'  8  11  ~/bin/seq2.sh
-|4,39,8,11,1538843532,"~/bin/seq2.sh"
+|4,39,9,11,1538843542,"~/bin/seq2.sh"
+-'  10  11  ~/bin/seq2.sh
+|4,39,10,11,1538843542,"~/bin/seq2.sh"
 -'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843532,"~/bin/seq2.sh"
--'  8  11  ~/bin/seq2.sh
-|4,39,8,11,1538843532,"~/bin/seq2.sh"
+|4,39,9,11,1538843542,"~/bin/seq2.sh"
+-'  10  11  ~/bin/seq2.sh
+|4,39,10,11,1538843542,"~/bin/seq2.sh"
 -'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843532,"~/bin/seq2.sh"
--'  8  11  ~/bin/seq2.sh
-|4,39,8,11,1538843532,"~/bin/seq2.sh"
+|4,39,9,11,1538843542,"~/bin/seq2.sh"
+-'  10  11  ~/bin/seq2.sh
+|4,39,10,11,1538843542,"~/bin/seq2.sh"
 -'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843532,"~/bin/seq2.sh"
--'  8  11  ~/bin/seq2.sh
-|4,39,8,11,1538843532,"~/bin/seq2.sh"
+|4,39,9,11,1538843542,"~/bin/seq2.sh"
+-'  10  11  ~/bin/seq2.sh
+|4,39,10,11,1538843542,"~/bin/seq2.sh"
 -'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843532,"~/bin/seq2.sh"
--'  8  11  ~/bin/seq2.sh
-|4,39,8,11,1538843532,"~/bin/seq2.sh"
--'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843532,"~/bin/seq2.sh"
--'  8  11  ~/bin/seq2.sh
-|4,39,8,11,1538843532,"~/bin/seq2.sh"
--'  11  1  ~/bin/seq2.sh
-|4,39,11,1,1538843433,"~/bin/seq2.sh"
--'  10  1  ~/bin/seq2.sh
-|4,39,10,1,1538843433,"~/bin/seq2.sh"
--'  9  1  ~/bin/seq2.sh
-|4,39,9,1,1538843433,"~/bin/seq2.sh"
--'  11  1  ~/bin/seq2.sh
-|4,39,11,1,1538843433,"~/bin/seq2.sh"
--'  10  1  ~/bin/seq2.sh
-|4,39,10,1,1538843433,"~/bin/seq2.sh"
--'  9  1  ~/bin/seq2.sh
-|4,39,9,1,1538843433,"~/bin/seq2.sh"
--'  11  1  ~/bin/seq2.sh
-|4,39,11,1,1538843433,"~/bin/seq2.sh"
--'  10  1  ~/bin/seq2.sh
-|4,39,10,1,1538843433,"~/bin/seq2.sh"
--'  9  1  ~/bin/seq2.sh
-|4,39,9,1,1538843433,"~/bin/seq2.sh"
--'  11  1  ~/bin/seq2.sh
-|4,39,11,1,1538843433,"~/bin/seq2.sh"
--'  10  1  ~/bin/seq2.sh
-|4,39,10,1,1538843433,"~/bin/seq2.sh"
--'  9  1  ~/bin/seq2.sh
-|4,39,9,1,1538843433,"~/bin/seq2.sh"
--'  11  1  ~/bin/seq2.sh
-|4,39,11,1,1538843433,"~/bin/seq2.sh"
--'  10  1  ~/bin/seq2.sh
-|4,39,10,1,1538843433,"~/bin/seq2.sh"
--'  9  1  ~/bin/seq2.sh
-|4,39,9,1,1538843433,"~/bin/seq2.sh"
--'  11  1  ~/bin/seq2.sh
-|4,39,11,1,1538843433,"~/bin/seq2.sh"
--'  10  1  ~/bin/seq2.sh
-|4,39,10,1,1538843433,"~/bin/seq2.sh"
--'  9  1  ~/bin/seq2.sh
-|4,39,9,1,1538843433,"~/bin/seq2.sh"
--'  11  1  ~/bin/seq2.sh
-|4,39,11,1,1538843433,"~/bin/seq2.sh"
--'  10  1  ~/bin/seq2.sh
-|4,39,10,1,1538843433,"~/bin/seq2.sh"
--'  9  1  ~/bin/seq2.sh
-|4,39,9,1,1538843433,"~/bin/seq2.sh"
--'  11  1  ~/bin/seq2.sh
-|4,39,11,1,1538843433,"~/bin/seq2.sh"
--'  10  1  ~/bin/seq2.sh
-|4,39,10,1,1538843433,"~/bin/seq2.sh"
--'  9  1  ~/bin/seq2.sh
-|4,39,9,1,1538843433,"~/bin/seq2.sh"
--'  8  1  ~/bin/seq2.sh
-|4,39,8,1,1538843375,"~/bin/seq2.sh"
--'  7  1  ~/bin/seq2.sh
-|4,39,7,1,1538843375,"~/bin/seq2.sh"
--'  7  1  ~/bin/seq2.sh
-|4,39,7,1,1538843375,"~/bin/seq2.sh"
--'  6  1  ~/bin/seq2.sh
-|4,39,6,1,1538843375,"~/bin/seq2.sh"
--'  8  1  ~/bin/seq2.sh
-|4,39,8,1,1538843375,"~/bin/seq2.sh"
--'  7  1  ~/bin/seq2.sh
-|4,39,7,1,1538843375,"~/bin/seq2.sh"
--'  7  1  ~/bin/seq2.sh
-|4,39,7,1,1538843375,"~/bin/seq2.sh"
--'  6  1  ~/bin/seq2.sh
-|4,39,6,1,1538843375,"~/bin/seq2.sh"
--'  8  1  ~/bin/seq2.sh
-|4,39,8,1,1538843375,"~/bin/seq2.sh"
--'  7  1  ~/bin/seq2.sh
-|4,39,7,1,1538843375,"~/bin/seq2.sh"
+|4,39,9,11,1538843542,"~/bin/seq2.sh"
+-'  10  11  ~/bin/seq2.sh
+|4,39,10,11,1538843542,"~/bin/seq2.sh"
 
 # History of marks within files (newest to oldest):
+
+> ~/file2
+	*	1541159221	0
+	"	1	11
+
+> ~/file1
+	*	1541159212	0
+	"	1	11
+	^	1	12
+	.	1	11
+	+	1	11
 
 > /var/www/cgi/sysinfo.sh
 	*	1539609365	0

@@ -789,3 +789,104 @@ echo "$(top -bn 1)" | cw -l
 echo "$(top -bn 1)" | wc -l
 w
 sudo shutdown now
+sysinfo.sh -p
+sysinfo.sh -h
+echo $(top -bn 1)
+echo "$(top -bn 1)"
+sysinfo.sh -67y8h
+sysinfo.sh --help
+sysinfo.sh --halp
+sysinfo.sh --halp plz
+sysinfo.sh -p
+sudo vim ~/bin/sysinfo.sh 
+sysinfo.sh -p
+sudo vim ~/bin/sysinfo.sh 
+sysinfo.sh -p
+cd ..
+dir
+cd ec
+cd etc
+man cp
+cd passwd
+cat file1
+cat /etc/passwd
+cat /etc/passwd | tea file1 file2
+man tea
+man tee
+cat /etc/passwd | tee file1 file2
+ls
+cd ..
+ls
+tee test.txt
+sudo tee test.txt
+echo abe
+echo abo | tee test.txt
+ls
+cat test.txt
+cat /etc/passwd | tee file1 file2
+ls
+cat file1
+sudo vim file2
+diff -u file1 file2
+vimdiff file1 file2
+diff -u file1 file2
+man pathc
+man patch
+patch --help
+diff -u file1 file2 | patch file1
+diff -u file1 file2
+vnadmin create abe
+svnadmin create abe
+halp
+sudo apt install svnadmin
+sudo apt install subversion apache2 libapache2-svn
+sudo apt-get install subversion
+svnadmin create abe
+ls
+cd abe
+ls
+cat README.txt
+svnlook abe
+cd ..
+svnlook abe
+svnlook abefile://
+file://
+file abe | cat
+file abe/
+file /abe/
+file -N abe/
+file -n abe/
+file -L abe/
+file -F abe/
+file -f abe/
+file -f abe'
+a
+'
+file -f abe
+help svn
+man svn
+svn checkout file://e
+svn checkout file://abe
+hostname -I
+quit
+ls
+cd abe
+sudo nano main.cpp
+mkdir /home/pi/someshit
+cd someshit
+cd /home/pi/someshit
+man mv
+mv /home/pi/abe/main.cpp /home/pi/someshit
+ls
+cd ..
+cd abe
+ls
+cd ..
+cgg
+gcc
+gcc ~/someshit/main.cpp
+gcc ~/someshit/main.cpp shit
+gcc ~/someshit/main.cpp ~/
+kkk
+import /home/pi/someshit/ file://localhost/home/pi/abe/
+sudo svn import /home/pi/someshit/ file://localhost/home/pi/abe/

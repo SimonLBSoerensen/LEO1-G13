@@ -93,7 +93,7 @@ make_plain()
 	echo "Disk use: $(disk_use)"
 	
 	echo "Current users on system:"
-	echo "$(currently_users)"
+	echo "$(current_users)"
 	
 	echo "Current running processes:"
 	echo "$(running_processes)"
@@ -182,7 +182,7 @@ make_help()
 	 	Options:
 	 		-p	print the system information in plain ASCCI, suitable for terminal
 		
-	 	By default, 'sysinfo' print the system information in HTML format.
+	 	By default, 'sysinfo' prints the system information in HTML format.
 		
 	 	Exit Status:
 	 	Returns 0 unless an invalid option is given
