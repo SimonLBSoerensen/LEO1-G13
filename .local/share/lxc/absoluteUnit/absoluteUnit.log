@@ -1,0 +1,2 @@
+      lxc-start 20181129110258.680 ERROR    lxc_start_ui - tools/lxc_start.c:main:317 - Executing '/sbin/init' with no configuration file may crash the host
+      lxc-start 20181129110523.175 ERROR    lxc_start_ui - tools/lxc_start.c:main:317 - Executing '/sbin/init' with no configuration file may crash the host

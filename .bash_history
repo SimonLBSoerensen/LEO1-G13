@@ -890,3 +890,191 @@ gcc ~/someshit/main.cpp ~/
 kkk
 import /home/pi/someshit/ file://localhost/home/pi/abe/
 sudo svn import /home/pi/someshit/ file://localhost/home/pi/abe/
+git add .
+git commit -m "sysinfo don't know if there is any new things"
+it push
+git push¨
+git push
+sudo shutdown now
+hostname -I
+top
+lear
+claer
+clear
+cat ~/bin/sysinfo.sh 
+as
+./bin/sysinfo.sh 
+./bin/sysinfo.sh -p
+./bin/sysinfo.sh --help
+sudo shutdown now
+strace -o top -bn 1
+sudo shutdown now
+ls
+traceroute pet.dk
+ifconfig
+Ip addr
+op addr
+lp addr
+ip addr
+route
+ip route
+ipcalc
+ipcalc -h
+ipcalc --help
+sudo apt-get install -y nmap nerhogs tcpdump spcat
+sudo apt-get install -y ipcalc
+ipcalc 
+hostname
+hostname -I
+hostname -M
+hostname -d
+hostname -D
+ipcalc $(hotanem -I) 
+ipcalc $(hotname -I) 
+ipcalc $(hotsname -I) 
+ipcalc $(hostname -I) 
+ipcalc 
+traceroute -n jakob.dk
+traceroute -n pet.dk
+sudo apt-get install -y nmap nethogs tcpdump spcat
+sudo apt-get install -y nmap nethogs tcpdump socat
+nmap
+nmap -iR 3
+nmap $(hostname -I)
+nmap 217.182.185.209
+socat tcp-listen:8080,fork,reuseaddr exec:cat
+clear
+traceroute google.ch
+traceroute -n google.ch
+sudo apt-get update
+sudo shutdown now
+sudo lxc-ls --fancy
+sudo lxc-start --name u1 --daemon
+sudo lxc-ls --fancy
+sudo lxc-start --name u1 --daemon
+sudo lxc-start --name u1
+sudo lxc-ls --fancy
+sudo lxc-destroy --name u1
+sudo lxc-ls --fancy
+sudo lxc-create -t download -n u1
+sudo lxc-create -n u1 -t ubuntu
+sudo lxc-ls --fancy
+for i in {1..4}; do sudo lxc-create -t debian -n C${i} -- --release wheezy; done
+sudo lxc-create -t debian -n C1 -- --release wheezy
+sudo lxc-create -t ubuntu -n C1 -- --release wheezy
+sudo lxc-create -t ubuntu -n C1
+for i in {1..4}; do sudo lxc-create -n C${i} -- --release wheezy; done
+for i in {1..4}; do sudo lxc-create -n C${i}; done
+sudo lxc-create -t download -n u1 -- --dist ubuntu --release bionic --arch amd64
+top
+histry
+history
+sudo lxc-create -t download -n u1 -- --dist ubuntu --release bionic --arch armhf
+sudo lxc-ls --fancy
+sudo lxc-start -n u1
+sudo lxc-ls --fancy'
+sudo lxc-ls --fancy
+'
+'
+sudo lxc-ls --fancy
+sudo lxc-start -n u1
+sudo lxc-attach -n u1 -- bash -c "echo ad"
+sudo lxc-attach -n u1 -- bash -c "echo u1 > ad"
+sudo lxc-attach -n u1 -- bash -c "echo u1 > /root/container"
+lxc-start -n u1
+sudo lxc-start -n u1
+sudo lxc-attach -n u1
+ls
+cd ..
+ls
+cd root/
+sudo cd root/
+sudo cd root
+cd root
+sudo cd root
+sudo ls root/
+sudo ls /root/
+sudo ls /root/container
+sudo lxc-start -n u1
+sudo ls /root/container
+lxc-checkconfig
+sudo lxc-checkconfig
+sudo apt-get install lxc-templates
+sudo apt-get install lxc lxctl
+lxc-checkconfig
+sudo apt-get install lxc-templates
+modprobe configs
+sudo modprobe configs
+lxc-checkconfig
+sudo apt-get install lxc-templates
+sudo -i
+clear
+a
+clear
+b
+clear
+sudo shutdown now
+vim /etc/lxc/default.conf 
+sudo vim /etc/lxc/default.conf 
+vim .config/lxc/default.conf 
+vim /etc/default/lxc-net 
+grep $USER /etc/subuid
+grep $USER /etc/subgid
+vim .config/lxc/default.conf 
+sudo systemctl restart lxc-net
+systemctl status lxc-net
+ip -4 -o a show lxcbr0
+lxc-ls --fancy
+lxc-destroy -n ct
+lxc-create -t download -n c1
+lxc-start -n c1 -d
+lxc-ls --fancy
+ifconfig
+exit
+lxc-ls
+lxc-ls --fancy
+cat /etc/dhcp/dhclient.conf
+lxc-start -F -n c2
+lxc-ls
+lxc-ls --fancy
+lxc-start -n c2
+lxc-destroy -n c2
+lxc-ls --fancy
+lxc-stop -n c1
+lxc-ls --fancy
+lxc-start -n c1
+lxc-ls --fancy
+lxc-destroy -n c2
+lxc-destroy -n c3
+lxc-create -n C1 -t download -- -d alpine -r edge -a armhf
+lxc-start -n C1
+lxc-start -F -n C1
+lxc-ls --fancy
+lxc-attach -n c1
+lxc-ls --fancy
+sudo lxc-ls --fancy
+lxc-create -t download -n c2
+ls
+sudo lxc-ls --fancy
+lxc-ls --fancy
+sudo kill 3112
+lxc-ls --fancy
+lxc-create -t download -n c2
+lxc-start -n c2 -d
+lxc-start -n c2
+lxc-start -F -n c2 
+lxc-create -t download -n c3
+lxc-start -n c3
+lxc-start -F -n c3 
+sudo reboot now
+sudo shutdown now
+lxc-ls --fancy
+lxc-destroy -n C1
+lxc-create -n c2 -t download -- -d alpine -r edge -a armhf
+lxc-start -n c2
+lxc-ls --fancy
+lxc-start -n c1
+lxc-ls --fancy
+lxc-stop -n c1
+lxc-stop -n c2
+lxc-start -F -n c1

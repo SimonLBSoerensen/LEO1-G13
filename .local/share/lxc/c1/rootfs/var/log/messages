@@ -1,0 +1,56 @@
+Nov 30 09:20:17 c1 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c1 daemon.info init: starting pid 215, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c1 cron.info crond[234]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c1 daemon.info init: starting pid 292, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 291, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 290, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 289, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 288, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c1 cron.info crond[234]: USER root pid 295 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c1 cron.info crond[234]: USER root pid 296 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c1 cron.info crond[234]: USER root pid 306 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c1 cron.info crond[234]: USER root pid 307 cmd run-parts /etc/periodic/hourly
+Dec 31 23:59:59 c1 cron.info crond[234]: USER root pid 308 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c1 cron.info crond[234]: USER root pid 318 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c1 cron.info crond[234]: USER root pid 319 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c1 daemon.info init: starting pid 329, tty '': '/sbin/openrc shutdown'
+Nov 30 10:56:08 c1 syslog.info syslogd exiting
+Nov 30 10:56:24 c1 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c1 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c1 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c1 daemon.info init: starting pid 286, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 285, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 284, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 283, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 282, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c1 daemon.info init: reloading /etc/inittab
+Nov 30 10:59:00 c1 syslog.info syslogd exiting
+Nov 30 11:03:52 c1 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c1 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c1 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c1 daemon.info init: starting pid 286, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 285, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 284, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 283, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 282, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 287, tty '': '/sbin/openrc shutdown'
+Nov 30 11:04:13 c1 syslog.info syslogd exiting
+Nov 30 11:04:31 c1 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c1 daemon.info init: starting pid 212, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c1 cron.info crond[232]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c1 daemon.info init: starting pid 291, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 290, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 289, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 288, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 287, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c1 daemon.info init: reloading /etc/inittab
+Nov 30 11:05:59 c1 syslog.info syslogd exiting
+Nov 30 11:09:30 c1 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c1 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c1 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c1 daemon.info init: starting pid 286, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 285, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 284, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 283, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c1 daemon.info init: starting pid 282, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c1 cron.info crond[228]: USER root pid 290 cmd run-parts /etc/periodic/15min

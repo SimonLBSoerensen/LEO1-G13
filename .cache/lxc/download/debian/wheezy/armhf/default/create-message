@@ -1,0 +1,4 @@
+You just created an Debian wheezy armhf (20180627_05:26) container.
+
+To enable SSH, run: apt install openssh-server
+No default root or user password are set by LXC.

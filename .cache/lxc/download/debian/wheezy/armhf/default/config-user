@@ -1,0 +1,3 @@
+lxc.include = LXC_TEMPLATE_CONFIG/common.conf
+lxc.include = LXC_TEMPLATE_CONFIG/userns.conf
+lxc.arch = linux32

@@ -1,0 +1,7 @@
+./dev/full
+./dev/null
+./dev/ptmx
+./dev/random
+./dev/tty
+./dev/urandom
+./dev/zero

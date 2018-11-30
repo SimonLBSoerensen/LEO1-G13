@@ -1,0 +1,4 @@
+You just created a Debian stretch armhf (20181129_05:27) container.
+
+To enable SSH, run: apt install openssh-server
+No default root or user password are set by LXC.

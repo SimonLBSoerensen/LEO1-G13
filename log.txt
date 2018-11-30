@@ -1,0 +1,12 @@
+      lxc-start 20181129094927.261 ERROR    lxc_start - start.c:lxc_spawn:1207 - Failed to create the configured network.
+      lxc-start 20181129094927.282 ERROR    lxc_start - start.c:__lxc_start:1346 - Failed to spawn container "u69".
+      lxc-start 20181129094928.184 ERROR    lxc_start_ui - tools/lxc_start.c:main:366 - The container failed to start.
+      lxc-start 20181129094928.234 ERROR    lxc_start_ui - tools/lxc_start.c:main:370 - Additional information can be obtained by setting the --logfile and --logpriority options.
+      lxc-start 20181129095202.960 ERROR    lxc_start - start.c:lxc_spawn:1207 - Failed to create the configured network.
+      lxc-start 20181129095202.970 ERROR    lxc_start - start.c:__lxc_start:1346 - Failed to spawn container "u69".
+      lxc-start 20181129095203.693 ERROR    lxc_start_ui - tools/lxc_start.c:main:366 - The container failed to start.
+      lxc-start 20181129095203.695 ERROR    lxc_start_ui - tools/lxc_start.c:main:370 - Additional information can be obtained by setting the --logfile and --logpriority options.
+      lxc-start 20181129100055.259 ERROR    lxc_start - start.c:lxc_spawn:1207 - Failed to create the configured network.
+      lxc-start 20181129100055.274 ERROR    lxc_start - start.c:__lxc_start:1346 - Failed to spawn container "u69".
+      lxc-start 20181129100055.996 ERROR    lxc_start_ui - tools/lxc_start.c:main:366 - The container failed to start.
+      lxc-start 20181129100055.998 ERROR    lxc_start_ui - tools/lxc_start.c:main:370 - Additional information can be obtained by setting the --logfile and --logpriority options.

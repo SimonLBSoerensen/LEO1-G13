@@ -11,10 +11,20 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
+:x
+|2,0,1543569460,,"x"
+:q
+|2,0,1543569361,,"q"
+:q!
+|2,0,1543492053,,"q!"
 :wq
-|2,0,1541159224,,"wq"
+|2,0,1543492042,,"wq"
 :!q
-|2,0,1539609362,,"!q"
+|2,0,1543485535,,"!q"
+:!wq
+|2,0,1543485073,,"!wq"
+:1
+|2,0,1543484837,,"1"
 :.
 |2,0,1539609355,,"."
 :w
@@ -23,12 +33,6 @@
 |2,0,1539599792,,"!exit"
 :exit
 |2,0,1539599787,,"exit"
-:q
-|2,0,1539599741,,"q"
-:!wq
-|2,0,1539599705,,"!wq"
-:q!
-|2,0,1538910298,,"q!"
 :Wq
 |2,0,1538836940,,"Wq"
 :WQ
@@ -45,238 +49,272 @@
 # Debug Line History (newest to oldest):
 
 # Registers:
-"1	LINE	0
+""1	LINE	0
+	pi veth lxcbr0 2
+|3,1,1,1,1,0,1543485063,"pi veth lxcbr0 2"
+"2	LINE	0
 	## Warning this represents a security risk, as it allow to execute any file
-|3,0,1,1,1,0,1539599778,"## Warning this represents a security risk, as it allow to execute any file"
-""-	CHAR	0
+|3,0,2,1,1,0,1539599778,"## Warning this represents a security risk, as it allow to execute any file"
+"-	CHAR	0
 	e
-|3,1,36,0,1,0,1539599836,"e"
+|3,0,36,0,1,0,1539599836,"e"
 
 # File marks:
-'0  1  11  ~/file2
-|4,48,1,11,1541159224,"~/file2"
-'1  82  51  /var/www/cgi/sysinfo.sh
-|4,49,82,51,1539609493,"/var/www/cgi/sysinfo.sh"
-'2  9  29  /etc/lighttpd/conf-enabled/10-cgi.conf
-|4,50,9,29,1539599917,"/etc/lighttpd/conf-enabled/10-cgi.conf"
-'3  1  19  /boot/cmdline.txt
-|4,51,1,19,1538910298,"/boot/cmdline.txt"
-'4  4  9  ~/bin/seq2.sh
-|4,52,4,9,1538843585,"~/bin/seq2.sh"
-'5  5  1  ~/bin/seq2.sh
-|4,53,5,1,1538843564,"~/bin/seq2.sh"
-'6  4  1  ~/bin/seq2.sh
-|4,54,4,1,1538843564,"~/bin/seq2.sh"
-'7  10  11  ~/bin/seq2.sh
-|4,55,10,11,1538843532,"~/bin/seq2.sh"
-'8  9  11  ~/bin/seq2.sh
-|4,56,9,11,1538843532,"~/bin/seq2.sh"
-'9  9  11  ~/bin/seq2.sh
-|4,57,9,11,1538843532,"~/bin/seq2.sh"
+'0  2  28  ~/.config/lxc/default.conf
+|4,48,2,28,1543569460,"~/.config/lxc/default.conf"
+'1  1  0  /etc/default/lxc-net
+|4,49,1,0,1543569361,"/etc/default/lxc-net"
+'2  1  29  ~/.config/lxc/default.conf
+|4,50,1,29,1543569311,"~/.config/lxc/default.conf"
+'3  1  29  ~/.config/lxc/default.conf
+|4,51,1,29,1543569311,"~/.config/lxc/default.conf"
+'4  4  30  /etc/lxc/default.conf
+|4,52,4,30,1543569261,"/etc/lxc/default.conf"
+'5  1  29  ~/.config/lxc/default.conf
+|4,53,1,29,1543492053,"~/.config/lxc/default.conf"
+'6  1  29  ~/.config/lxc/default.conf
+|4,54,1,29,1543492053,"~/.config/lxc/default.conf"
+'7  4  24  ~/.config/lxc/default.conf
+|4,55,4,24,1543491908,"~/.config/lxc/default.conf"
+'8  4  24  ~/.config/lxc/default.conf
+|4,56,4,24,1543491908,"~/.config/lxc/default.conf"
+'9  4  24  ~/.config/lxc/default.conf
+|4,57,4,24,1543491908,"~/.config/lxc/default.conf"
 
 # Jumplist (newest first):
--'  1  11  ~/file2
-|4,39,1,11,1541159224,"~/file2"
--'  82  51  /var/www/cgi/sysinfo.sh
-|4,39,82,51,1539609493,"/var/www/cgi/sysinfo.sh"
--'  82  51  /var/www/cgi/sysinfo.sh
-|4,39,82,51,1539609493,"/var/www/cgi/sysinfo.sh"
--'  1  0  /var/www/cgi/sysinfo.sh
-|4,39,1,0,1539609278,"/var/www/cgi/sysinfo.sh"
--'  1  0  /var/www/cgi/sysinfo.sh
-|4,39,1,0,1539609278,"/var/www/cgi/sysinfo.sh"
--'  9  29  /etc/lighttpd/conf-enabled/10-cgi.conf
-|4,39,9,29,1539599917,"/etc/lighttpd/conf-enabled/10-cgi.conf"
--'  9  29  /etc/lighttpd/conf-enabled/10-cgi.conf
-|4,39,9,29,1539599917,"/etc/lighttpd/conf-enabled/10-cgi.conf"
--'  9  29  /etc/lighttpd/conf-enabled/10-cgi.conf
-|4,39,9,29,1539599917,"/etc/lighttpd/conf-enabled/10-cgi.conf"
--'  9  29  /etc/lighttpd/conf-enabled/10-cgi.conf
-|4,39,9,29,1539599917,"/etc/lighttpd/conf-enabled/10-cgi.conf"
--'  1  0  /etc/lighttpd/conf-enabled/10-cgi.conf
-|4,39,1,0,1539599483,"/etc/lighttpd/conf-enabled/10-cgi.conf"
--'  1  0  /etc/lighttpd/conf-enabled/10-cgi.conf
-|4,39,1,0,1539599483,"/etc/lighttpd/conf-enabled/10-cgi.conf"
--'  1  0  /etc/lighttpd/conf-enabled/10-cgi.conf
-|4,39,1,0,1539599483,"/etc/lighttpd/conf-enabled/10-cgi.conf"
--'  1  0  /etc/lighttpd/conf-enabled/10-cgi.conf
-|4,39,1,0,1539599483,"/etc/lighttpd/conf-enabled/10-cgi.conf"
--'  1  19  /boot/cmdline.txt
-|4,39,1,19,1538910298,"/boot/cmdline.txt"
--'  1  19  /boot/cmdline.txt
-|4,39,1,19,1538910298,"/boot/cmdline.txt"
--'  1  19  /boot/cmdline.txt
-|4,39,1,19,1538910298,"/boot/cmdline.txt"
--'  1  19  /boot/cmdline.txt
-|4,39,1,19,1538910298,"/boot/cmdline.txt"
--'  1  19  /boot/cmdline.txt
-|4,39,1,19,1538910298,"/boot/cmdline.txt"
--'  1  19  /boot/cmdline.txt
-|4,39,1,19,1538910298,"/boot/cmdline.txt"
--'  1  19  /boot/cmdline.txt
-|4,39,1,19,1538910298,"/boot/cmdline.txt"
--'  1  19  /boot/cmdline.txt
-|4,39,1,19,1538910298,"/boot/cmdline.txt"
--'  4  9  ~/bin/seq2.sh
-|4,39,4,9,1538843585,"~/bin/seq2.sh"
--'  4  9  ~/bin/seq2.sh
-|4,39,4,9,1538843585,"~/bin/seq2.sh"
--'  4  9  ~/bin/seq2.sh
-|4,39,4,9,1538843585,"~/bin/seq2.sh"
--'  4  9  ~/bin/seq2.sh
-|4,39,4,9,1538843585,"~/bin/seq2.sh"
--'  4  9  ~/bin/seq2.sh
-|4,39,4,9,1538843585,"~/bin/seq2.sh"
--'  4  9  ~/bin/seq2.sh
-|4,39,4,9,1538843585,"~/bin/seq2.sh"
--'  4  9  ~/bin/seq2.sh
-|4,39,4,9,1538843585,"~/bin/seq2.sh"
--'  4  9  ~/bin/seq2.sh
-|4,39,4,9,1538843585,"~/bin/seq2.sh"
--'  4  9  ~/bin/seq2.sh
-|4,39,4,9,1538843585,"~/bin/seq2.sh"
--'  4  9  ~/bin/seq2.sh
-|4,39,4,9,1538843585,"~/bin/seq2.sh"
--'  4  9  ~/bin/seq2.sh
-|4,39,4,9,1538843585,"~/bin/seq2.sh"
--'  4  9  ~/bin/seq2.sh
-|4,39,4,9,1538843585,"~/bin/seq2.sh"
--'  4  9  ~/bin/seq2.sh
-|4,39,4,9,1538843585,"~/bin/seq2.sh"
--'  4  9  ~/bin/seq2.sh
-|4,39,4,9,1538843585,"~/bin/seq2.sh"
--'  4  9  ~/bin/seq2.sh
-|4,39,4,9,1538843585,"~/bin/seq2.sh"
--'  4  9  ~/bin/seq2.sh
-|4,39,4,9,1538843585,"~/bin/seq2.sh"
--'  5  1  ~/bin/seq2.sh
-|4,39,5,1,1538843570,"~/bin/seq2.sh"
--'  5  1  ~/bin/seq2.sh
-|4,39,5,1,1538843570,"~/bin/seq2.sh"
--'  5  1  ~/bin/seq2.sh
-|4,39,5,1,1538843570,"~/bin/seq2.sh"
--'  5  1  ~/bin/seq2.sh
-|4,39,5,1,1538843570,"~/bin/seq2.sh"
--'  5  1  ~/bin/seq2.sh
-|4,39,5,1,1538843570,"~/bin/seq2.sh"
--'  5  1  ~/bin/seq2.sh
-|4,39,5,1,1538843570,"~/bin/seq2.sh"
--'  5  1  ~/bin/seq2.sh
-|4,39,5,1,1538843570,"~/bin/seq2.sh"
--'  5  1  ~/bin/seq2.sh
-|4,39,5,1,1538843570,"~/bin/seq2.sh"
--'  5  1  ~/bin/seq2.sh
-|4,39,5,1,1538843570,"~/bin/seq2.sh"
--'  5  1  ~/bin/seq2.sh
-|4,39,5,1,1538843570,"~/bin/seq2.sh"
--'  5  1  ~/bin/seq2.sh
-|4,39,5,1,1538843570,"~/bin/seq2.sh"
--'  5  1  ~/bin/seq2.sh
-|4,39,5,1,1538843570,"~/bin/seq2.sh"
--'  5  1  ~/bin/seq2.sh
-|4,39,5,1,1538843570,"~/bin/seq2.sh"
--'  5  1  ~/bin/seq2.sh
-|4,39,5,1,1538843570,"~/bin/seq2.sh"
--'  5  1  ~/bin/seq2.sh
-|4,39,5,1,1538843570,"~/bin/seq2.sh"
--'  5  1  ~/bin/seq2.sh
-|4,39,5,1,1538843570,"~/bin/seq2.sh"
--'  4  1  ~/bin/seq2.sh
-|4,39,4,1,1538843564,"~/bin/seq2.sh"
--'  4  1  ~/bin/seq2.sh
-|4,39,4,1,1538843564,"~/bin/seq2.sh"
--'  4  1  ~/bin/seq2.sh
-|4,39,4,1,1538843564,"~/bin/seq2.sh"
--'  4  1  ~/bin/seq2.sh
-|4,39,4,1,1538843564,"~/bin/seq2.sh"
--'  4  1  ~/bin/seq2.sh
-|4,39,4,1,1538843564,"~/bin/seq2.sh"
--'  4  1  ~/bin/seq2.sh
-|4,39,4,1,1538843564,"~/bin/seq2.sh"
--'  4  1  ~/bin/seq2.sh
-|4,39,4,1,1538843564,"~/bin/seq2.sh"
--'  4  1  ~/bin/seq2.sh
-|4,39,4,1,1538843564,"~/bin/seq2.sh"
--'  4  1  ~/bin/seq2.sh
-|4,39,4,1,1538843564,"~/bin/seq2.sh"
--'  4  1  ~/bin/seq2.sh
-|4,39,4,1,1538843564,"~/bin/seq2.sh"
--'  4  1  ~/bin/seq2.sh
-|4,39,4,1,1538843564,"~/bin/seq2.sh"
--'  4  1  ~/bin/seq2.sh
-|4,39,4,1,1538843564,"~/bin/seq2.sh"
--'  4  1  ~/bin/seq2.sh
-|4,39,4,1,1538843564,"~/bin/seq2.sh"
--'  4  1  ~/bin/seq2.sh
-|4,39,4,1,1538843564,"~/bin/seq2.sh"
--'  4  1  ~/bin/seq2.sh
-|4,39,4,1,1538843564,"~/bin/seq2.sh"
--'  4  1  ~/bin/seq2.sh
-|4,39,4,1,1538843564,"~/bin/seq2.sh"
--'  10  11  ~/bin/seq2.sh
-|4,39,10,11,1538843542,"~/bin/seq2.sh"
--'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843542,"~/bin/seq2.sh"
--'  10  11  ~/bin/seq2.sh
-|4,39,10,11,1538843542,"~/bin/seq2.sh"
--'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843542,"~/bin/seq2.sh"
--'  10  11  ~/bin/seq2.sh
-|4,39,10,11,1538843542,"~/bin/seq2.sh"
--'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843542,"~/bin/seq2.sh"
--'  10  11  ~/bin/seq2.sh
-|4,39,10,11,1538843542,"~/bin/seq2.sh"
--'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843542,"~/bin/seq2.sh"
--'  10  11  ~/bin/seq2.sh
-|4,39,10,11,1538843542,"~/bin/seq2.sh"
--'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843542,"~/bin/seq2.sh"
--'  10  11  ~/bin/seq2.sh
-|4,39,10,11,1538843542,"~/bin/seq2.sh"
--'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843542,"~/bin/seq2.sh"
--'  10  11  ~/bin/seq2.sh
-|4,39,10,11,1538843542,"~/bin/seq2.sh"
--'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843542,"~/bin/seq2.sh"
--'  10  11  ~/bin/seq2.sh
-|4,39,10,11,1538843542,"~/bin/seq2.sh"
--'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843542,"~/bin/seq2.sh"
--'  10  11  ~/bin/seq2.sh
-|4,39,10,11,1538843542,"~/bin/seq2.sh"
--'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843542,"~/bin/seq2.sh"
--'  10  11  ~/bin/seq2.sh
-|4,39,10,11,1538843542,"~/bin/seq2.sh"
--'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843542,"~/bin/seq2.sh"
--'  10  11  ~/bin/seq2.sh
-|4,39,10,11,1538843542,"~/bin/seq2.sh"
--'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843542,"~/bin/seq2.sh"
--'  10  11  ~/bin/seq2.sh
-|4,39,10,11,1538843542,"~/bin/seq2.sh"
--'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843542,"~/bin/seq2.sh"
--'  10  11  ~/bin/seq2.sh
-|4,39,10,11,1538843542,"~/bin/seq2.sh"
--'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843542,"~/bin/seq2.sh"
--'  10  11  ~/bin/seq2.sh
-|4,39,10,11,1538843542,"~/bin/seq2.sh"
--'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843542,"~/bin/seq2.sh"
--'  10  11  ~/bin/seq2.sh
-|4,39,10,11,1538843542,"~/bin/seq2.sh"
--'  9  11  ~/bin/seq2.sh
-|4,39,9,11,1538843542,"~/bin/seq2.sh"
--'  10  11  ~/bin/seq2.sh
-|4,39,10,11,1538843542,"~/bin/seq2.sh"
+-'  2  28  ~/.config/lxc/default.conf
+|4,39,2,28,1543569460,"~/.config/lxc/default.conf"
+-'  1  29  ~/.config/lxc/default.conf
+|4,39,1,29,1543569424,"~/.config/lxc/default.conf"
+-'  1  0  /etc/default/lxc-net
+|4,39,1,0,1543569361,"/etc/default/lxc-net"
+-'  1  0  /etc/default/lxc-net
+|4,39,1,0,1543569361,"/etc/default/lxc-net"
+-'  1  29  ~/.config/lxc/default.conf
+|4,39,1,29,1543569311,"~/.config/lxc/default.conf"
+-'  1  29  ~/.config/lxc/default.conf
+|4,39,1,29,1543569311,"~/.config/lxc/default.conf"
+-'  4  30  /etc/lxc/default.conf
+|4,39,4,30,1543569261,"/etc/lxc/default.conf"
+-'  4  30  /etc/lxc/default.conf
+|4,39,4,30,1543569261,"/etc/lxc/default.conf"
+-'  4  30  /etc/lxc/default.conf
+|4,39,4,30,1543569261,"/etc/lxc/default.conf"
+-'  4  30  /etc/lxc/default.conf
+|4,39,4,30,1543569261,"/etc/lxc/default.conf"
+-'  4  30  /etc/lxc/default.conf
+|4,39,4,30,1543569261,"/etc/lxc/default.conf"
+-'  4  30  /etc/lxc/default.conf
+|4,39,4,30,1543569261,"/etc/lxc/default.conf"
+-'  4  30  /etc/lxc/default.conf
+|4,39,4,30,1543569261,"/etc/lxc/default.conf"
+-'  4  30  /etc/lxc/default.conf
+|4,39,4,30,1543569261,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543569254,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543569254,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543569254,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543569254,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543569254,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543569254,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543569254,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543569254,"/etc/lxc/default.conf"
+-'  1  29  ~/.config/lxc/default.conf
+|4,39,1,29,1543492053,"~/.config/lxc/default.conf"
+-'  1  29  ~/.config/lxc/default.conf
+|4,39,1,29,1543492053,"~/.config/lxc/default.conf"
+-'  1  29  ~/.config/lxc/default.conf
+|4,39,1,29,1543492053,"~/.config/lxc/default.conf"
+-'  1  29  ~/.config/lxc/default.conf
+|4,39,1,29,1543492053,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543492021,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543492021,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543492021,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543492021,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543492021,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543492021,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543492021,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543491908,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543491908,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543491908,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543491908,"~/.config/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  1  0  /etc/lxc/default.conf
+|4,39,1,0,1543491853,"/etc/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543488944,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543488944,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543488944,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543488944,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543488944,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543488944,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543488944,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543488944,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543485542,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543485542,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543485542,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543485542,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543485542,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543485542,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543485542,"~/.config/lxc/default.conf"
+-'  4  24  ~/.config/lxc/default.conf
+|4,39,4,24,1543485542,"~/.config/lxc/default.conf"
+-'  1  0  /etc/lxc/lxc-usernet
+|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
+-'  1  0  /etc/lxc/lxc-usernet
+|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
+-'  1  0  /etc/lxc/lxc-usernet
+|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
+-'  1  0  /etc/lxc/lxc-usernet
+|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
+-'  1  0  /etc/lxc/lxc-usernet
+|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
+-'  1  0  /etc/lxc/lxc-usernet
+|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
+-'  1  0  /etc/lxc/lxc-usernet
+|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
+-'  1  0  /etc/lxc/lxc-usernet
+|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
+-'  1  0  /etc/lxc/lxc-usernet
+|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
+-'  1  0  /etc/lxc/lxc-usernet
+|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
+-'  1  0  /etc/lxc/lxc-usernet
+|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
+-'  1  0  /etc/lxc/lxc-usernet
+|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
+-'  1  0  /etc/lxc/lxc-usernet
+|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
+-'  1  0  /etc/lxc/lxc-usernet
+|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
+-'  1  0  /etc/lxc/lxc-usernet
+|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
 
 # History of marks within files (newest to oldest):
+
+> ~/.config/lxc/default.conf
+	*	1543569458	0
+	"	2	28
+	^	2	29
+	.	2	28
+	+	1	16
+	+	2	16
+	+	4	25
+	+	5	0
+	+	2	29
+	+	1	28
+	+	2	28
+
+> /etc/default/lxc-net
+	*	1543569358	0
+	"	1	0
+
+> /etc/lxc/default.conf
+	*	1543569259	0
+	"	4	30
+
+> /etc/lxc/lxc-usernet
+	*	1543485454	0
+	"	1	0
+	.	2	0
+	+	2	0
+
+> /var/lib/lxc/ubuntu-lxc/rootfs/etc/dhcp/debug
+	*	1543484837	0
+	"	1	0
 
 > ~/file2
 	*	1541159221	0

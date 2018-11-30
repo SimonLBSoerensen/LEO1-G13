@@ -1,0 +1,50 @@
+      lxc-start 20181129094627.537 INFO     lxc_start_ui - tools/lxc_start.c:main:275 - using rcfile /home/pi/.local/share/lxc/u69/config
+      lxc-start 20181129094627.550 WARN     lxc_confile - confile.c:config_pivotdir:1910 - lxc.pivotdir is ignored.  It will soon become an error.
+      lxc-start 20181129094627.552 INFO     lxc_confile - confile.c:config_idmap:1531 - read uid map: type u nsid 0 hostid 100000 range 65536
+      lxc-start 20181129094627.552 INFO     lxc_confile - confile.c:config_idmap:1531 - read uid map: type g nsid 0 hostid 100000 range 65536
+      lxc-start 20181129094627.554 DEBUG    lxc_monitor - monitor.c:lxc_monitord_spawn:309 - Going to wait for pid 15046.
+      lxc-start 20181129094627.557 DEBUG    lxc_monitor - monitor.c:lxc_monitord_spawn:328 - Trying to sync with child process.
+      lxc-start 20181129094627.561 INFO     lxc_start - start.c:lxc_check_inherited:235 - Closed inherited fd: 4.
+      lxc-start 20181129094627.562 DEBUG    lxc_monitor - monitor.c:lxc_monitord_spawn:366 - Using pipe file descriptor 5 for monitord.
+      lxc-start 20181129094627.609 DEBUG    lxc_monitor - monitor.c:lxc_monitord_spawn:343 - Sucessfully synced with child process.
+      lxc-start 20181129094627.615 DEBUG    lxc_monitor - monitor.c:lxc_monitord_spawn:312 - Finished waiting on pid 15046.
+      lxc-start 20181129094627.618 INFO     lxc_container - lxccontainer.c:do_lxcapi_start:804 - Attempting to set proc title to [lxc monitor] /home/pi/.local/share/lxc u69
+      lxc-start 20181129094627.619 INFO     lxc_utils - utils.c:setproctitle:1519 - setting cmdline failed - Operation not permitted
+      lxc-start 20181129094627.627 DEBUG    lxc_monitor - monitor.c:lxc_monitord_spawn:309 - Going to wait for pid 15050.
+      lxc-start 20181129094627.630 INFO     lxc_lsm - lsm/lsm.c:lsm_init:48 - LSM security driver nop
+      lxc-start 20181129094627.632 INFO     lxc_seccomp - seccomp.c:parse_config_v2:402 - processing: .reject_force_umount  # comment this to allow umount -f;  not recommended.
+      lxc-start 20181129094627.632 INFO     lxc_seccomp - seccomp.c:parse_config_v2:402 - processing: .[all].
+      lxc-start 20181129094627.632 INFO     lxc_seccomp - seccomp.c:parse_config_v2:402 - processing: .kexec_load errno 1.
+      lxc-start 20181129094627.633 INFO     lxc_seccomp - seccomp.c:parse_config_v2:553 - Adding native rule for kexec_load action 327681.
+      lxc-start 20181129094627.633 INFO     lxc_seccomp - seccomp.c:parse_config_v2:402 - processing: .open_by_handle_at errno 1.
+      lxc-start 20181129094627.633 INFO     lxc_seccomp - seccomp.c:parse_config_v2:553 - Adding native rule for open_by_handle_at action 327681.
+      lxc-start 20181129094627.633 INFO     lxc_seccomp - seccomp.c:parse_config_v2:402 - processing: .init_module errno 1.
+      lxc-start 20181129094627.633 INFO     lxc_seccomp - seccomp.c:parse_config_v2:553 - Adding native rule for init_module action 327681.
+      lxc-start 20181129094627.633 INFO     lxc_seccomp - seccomp.c:parse_config_v2:402 - processing: .finit_module errno 1.
+      lxc-start 20181129094627.634 INFO     lxc_seccomp - seccomp.c:parse_config_v2:553 - Adding native rule for finit_module action 327681.
+      lxc-start 20181129094627.634 INFO     lxc_seccomp - seccomp.c:parse_config_v2:402 - processing: .delete_module errno 1.
+      lxc-start 20181129094627.634 INFO     lxc_seccomp - seccomp.c:parse_config_v2:553 - Adding native rule for delete_module action 327681.
+      lxc-start 20181129094627.636 DEBUG    lxc_monitor - monitor.c:lxc_monitord_spawn:328 - Trying to sync with child process.
+      lxc-start 20181129094627.640 INFO     lxc_start - start.c:lxc_check_inherited:235 - Closed inherited fd: 4.
+      lxc-start 20181129094627.640 DEBUG    lxc_monitor - monitor.c:lxc_monitord_spawn:366 - Using pipe file descriptor 5 for monitord.
+      lxc-start 20181129094627.650 DEBUG    lxc_start - start.c:setup_signal_fd:273 - Set SIGCHLD handler with file descriptor: 5.
+      lxc-start 20181129094627.657 DEBUG    console - console.c:lxc_console_peer_default:468 - no console peer
+      lxc-start 20181129094627.735 DEBUG    lxc_monitor - monitor.c:lxc_monitord_spawn:343 - Sucessfully synced with child process.
+      lxc-start 20181129094627.743 DEBUG    lxc_monitor - monitor.c:lxc_monitord_spawn:312 - Finished waiting on pid 15050.
+      lxc-start 20181129094627.743 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+      lxc-start 20181129094627.814 INFO     lxc_start - start.c:lxc_init:475 - Container "u69" is initialized.
+      lxc-start 20181129094627.818 DEBUG    lxc_start - start.c:__lxc_start:1317 - Not dropping CAP_SYS_BOOT or watching utmp.
+      lxc-start 20181129094627.818 INFO     lxc_cgroup - cgroups/cgroup.c:cgroup_init:68 - cgroup driver cgroupfs-ng initing for u69
+      lxc-start 20181129094627.821 INFO     lxc_start - start.c:lxc_spawn:1154 - Cloned CLONE_NEWUSER.
+      lxc-start 20181129094627.821 INFO     lxc_start - start.c:lxc_spawn:1154 - Cloned CLONE_NEWNS.
+      lxc-start 20181129094627.821 INFO     lxc_start - start.c:lxc_spawn:1154 - Cloned CLONE_NEWPID.
+      lxc-start 20181129094627.821 INFO     lxc_start - start.c:lxc_spawn:1154 - Cloned CLONE_NEWUTS.
+      lxc-start 20181129094627.822 INFO     lxc_start - start.c:lxc_spawn:1154 - Cloned CLONE_NEWIPC.
+      lxc-start 20181129094627.873 INFO     lxc_start - start.c:do_start:745 - Unshared CLONE_NEWNET.
+      lxc-start 20181129094628.408 ERROR    lxc_start - start.c:lxc_spawn:1207 - Failed to create the configured network.
+      lxc-start 20181129094628.481 ERROR    lxc_start - start.c:__lxc_start:1346 - Failed to spawn container "u69".
+      lxc-start 20181129094628.536 INFO     lxc_conf - conf.c:run_script_argv:424 - Executing script "/usr/share/lxcfs/lxc.reboot.hook" for container "u69", config section "lxc".
+      lxc-start 20181129094628.650 WARN     lxc_commands - commands.c:lxc_cmd_rsp_recv:172 - Command get_cgroup failed to receive response: Connection reset by peer.
+      lxc-start 20181129094633.656 ERROR    lxc_start_ui - tools/lxc_start.c:main:366 - The container failed to start.
+      lxc-start 20181129094633.656 ERROR    lxc_start_ui - tools/lxc_start.c:main:368 - To get more details, run the container in foreground mode.
+      lxc-start 20181129094633.656 ERROR    lxc_start_ui - tools/lxc_start.c:main:370 - Additional information can be obtained by setting the --logfile and --logpriority options.
