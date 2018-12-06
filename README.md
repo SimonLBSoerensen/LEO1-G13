@@ -5,7 +5,7 @@ See the folder [/assignment2/](/assignment2/) for the scripts used to solve this
 | Container        | Distribution | Version  | Purpose |
 |:-------------:|:-------------:|:-----:|:---:|
 | c1     | Alpine | 3.4 | Runs the webserver |
-| c2      | Alpine      |  edge | Supplies random numbers|
+| c2      | Alpine      |  <p title="Why did we do this again?">edge</p> | Supplies random numbers|
 
 <p align="center">
   <img src="https://github.com/SimonLBSoerensen/LEO1-G13/blob/master/WebsiteImage.png" title="Screenshot of website in action"></p>
