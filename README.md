@@ -2,10 +2,10 @@
 
 See the folder [/assignment2/](/assignment2/) for the scripts used to solve this assignment.
 
-| Container Name        | Distribution | Version  |
-| ------------- |:-------------:| -----:|
-| c1     | alpine | 3.4 |
-| c2      | alpine      |  edge |
+| Container Name        | Distribution | Version  | Purpose |
+| ------------- |:-------------:|:-----:| ---:|
+| c1     | Alpine | 3.4 | Runs the webserver |
+| c2      | Alpine      |  edge | Supplies random numbers|
 
 ----------------
 [pi_crontab](/assignment2/pi_crontab)
