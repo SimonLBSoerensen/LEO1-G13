@@ -7,7 +7,8 @@ See the folder [/assignment2/](/assignment2/) for the scripts used to solve this
 | c1     | Alpine | 3.4 | Runs the webserver |
 | c2      | Alpine      |  edge | Supplies random numbers|
 
-<p align="center">![Replacement Text](https://github.com/SimonLBSoerensen/LEO1-G13/blob/master/WebsiteImage.png "Screenshot of website in action") </p>
+<p align="center">
+  <img src="https://github.com/SimonLBSoerensen/LEO1-G13/blob/master/WebsiteImage.png"></p>
 
 ----------------
 [pi_crontab](/assignment2/pi_crontab)
