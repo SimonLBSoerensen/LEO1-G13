@@ -14,7 +14,7 @@ welcomeString()
 	else
 		user=" with IP: $SOCAT_PEERADDR"
 	fi
-	welcome="Numbers fetch for user$user at $TIME"
+	welcome="Numbers fetched for user$user at $TIME"
 	echo $welcome
 }
 
