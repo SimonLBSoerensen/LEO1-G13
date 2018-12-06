@@ -89,7 +89,7 @@ Whenever container 2 reboots, this aautomatically starts the server by executing
 This script runs a tcp server on port 8080 which replies with a random number when polled by executing the script randomizer_c2.sh.
 
 **Relevant functions:**
-- socat: To maintain a tcp server to transfer a random number.
+- *socat*: To maintain a tcp server to transfer a random number.
 
 ----------------------
 [randomizer_c2.sh](/assignment2/randomizer_c2.sh)
