@@ -1,6 +1,6 @@
 # LEO1-G13
 
-See the folder /assignment2 for the scripts used to solve this assignment.
+See the folder [/assignment2](/assignment2/) for the scripts used to solve this assignment.
 
 ----------------
 [pi_crontab](/assignment2/pi_crontab)
@@ -8,7 +8,7 @@ See the folder /assignment2 for the scripts used to solve this assignment.
 This script executes  whenever the pi is rebooted.
 
 ------------------
-pi_startC.sh
+[pi_startC.sh](/assignment2/pi_startC.sh)
 ------------------
 This script starts the two containers, waits for them to get an ip address, finds the ip address of container 1 and routes any 
 port 80 (http) communication to container 1.
@@ -18,7 +18,7 @@ Relevant functions:
 - iptables: Used to route the communication through port 80 to the container.
 
 ------------------------
-autostartserver_c1 --
+[autostartserver_c1]((/assignment2/autostartserver_c1)
 ------------------------
 This script is used to start an OpenRC service that calls startserver_c1.sh on container 1 boot.
 
