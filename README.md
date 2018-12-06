@@ -2,6 +2,11 @@
 
 See the folder [/assignment2/](/assignment2/) for the scripts used to solve this assignment.
 
+| Container Name        | Distribution | Version  |
+| ------------- |:-------------:| -----:|
+| c1     | alpine | 3.4 |
+| c2      | alpine      |  edge |
+
 ----------------
 [pi_crontab](/assignment2/pi_crontab)
 ----------------
