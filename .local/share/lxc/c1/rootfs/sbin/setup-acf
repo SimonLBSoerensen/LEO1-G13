@@ -1,7 +1,7 @@
 #!/bin/sh
 
 PROGRAM=setup-acf
-VERSION=3.8.0-r0
+VERSION=3.4.1-r5
 
 PREFIX=
 . $PREFIX/lib/libalpine.sh
@@ -23,14 +23,14 @@ while getopts "ae:hl:n" opt ; do
 		*) usage;;
 	esac
 done
-shift $(expr $OPTIND - 1)
+shift `expr $OPTIND - 1`
 
 while [ $# -gt 0 ]; do
 	pkgs="$pkgs acf-$1"
 	shift
 done
 
-# install packages
+# install packages 
 apk add mini_httpd $pkgs || exit 1
 
 if [ "$create_passwd" != "no" ]; then
@@ -62,22 +62,22 @@ if [ -f $PEMFILE ]; then
 	echo "$PEMFILE already exist."
 else
 	mkdir -p $SSLDIR
-	cat >$SSLCNF <<-__EOF__
-		[ req ]
-		default_bits = 1024
-		encrypt_key = yes
-		distinguished_name = req_dn
-		x509_extensions = cert_type
-		prompt = no
+cat >$SSLCNF <<EOF
+[ req ]
+default_bits = 1024
+encrypt_key = yes
+distinguished_name = req_dn
+x509_extensions = cert_type
+prompt = no
 
-		[ req_dn ]
-		OU=HTTPS server
-		CN=$(hostname -f || hostname)
-		emailAddress=${EMAIL:-postmaster@example.com}
+[ req_dn ]
+OU=HTTPS server
+CN=$(hostname -f || hostname)
+emailAddress=${EMAIL:-postmaster@example.com}
 
-		[ cert_type ]
-		nsCertType = server
-	__EOF__
+[ cert_type ]
+nsCertType = server
+EOF
 	echo "Generating certificates for HTTPS..."
 	openssl genrsa 2048 > $KEYFILE
 	openssl req -new -x509 -nodes -sha1 -days 3650 -key $KEYFILE \
@@ -87,15 +87,15 @@ else
 	mv $CRTFILE $PEMFILE
 fi
 
-cat >/etc/mini_httpd/mini_httpd.conf <<-__EOF__
-	nochroot
-	dir=/var/www/localhost/htdocs
-	user=nobody
-	cgipat=cgi-bin**
-	certfile=$PEMFILE
-	port=443
-	ssl
-__EOF__
+cat >/etc/mini_httpd/mini_httpd.conf <<EOF
+nochroot
+dir=/var/www/localhost/htdocs
+user=nobody
+cgipat=cgi-bin**
+certfile=$PEMFILE
+port=443
+ssl
+EOF
 if [ -n "$address" ]; then
 	echo "host=$address" >> /etc/mini_httpd/mini_httpd.conf
 fi

@@ -2,5 +2,9 @@ alpine-base
 alpine-baselayout
 alpine-keys
 apk-tools
+bash
 busybox
 libc-utils
+nano
+socat
+vim

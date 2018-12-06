@@ -38,28 +38,15 @@ ssd_start()
 		service_inactive && _inactive=true
 		mark_service_inactive
 	fi
-	[ -n "$output_logger" ] &&
-		output_logger_arg="--stdout-logger \"$output_logger\""
-	[ -n "$error_logger" ] &&
-		error_logger_arg="--stderr-logger \"$error_logger\""
-	#the eval call is necessary for cases like:
-	# command_args="this \"is a\" test"
-	# to work properly.
 	eval start-stop-daemon --start \
 		--exec $command \
 		${chroot:+--chroot} $chroot \
-		${directory:+--chdir} $directory \
-		${output_log+--stdout} $output_log \
-		${error_log+--stderr} $error_log \
-		${output_logger_arg} \
-		${error_logger_arg} \
 		${procname:+--name} $procname \
 		${pidfile:+--pidfile} $pidfile \
 		${command_user+--user} $command_user \
-		${umask+--umask} $umask \
 		$_background $start_stop_daemon_args \
 		-- $command_args $command_args_background
-	if eend $? "Failed to start ${name:-$RC_SVCNAME}"; then
+	if eend $? "Failed to start $RC_SVCNAME"; then
 		service_set_value "command" "${command}"
 		[ -n "${chroot}" ] && service_set_value "chroot" "${chroot}"
 		[ -n "${pidfile}" ] && service_set_value "pidfile" "${pidfile}"
@@ -76,7 +63,6 @@ ssd_start()
 
 ssd_stop()
 {
-	local _progress=
 	local startcommand="$(service_get_value "command")"
 	local startchroot="$(service_get_value "chroot")"
 	local startpidfile="$(service_get_value "pidfile")"
@@ -86,17 +72,15 @@ ssd_stop()
 	pidfile="${startpidfile:-$pidfile}"
 	procname="${startprocname:-$procname}"
 	[ -n "$command" -o -n "$procname" -o -n "$pidfile" ] || return 0
-	yesno "${command_progress}" && _progress=--progress
 	ebegin "Stopping ${name:-$RC_SVCNAME}"
 	start-stop-daemon --stop \
 		${retry:+--retry} $retry \
 		${command:+--exec} $command \
 		${procname:+--name} $procname \
 		${pidfile:+--pidfile} $chroot$pidfile \
-		${stopsig:+--signal} $stopsig \
-		${_progress}
+		${stopsig:+--signal} $stopsig
 
-	eend $? "Failed to stop ${name:-$RC_SVCNAME}"
+	eend $? "Failed to stop $RC_SVCNAME"
 }
 
 ssd_status()

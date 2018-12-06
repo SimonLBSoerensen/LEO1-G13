@@ -2,20 +2,14 @@
 
 PREFIX=
 . "$PREFIX/lib/libalpine.sh"
-. "$PREFIX/lib/dasd-functions.sh"
 
 MBR=${MBR:-"/usr/share/syslinux/mbr.bin"}
 ROOTFS=${ROOTFS:-ext4}
 BOOTFS=${BOOTFS:-ext4}
 VARFS=${VARFS:-ext4}
-BOOTLOADER=${BOOTLOADER:-syslinux}
-DISKLABEL=${DISKLABEL:-dos}
 
 # default location for mounted root
 SYSROOT=${SYSROOT:-/mnt}
-
-# machine arch
-ARCH=$(apk --print-arch)
 
 in_list() {
 	local i="$1"
@@ -70,11 +64,6 @@ enumerate_fstab() {
 	awk "\$2 ~ /^$escaped_mnt(\/|\$)/ {print \$0}" /proc/mounts | \
 		sed "s:$mnt:/:g; s: :\t:g" | sed -E 's:/+:/:g' | \
 		while read fs_spec fs_file fs_vfstype fs_mntops fs_freq fs_passno; do
-			if [ "$fs_file" = / ]; then
-				fs_passno=1
-			else
-				fs_passno=2
-			fi
 			echo -e "$(uuid_or_device $fs_spec)\t${fs_file}\t${fs_vfstype}\t${fs_mntops} ${fs_freq} ${fs_passno}"
 		done
 }
@@ -89,74 +78,19 @@ is_lvm() {
 	lvs "$1" >/dev/null 2>&1
 }
 
-is_efi() {
-	[ -d "/sys/firmware/efi" ] && return 0
-	return 1
-}
-
 # Find the disk device from given partition
 disk_from_part() {
-	local path=${1%/*}
-	local dev=${1##*/}
-	echo $path/$(basename "$(readlink -f "/sys/class/block/$dev/..")")
-}
-
-# $1 partition type (swap,linux,raid,lvm,prep,esp)
-# return partition type id based on table type
-partition_id() {
-	local id
-	if [ "$DISKLABEL" = "gpt" ]; then
-		case "$1" in
-			swap)	id=0657FD6D-A4AB-43C4-84E5-0933C84B4F4F ;;
-			linux)	id=0FC63DAF-8483-4772-8E79-3D69D8477DE4 ;;
-			raid)	id=A19D880F-05FC-4D3B-A006-743F0F84911E ;;
-			lvm)	id=E6D6D379-F507-44C2-A23C-238F2A3DF928 ;;
-			prep)	id=9E1A2d38-C612-4316-AA26-8B49521E5A8B ;;
-			esp)	id=C12A7328-F81F-11D2-BA4B-00A0C93EC93B ;;
-			*)	die "Partition id \"$1\" is not supported!" ;;
-		esac
-	elif [ "$DISKLABEL" = "dos" ]; then
-		case "$1" in
-			swap)	id=82 ;;
-			linux)	id=83 ;;
-			raid)	id=fd ;;
-			lvm)	id=8e ;;
-			prep)	id=41 ;;
-			esp)	id=EF ;;
-			*)	die "Partition id \"$1\" is not supported!" ;;
-		esac
-	elif [ "$DISKLABEL" = "eckd" ]; then
-		case "$1" in
-			native|lvm|swap|raid|gpfs)	id="$1" ;;
-		esac
-	else
-		die "Partition label \"$DISKLABEL\" is not supported!"
-	fi
-	echo $id
-}
-
-# find partitions based on partition type from specified disk
-# type can be any type from partition_id or the literal string "boot"
-find_partitions() {
-	local dev="$1" type="$2" search=
-	if is_dasd "$dev" eckd; then
-		case "$type" in
-			boot) echo "$dev"1 ;;
-			*) fdasd -p "$dev" | grep "Linux $(partition_id "$type")" | awk '{print $1}' | tail -n 1 ;;
-		esac
-		return 0
-	fi
-	case "$type" in
-		boot)
-			search=bootable
-			[ -n "$USE_EFI" ] && search=$(partition_id esp)
-			sfdisk -d "$dev" | awk '/'$search'/ {print $1}'
-			;;
-		*)
-			search=$(partition_id "$type")
-			sfdisk -d "$dev" | awk '/type='$search'/ {print $1}'
-			;;
-	esac
+	# we need convert cciss/c0d0* cciss!c0d0*...
+	local i= part=$(echo ${1#/dev/} | sed 's:/:!:g')
+	for i in /sys/block/*/$part; do
+		i=${i%/*}
+		# ...and back from cciss!c0d0 to cciss/c0d0
+		if [ -b "/dev/${i##*/}" ]; then
+			echo "/dev/${i##*/}" | sed 's:!:/:g'
+			return 0
+		fi
+	done
+	return 1
 }
 
 unpack_apkovl() {
@@ -207,20 +141,13 @@ find_mount_dev() {
 }
 
 supported_boot_fs() {
-	local supported="ext2 ext3 ext4 btrfs xfs vfat"
+	local supported="ext2 ext3 ext4 btrfs"
 	local fs=
 	for fs in $supported; do
 		[ "$fs" = "$1" ] && return 0
 	done
 	echo "$1 is not supported. Only supported are: $supported" >&2
 	return 1
-}
-
-supported_part_label() {
-	case "$1" in
-		dos|gpt|eckd) return 0 ;;
-		*) die "Partition label \"$DISKLABEL\" is not supported!" ;;
-	esac
 }
 
 find_volume_group() {
@@ -258,98 +185,20 @@ cleanup_chroot_mounts() {
 	done
 }
 
-get_bootopt() {
+has_bootopt() {
 	local opt="$1"
 	set -- $(cat /proc/cmdline)
 	for i; do
-		case "$i" in
-			"$opt"|"$opt"=*) echo "${i#*=}"; break;;
-		esac
+		[ "$i" = "$opt" ] && return 0
 	done
-}
-
-# setup GRUB bootloader
-setup_grub() {
-	local mnt="$1" root="$2" modules="$3" kernel_opts="$4" bootdev="$5"
-	# install GRUB efi mode
-	if [ -n "$USE_EFI" ]; then
-		local target fwa
-		case "$ARCH" in
-			x86_64)		target=x86_64-efi ; fwa=x64 ;;
-			x86)		target=i386-efi ; fwa=ia32 ;;
-			arm*)		target=arm-efi ; fwa=arm ;;
-			aarch64)	target=arm64-efi ; fwa=aa64 ;;
-		esac
-		# currently disabling nvram so grub doesnt call efibootmgr
-		# installing to alpine directory so other distros dont overwrite it
-		grub-install --target=$target --efi-directory="$mnt"/boot/efi \
-			--bootloader-id=alpine --boot-directory="$mnt"/boot --no-nvram
-		# fallback mode will use boot/boot${fw arch}.efi
-		install -D "$mnt"/boot/efi/EFI/alpine/grub$fwa.efi \
-			"$mnt"/boot/efi/EFI/boot/boot$fwa.efi
-	# install GRUB for ppc64le
-	elif [ "$ARCH" = "ppc64le" ]; then
-		shift 5
-		local disks="${@}"
-		for disk in $disks; do
-			prep=$(find_partitions "$disk" "prep")
-			echo "Installing grub on $prep"
-			grub-install --boot-directory="$mnt"/boot $prep
-		done
-	# install GRUB in bios mode
-	else
-		local bootdisk=$(disk_from_part $bootdev)
-		case "$ARCH" in
-			x86|x86_64) grub-install --boot-directory="$mnt"/boot \
-				--target=i386-pc $bootdisk ;;
-			*) die "Cannot install GRUB in BIOS mode for $ARCH" ;;
-		esac
-	fi
-
-	# setup GRUB config
-
-	# all_video is needed to remove the video error on boot
-	cat > "$mnt"/boot/grub/grub.cfg <<- EOF
-	set timeout=2
-	insmod all_video
-	menuentry "Alpine Linux" {
-	    linux   /boot/vmlinuz-$KERNEL_FLAVOR modules=$modules root=$root $kernel_opts
-	    initrd  /boot/initramfs-$KERNEL_FLAVOR
-	}
-	EOF
-}
-
-# setup syslinux bootloader
-setup_syslinux() {
-	local mnt="$1" root="$2" modules="$3" kernel_opts="$4" bootdev="$5"
-	local exlinux_raidopt=
-
-	sed -e "s:^root=.*:root=$root:" \
-		-e "s:^default_kernel_opts=.*:default_kernel_opts=\"$kernel_opts\":" \
-		-e "s:^modules=.*:modules=$modules:" \
-		/etc/update-extlinux.conf > "$mnt"/etc/update-extlinux.conf
-	if [ "$(rc --sys)" = "XEN0" ]; then
-		sed -i -e "s:^default=.*:default=xen-grsec:" \
-			"$mnt"/etc/update-extlinux.conf
-	fi
-
-	# Check if we boot from raid so we can pass proper option to
-	# extlinux later.
-	if [ -e "/sys/block/${bootdev#/dev/}/md" ]; then
-		extlinux_raidopt="--raid"
-	fi
-
-	extlinux $extlinux_raidopt --install "$mnt"/boot
+	return 1
 }
 
 install_mounted_root() {
-	local mnt="$1"
-	shift 1
-	local disks="${@}" mnt_boot= boot_fs= root_fs=
+	local mnt="$1" mnt_boot= boot_fs= root_fs=
 	local initfs_features="ata base ide scsi usb virtio"
 	local pvs= dev= rootdev= bootdev= extlinux_raidopt= root= modules=
 	local kernel_opts="quiet"
-	[ "$ARCH" = "s390x" ] && initfs_features="$initfs_features qeth dasd_mod"
 
 	rootdev=$(find_mount_dev "$mnt")
 	if [ -z "$rootdev" ]; then
@@ -376,20 +225,20 @@ install_mounted_root() {
 	boot_fs=$(find_mount_fs "$mnt_boot")
 	supported_boot_fs "$boot_fs" || return 1
 
+	# Check if we boot from raid so we can pass proper option to
+	# extlinux later.
+	if [ -e "/sys/block/${bootdev#/dev/}/md" ]; then
+		extlinux_raidopt="--raid"
+	fi
+
 	# check if our root is on raid so we can feed mkinitfs and
-	# bootloader conf with the proper kernel module params
+	# update-exlinux.conf with the proper kernel module params
 	for dev in $rootdev $pvs; do
 
 		# check if we need hardware raid drivers
 		case $dev in
 		/dev/cciss/*)
 			initfs_features="${initfs_features% raid} raid"
-			;;
-		/dev/nvme*)
-			initfs_features="${initfs_features% nvme} nvme"
-			;;
-		/dev/mmc*)
-			initfs_features="${initfs_features% mmc} mmc"
 			;;
 		esac
 
@@ -437,40 +286,40 @@ install_mounted_root() {
 
 	# generate update-extlinux.conf
 	root=$(uuid_or_device $rootdev)
-	kernel_opts="$kernel_opts rootfstype=$root_fs"
 	if is_vmware; then
 		kernel_opts="pax_nouderef $kernel_opts"
 	fi
-	if [ -n "$(get_bootopt nomodeset)" ]; then
+	if has_bootopt nomodeset; then
 		kernel_opts="nomodeset $kernel_opts"
 	fi
 	modules="sd-mod,usb-storage,${root_fs}${raidmod}"
+	sed -e "s:^root=.*:root=$root:" \
+		-e "s:^default_kernel_opts=.*:default_kernel_opts=\"$kernel_opts\":" \
+		-e "s:^modules=.*:modules=$modules:" \
+		/etc/update-extlinux.conf > "$mnt"/etc/update-extlinux.conf
+	if [ "$(rc --sys)" = "XEN0" ]; then
+		sed -i -e "s:^default=.*:default=xen-grsec:" \
+			"$mnt"/etc/update-extlinux.conf
+	fi
 
 	# generate the fstab
 	if [ -f "$mnt"/etc/fstab ]; then
 		mv "$mnt"/etc/fstab "$mnt"/etc/fstab.old
 	fi
 	enumerate_fstab "$mnt" >> "$mnt"/etc/fstab
-	if [ -n "$SWAP_DEVICES" ]; then
-		local swap_dev
-		for swap_dev in $SWAP_DEVICES; do
-			echo -e "$(uuid_or_device ${swap_dev})\tswap\tswap\tdefaults\t0 0" \
-				>> "$mnt"/etc/fstab
-		done
+	if [ -n "$SWAP_DEVICE" ]; then
+		echo -e "${SWAP_DEVICE}\tswap\tswap\tdefaults\t0 0" \
+			>> "$mnt"/etc/fstab
 	fi
-	cat >>"$mnt"/etc/fstab <<-__EOF__
-		/dev/cdrom	/media/cdrom	iso9660	noauto,ro 0 0
-		/dev/usbdisk	/media/usb	vfat	noauto	0 0
-	__EOF__
+	cat >>"$mnt"/etc/fstab <<EOF
+/dev/cdrom	/media/cdrom	iso9660	noauto,ro 0 0
+/dev/fd0	/media/floppy	vfat	noauto	0 0
+/dev/usbdisk	/media/usb	vfat	noauto	0 0
+EOF
 	# remove the installed db in case its there so we force re-install
 	rm -f "$mnt"/var/lib/apk/installed "$mnt"/lib/apk/db/installed
 	echo "Installing system on $rootdev:"
-	case "$BOOTLOADER" in
-		grub) setup_grub "$mnt" "$root" "$modules" "$kernel_opts" "$bootdev" $disks ;;
-		syslinux) setup_syslinux "$mnt" "$root" "$modules" "$kernel_opts" "$bootdev" ;;
-		zipl) setup_zipl "$mnt" "$root" "$modules" "$kernel_opts" ;;
-		*) die "Bootloader \"$BOOTLOADER\" not supported!" ;;
-	esac
+	extlinux $extlinux_raidopt --install "$mnt"/boot
 
 	# apk reads config from target root so we need to copy the config
 	mkdir -p "$mnt"/etc/apk/keys/
@@ -591,23 +440,9 @@ stop_all_raid() {
 	done
 }
 
-select_bootloader() {
-	local bootloader=syslinux
-	if [ "$ARCH" = "ppc64le" ]; then
-		bootloader=grub-ieee1275
-	elif [ "$ARCH" = "s390x" ]; then
-		bootloader=s390-tools
-	elif [ -n "$USE_EFI" ]; then
-		bootloader=grub-efi
-	elif [ "$BOOTLOADER" = "grub" ]; then
-		bootloader=grub-bios
-	fi
-	echo "$bootloader"
-}
-
 # install needed programs
 init_progs() {
-	local raidpkg= lvmpkg= fs= fstools= grub=
+	local raidpkg= lvmpkg= fs= fstools=
 	[ -n "$USE_RAID" ] && raidpkg="mdadm"
 	[ -n "$USE_LVM" ] && lvmpkg="lvm2"
 	for fs in $BOOTFS $ROOTFS $VARFS; do
@@ -621,26 +456,20 @@ init_progs() {
 		xfs) fstools="$fstools xfsprogs";;
 		ext*) fstools="$fstools e2fsprogs";;
 		btrfs) fstools="$fstools btrfs-progs";;
-		vfat) fstools="$fstools dosfstools";;
 		esac
 	done
 	apk add --quiet sfdisk $lvmpkg $raidpkg $fstools $@
 }
 
 show_disk_info() {
-	local disk= vendor= model= d= size= busid=
+	local disk= vendor= model= d= size=
 	for disk in $@; do
 		local dev=${disk#/dev/}
 		d=$(echo $dev | sed 's:/:!:g')
 		vendor=$(cat /sys/block/$d/device/vendor 2>/dev/null)
 		model=$(cat /sys/block/$d/device/model 2>/dev/null)
-		busid=$(readlink -f /sys/block/$d/device 2>/dev/null)
 		size=$(awk '{gb = ($1 * 512)/1000000000; printf "%.1f GB\n", gb}' /sys/block/$d/size 2>/dev/null)
-		if is_dasd $dev eckd; then
-			echo "  $dev	($size $vendor ${busid##*/})"
-		else
-			echo "  $dev	($size $vendor $model)"
-		fi
+		echo "  $dev	($size $vendor $model)"
 	done
 }
 
@@ -664,47 +493,55 @@ confirm_erase() {
 # setup partitions on given disk dev in $1.
 # usage: setup_partitions <diskdev> size1,type1 [size2,type2 ...]
 setup_partitions() {
-	local diskdev="$1" start=1M line=
+	local diskdev="$1"
 	shift
-	supported_part_label "$DISKLABEL" || return 1
 
-	# initialize MBR for syslinux only
-	if [ "$BOOTLOADER" = "syslinux" ] && [ -f "$MBR" ]; then
+	echo "Initializing partitions on $diskdev..."
+
+	# new disks does not have an DOS signature in sector 0
+	# this makes sfdisk complain. We can workaround this by letting
+	# fdisk create that DOS signature, by just do a "w", a write.
+	# http://bugs.alpinelinux.org/issues/show/145
+	echo "w" | fdisk $diskdev >/dev/null
+
+	# fix the MBR while here so extlinux can boot
+	if [ -f "$MBR" ]; then
 		cat "$MBR" > $diskdev
 	fi
 
+	local start=1M
+	local line=
 	# create new partitions
 	(
 		for line in "$@"; do
-			case "$line" in
-			0M*) ;;
-			*) echo "$start,$line"; start= ;;
-			esac
+			echo "$start,$line"
+			start=
 		done
-	) | sfdisk --quiet --label $DISKLABEL $diskdev
+	) | sfdisk --quiet $diskdev >/dev/null || return 1
 
 	# create device nodes if not exist
 	mdev -s
 }
 
+# find the bootable partition on given disk
+find_boot_partition() {
+	sfdisk -d $1 | awk '/bootable/ {print $1}'
+}
+
+# find the partition(s) for LVM
+# this is not marked as bootable and is type 8e
+find_lvm_partition() {
+	local type=8e
+	sfdisk -d $1 | grep -v bootable | awk "/(Id|type)=$type/ {print \$1}"
+}
+
 # set up optional raid and create filesystem on boot device.
 setup_boot_dev() {
-	local disks="$@" disk= bootdev= mkfs_args=
-	[ "$BOOTFS" != "vfat" ] && mkfs_args="-q"
-	local part=$(for disk in $disks; do find_partitions "$disk" "boot"; done)
+	local disk= bootdev= mkfs_args="-q"
+	local part=$(for disk in $@; do find_boot_partition $disk; done)
 	set -- $part
 	bootdev=$1
 	[ -z "$bootdev" ] && return 1
-
-	if [ "$ARCH" = "ppc64le" ]; then
-		# Change bootable partition to PReP partition
-		for disk in $disks; do
-			echo ',,,*' | sfdisk --quiet $disk -N1
-			echo ',,,-' | sfdisk --quiet $disk -N2
-			mdev -s
-		done
-	fi
-
 	echo "Creating file systems..."
 	if [ -n "$USE_RAID" ]; then
 		local missing=
@@ -718,10 +555,7 @@ setup_boot_dev() {
 			--metadata=0.90 --quiet --run $@ $missing || return 1
 		bootdev=/dev/md0
 	fi
-	case "$BOOTFS" in
-	btrfs) mkfs_args="";;
-	ext4) mkfs_args="$mkfs_args -O ^64bit";; # pv-grub does not support 64bit
-	esac
+	[ "$BOOTFS" = "btrfs" ] && mkfs_args=""
 	mkfs.$BOOTFS $MKFS_OPTS_BOOT $mkfs_args $bootdev
 	BOOT_DEV="$bootdev"
 }
@@ -730,34 +564,24 @@ setup_boot_dev() {
 # $2 = partition type
 # $3... = disk devices
 find_nth_non_boot_parts() {
-	local idx=$1 id=$2 disk= type=bootable
-	shift 2
-	local disks="$@"
-	[ -n "$USE_EFI" ] && type=$(partition_id esp)
-	for disk in $disks; do
-		if is_dasd $disk eckd; then
-			fdasd -p $disk | grep "Linux $id" | awk '{print $1}' | tail -n 1
-		else
-			sfdisk -d $disk | grep -v $type \
-				| awk "/(Id|type)=$id/ { i++; if (i==$idx) print \$1 }"
-		fi
+	local idx=$1
+	local id=$2
+	local disk=
+	shift
+	shift
+	for disk in $@; do
+		sfdisk -d $disk | grep -v bootable \
+			| awk "/(Id|type)=$id/ { i++; if (i==$idx) print \$1 }"
 	done
 }
 
 setup_non_boot_raid_dev() {
 	local md_dev=$1
 	local idx=${md_dev#/dev/md}
-	[ -z "$md_dev" ] && return 0
-	if [ "$ARCH" = "ppc64le" ]; then
-		# increment idx as PReP partition is
-		# the bootable partition in ppc64le
-		idx=$((idx+1))
-	fi
 	shift
 	local level=1
 	local missing=
-	local pid=$(partition_id raid)
-	local raid_parts=$(find_nth_non_boot_parts $idx $pid $@)
+	local raid_parts=$(find_nth_non_boot_parts $idx "fd" $@)
 	set -- $raid_parts
 	# how many disks do we have?
 	case $# in
@@ -766,7 +590,7 @@ setup_non_boot_raid_dev() {
 		2) level=1; missing=  ; num=2;;
 		*) level=5; missing=  ; num=$#;;
 	esac
-	mdadm --create $md_dev --level=$level --raid-devices=$num \
+	mdadm --create /dev/md$idx --level=$level --raid-devices=$num \
 		--quiet --run $@ $missing || return 1
 }
 
@@ -780,7 +604,7 @@ setup_lvm_volume_group() {
 		setup_non_boot_raid_dev /dev/md1 $@ || return 1
 		lvmdev=/dev/md1
 	else
-		lvmdev=$(find_partitions "$1" "lvm")
+		lvmdev=$(find_lvm_partition $1)
 	fi
 
 	# be quiet on success
@@ -794,12 +618,11 @@ setup_lvm_volume_group() {
 setup_swap_dev() {
 	local swap_dev=
 	sed -i -e '/swap/d' /etc/fstab
-	SWAP_DEVICES=
 	for swap_dev in "$@"; do
 		mkswap $swap_dev >/dev/null
-		echo -e "$(uuid_or_device $swap_dev)\tswap\t\tswap\tdefaults 0 0" >> /etc/fstab
-		SWAP_DEVICES="$SWAP_DEVICES $swap_dev"
+		echo -e "$swap_dev\tswap\t\tswap\tdefaults 0 0" >> /etc/fstab
 	done
+	SWAP_DEVICE="$(uuid_or_device $swap_dev)"
 	swapon -a
 	rc-update --quiet add swap boot
 }
@@ -830,7 +653,7 @@ setup_var() {
 	echo "Creating file systems..."
 	mkfs.$varfs $MKFS_OPTS_VAR $var_dev >/dev/null || return 1
 	sed -i -e '/[[:space:]]\/var[[:space:]]/d' /etc/fstab
-	echo -e "$(uuid_or_device ${var_dev})\t/var\t\t${varfs}\tdefaults 1 2" >> /etc/fstab
+	echo -e "${var_dev}\t/var\t\t${varfs}\tdefaults 1 2" >> /etc/fstab
 
 	mv /var /.var
 	mkdir /var
@@ -860,20 +683,21 @@ data_only_disk_install_lvm() {
 	local diskdev=
 	local vgname=vg0
 	local var_dev=/dev/$vgname/lv_var
-	local lvm_part_type=$(partition_id lvm)
+	local lvm_part_type="8e"
+	local part_type=$lvm_part_type
 	local size=
-	unset BOOTLOADER
 
 	init_progs || return 1
 	confirm_erase $@ || return 1
 
 	if [ "$USE_RAID" ]; then
-		lvm_part_type=$(partition_id raid)
+		# the paritition type for raid is "fd"
+		part_type="fd"
 		stop_all_raid
 	fi
 
 	for diskdev in "$@"; do
-		setup_partitions $diskdev "${size}${size:+M},$lvm_part_type" || return 1
+		setup_partitions $diskdev "${size}${size:+M},$part_type" || return 1
 	done
 
 	setup_lvm_volume_group $vgname $@ || return 1
@@ -887,18 +711,17 @@ data_only_disk_install_lvm() {
 data_only_disk_install() {
 	local diskdev=
 	local var_dev=
-	local var_part_type=$(partition_id linux)
-	local swap_part_type=$(partition_id swap)
+	local var_part_type="83"
+	local swap_part_type=82
 	local size=
 	local swap_dev= var_dev=
-	unset BOOTLOADER
 
 	init_progs || return 1
 	confirm_erase $@ || return 1
 
 	if [ "$USE_RAID" ]; then
-		var_part_type=$(partition_id raid)
-		swap_part_type=$(partition_id raid)
+		var_part_type="fd"
+		swap_part_type="fd"
 		stop_all_raid
 	fi
 
@@ -909,18 +732,13 @@ data_only_disk_install() {
 	done
 
 	if [ "$USE_RAID" ]; then
-		if [ $SWAP_SIZE -gt 0 ]; then
-			swap_dev=/dev/md1
-			var_dev=/dev/md2
-		else
-			swap_dev=
-			var_dev=/dev/md1
-		fi
-		setup_non_boot_raid_dev "$swap_dev" $@ || return 1
-		setup_non_boot_raid_dev "$var_dev" $@ || return 1
+		[ $SWAP_SIZE -gt 0 ] && setup_non_boot_raid_dev /dev/md1 $@
+		setup_non_boot_raid_dev /dev/md2 $@ || return 1
+		swap_dev=/dev/md1
+		var_dev=/dev/md2
 	else
-		swap_dev=$(find_nth_non_boot_parts 1 "$swap_part_type" $@)
-		var_dev=$(find_nth_non_boot_parts 1 "$var_part_type" $@)
+		swap_dev=$(find_nth_non_boot_parts 1 82 $@)
+		var_dev=$(find_nth_non_boot_parts 1 83 $@)
 	fi
 	[ $SWAP_SIZE -gt 0 ] && setup_swap_dev $swap_dev
 	setup_var $var_dev
@@ -928,24 +746,18 @@ data_only_disk_install() {
 
 # setup
 setup_root() {
-	local root_dev="$1" boot_dev="$2"
-	shift 2
-	local disks="$@" mkfs_args="-q"
+	local root_dev="$1" boot_dev="$2" mkfs_args="-q"
 	[ "$ROOTFS" = "btrfs" ] && mkfs_args=""
 	mkfs.$ROOTFS $MKFS_OPTS_ROOT $mkfs_args "$root_dev"
 	mkdir -p "$SYSROOT"
 	mount -t $ROOTFS $root_dev "$SYSROOT" || return 1
-	if [ -n "$boot_dev" ] && [ -z "$USE_EFI" ]; then
+	if [ -n "$boot_dev" ]; then
 		mkdir -p "$SYSROOT"/boot
 		mount -t $BOOTFS $boot_dev "$SYSROOT"/boot || return 1
 	fi
-	if [ -n "$boot_dev" ] && [ -n "$USE_EFI" ]; then
-		mkdir -p "$SYSROOT"/boot/efi
-		mount -t $BOOTFS $boot_dev "$SYSROOT"/boot/efi || return 1
-	fi
 
 	setup_mdadm_conf
-	install_mounted_root "$SYSROOT" "$disks" || return 1
+	install_mounted_root "$SYSROOT" || return 1
 	unmount_partitions "$SYSROOT"
 	swapoff -a
 
@@ -955,35 +767,24 @@ setup_root() {
 
 native_disk_install_lvm() {
 	local diskdev= vgname=vg0
-	local lvm_part_type=$(partition_id lvm)
-	local boot_part_type=$(partition_id linux)
+	local lvm_part_type="8e"
+	local boot_part_type="83"
 	local boot_size=${BOOT_SIZE:-100}
 	local lvm_size=
 	local root_dev=/dev/$vgname/lv_root
 
-	init_progs $(select_bootloader) || return 1
+	init_progs syslinux || return 1
 	confirm_erase $@ || return 1
 
 	if [ -n "$USE_RAID" ]; then
-		boot_part_type=$(partition_id raid)
-		lvm_part_type=$(partition_id raid)
+		boot_part_type="fd"
+		lvm_part_type="fd"
 		stop_all_raid
 	fi
-
-	if [ -n "$USE_EFI" ]; then
-		boot_part_type=$(partition_id esp)
-	fi
-
 	for diskdev in "$@"; do
-		if is_dasd $diskdev eckd; then
-			root_part_type="lvm"
-			setup_partitions_eckd $diskdev \
-				$boot_size 0 $root_part_type || return 1
-		else
-			setup_partitions $diskdev \
-				"${boot_size}M,$boot_part_type,*" \
-				"${lvm_size}${lvm_size:+M},$lvm_part_type" || return 1
-		fi
+		setup_partitions $diskdev \
+			"${boot_size}M,$boot_part_type,*" \
+			"${lvm_size}${lvm_size:+M},$lvm_part_type" || return 1
 	done
 
 	# will find BOOT_DEV for us
@@ -997,121 +798,86 @@ native_disk_install_lvm() {
 }
 
 native_disk_install() {
-	local prep_part_type=$(partition_id prep)
-	local root_part_type=$(partition_id linux)
-	local swap_part_type=$(partition_id swap)
-	local boot_part_type=$(partition_id linux)
-	local prep_size=8
+	local root_part_type="83" swap_part_type="82" boot_part_type="83"
 	local boot_size=${BOOT_SIZE:-100}
 	local swap_size=${SWAP_SIZE}
 	local root_size=
 	local root_dev= boot_dev= swap_dev=
-	init_progs $(select_bootloader) || return 1
+
+	init_progs syslinux || return 1
 	confirm_erase $@ || return 1
 
 	if [ -n "$USE_RAID" ]; then
-		boot_part_type=$(partition_id raid)
-		root_part_type=$(partition_id raid)
-		swap_part_type=$(partition_id raid)
+		boot_part_type="fd"
+		root_part_type="fd"
+		swap_part_type="fd"
 		stop_all_raid
 	fi
-
-	if [ -n "$USE_EFI" ]; then
-		boot_part_type=$(partition_id esp)
-	fi
-
 	for diskdev in "$@"; do
-		if [ "$ARCH" = "ppc64le" ]; then
-			setup_partitions $diskdev \
-				"${prep_size}M,$prep_part_type" \
-				"${boot_size}M,$boot_part_type,*" \
-				"${swap_size}M,$swap_part_type" \
-				"${root_size}${root_size:+M},$root_part_type" \
-				|| return 1
-		elif is_dasd $diskdev eckd; then
-			swap_part_type="swap"
-			root_part_type="native"
-			setup_partitions_eckd $diskdev \
-				$boot_size $swap_size $root_part_type || return 1
-		else
-			setup_partitions $diskdev \
-				"${boot_size}M,$boot_part_type,*" \
-				"${swap_size}M,$swap_part_type" \
-				"${root_size}${root_size:+M},$root_part_type" \
-				|| return 1
-		fi
+		setup_partitions $diskdev \
+			"${boot_size}M,$boot_part_type,*" \
+			"${swap_size}M,$swap_part_type" \
+			"${root_size}${root_size:+M},$root_part_type" \
+			|| return 1
 	done
 
 	# will find BOOT_DEV for us
 	setup_boot_dev $@
 
 	if [ "$USE_RAID" ]; then
-		if [ $SWAP_SIZE -gt 0 ]; then
-			swap_dev=/dev/md1
-			root_dev=/dev/md2
-		else
-			swap_dev=
-			root_dev=/dev/md1
-		fi
-		setup_non_boot_raid_dev "$swap_dev" $@ || return 1
-		setup_non_boot_raid_dev "$root_dev" $@ || return 1
+		[ $SWAP_SIZE -gt 0 ] && setup_non_boot_raid_dev /dev/md1 $@
+		setup_non_boot_raid_dev /dev/md2 $@ || return 1
+		swap_dev=/dev/md1
+		root_dev=/dev/md2
 	else
-		swap_dev=$(find_nth_non_boot_parts 1 "$swap_part_type" $@)
-		local index=
-		case "$ARCH" in
-			# use the second non botable partition on ppc64le,
-			# as PReP partition is the bootable partition
-			ppc64le) index=2;;
-			*) index=1;;
-		esac
-		root_dev=$(find_nth_non_boot_parts $index "$root_part_type" $@)
+		swap_dev=$(find_nth_non_boot_parts 1 82 $@)
+		root_dev=$(find_nth_non_boot_parts 1 83 $@)
 	fi
-
 	[ $SWAP_SIZE -gt 0 ] && setup_swap_dev $swap_dev
-	setup_root $root_dev $BOOT_DEV $@
+	setup_root $root_dev $BOOT_DEV
 }
 
 diskselect_help() {
-	cat <<-__EOF__
+	cat <<__EOF__
 
-		The disk you select can be used for a traditional disk install or for a
-		data-only install.
+The disk you select can be used for a traditional disk install or for a
+data-only install.
 
-		The disk will be erased.
+The disk will be erased.
 
-		Enter 'none' if you want to run diskless.
+Enter 'none' if you want to run diskless.
 
-	__EOF__
+__EOF__
 }
 
 diskmode_help() {
-	cat <<-__EOF__
+	cat <<__EOF__
 
-		You can select between 'sys', 'data', 'lvm', 'lvmsys' or 'lvmdata'.
+You can select between 'sys', 'data', 'lvm', 'lvmsys' or 'lvmdata'.
 
-		sys:
-		  This mode is a traditional disk install. The following partitions will be
-		  created on the disk: /boot, / (filesystem root) and swap.
+sys:
+  This mode is a traditional disk install. The following partitions will be
+  created on the disk: /boot, / (filesystem root) and swap.
 
-		  This mode may be used for development boxes, desktops, virtual servers, etc.
+  This mode may be used for development boxes, desktops, virtual servers, etc.
 
-		data:
-		  This mode uses your disk(s) for data storage, not for the operating system.
-		  The system itself will run from tmpfs (RAM).
+data:
+  This mode uses your disk(s) for data storage, not for the operating system.
+  The system itself will run from tmpfs (RAM).
 
-		  Use this mode if you only want to use the disk(s) for a mailspool, databases,
-		  logs, etc.
+  Use this mode if you only want to use the disk(s) for a mailspool, databases,
+  logs, etc.
 
-		lvm:
-		  Enable logical volume manager and ask again for 'sys' or 'data'.
+lvm:
+  Enable logical volume manager and ask again for 'sys' or 'data'.
 
-		lvmsys:
-		  Same as 'sys' but use logical volume manager for partitioning.
+lvmsys:
+  Same as 'sys' but use logical volume manager for partitioning.
 
-		lvmdata:
-		  Same as 'data' but use logical volume manager for partitioning.
+lvmdata:
+  Same as 'data' but use logical volume manager for partitioning.
 
-	__EOF__
+__EOF__
 }
 
 # ask for a root or data disk
@@ -1137,62 +903,52 @@ ask_disk() {
 				if ! [ -b "/dev/$i" ]; then
 					echo "/dev/$i is not a block device" >&2
 					answer=
-				fi
+				   fi
 			done;;
 		esac
 	done
 }
 
 usage() {
-	cat <<-__EOF__
-		usage: setup-disk [-hLqrv] [-k kernelflavor] [-m MODE] [-o apkovl] [-s SWAPSIZE]
-		                  [MOUNTPOINT | DISKDEV...]
+	cat <<__EOF__
+usage: setup-disk [-hLqrv] [-k kernelflavor] [-m MODE] [-o apkovl] [-s SWAPSIZE]
+		  [MOUNTPOINT | DISKDEV...]
 
-		Install alpine on harddisk.
+Install alpine on harddisk.
 
-		If MOUNTPOINT is specified, then do a traditional disk install with MOUNTPOINT
-		as root.
+If MOUNTPOINT is specified, then do a traditional disk install with MOUNTPOINT
+as root.
 
-		If DISKDEV is specified, then use the specified disk(s) without asking. If
-		multiple disks are specified then set them up in a RAID array. If there are
-		mode than 2 disks, then use raid level 5 instead of raid level 1.
+If DISKDEV is specified, then use the specified disk(s) without asking. If
+multiple disks are specified then set them up in a RAID array. If there are
+mode than 2 disks, then use raid level 5 instead of raid level 1.
 
-		options:
-		 -h  Show this help
-		 -m  Use disk for MODE without asking, where MODE is either 'data' or 'sys'
-		 -o  Restore system from given apkovl file
-		 -k  Use kernelflavor instead of $KERNEL_FLAVOR
-		 -L  Use LVM to manage partitions
-		 -q  Exit quietly if no disks are found
-		 -r  Enable software raid1 with single disk
-		 -s  Use SWAPSIZE MB instead of autodetecting swap size (Use 0 to disable swap)
-		 -v  Be more verbose about what is happening
+options:
+ -h  Show this help
+ -m  Use disk for MODE without asking, where MODE is either 'data' or 'sys'
+ -o  Restore system from given apkovl file
+ -k  Use kernelflavor instead of $KERNEL_FLAVOR
+ -L  Use LVM to manage partitions
+ -q  Exit quietly if no disks are found
+ -r  Enable software raid1 with single disk
+ -s  Use SWAPSIZE MB instead of autodetecting swap size (Use 0 to disable swap)
+ -v  Be more verbose about what is happening
 
-		If BOOTLOADER is specified, the specified bootloader will be used.
-		If no bootloader is specified, the default bootloader is syslinux(extlinux)
-		except when EFI is detected or explicitly set by USE_EFI which will select grub.
-		Supported bootloaders are: grub, syslinux
-
-		If DISKLABEL is specified, the specified partition label will be used.
-		if no partition label is specified, the default label will be dos
-		except when EFI is detected or explicitly set by USE_EFI which will select gpt.
-		Supported partition labels are: dos, gpt
-
-		If BOOTFS, ROOTFS, VARFS are specified, then format a partition with specified
-		filesystem. If not specified, the default filesystem is ext4.
-		Supported filesystems for
-		  boot: ext2, ext3, ext4, btrfs, xfs, vfat(EFI)
-		  root: ext2, ext3, ext4, btrfs, xfs
-		   var: ext2, ext3, ext4, btrfs, xfs
-	__EOF__
+If BOOTFS, ROOTFS, VARFS are specified, then format a partition with specified
+filesystem. If not specified, the default filesystem is ext4.
+Supported filesystems for
+  boot: ext2, ext3, ext4, btrfs
+  root: ext2, ext3, ext4, btrfs, xfs
+   var: ext2, ext3, ext4, btrfs, xfs
+__EOF__
 	exit 1
 }
 
 kver=$(uname -r)
 case $kver in
-	*-rc[0-9]*) KERNEL_FLAVOR=vanilla;;
-	*-[a-z]*) KERNEL_FLAVOR=${kver##*-};;
-	*) KERNEL_FLAVOR=vanilla;;
+        *-rc[0-9]*) KERNEL_FLAVOR=vanilla;;
+        *-[a-z]*) KERNEL_FLAVOR=${kver##*-};;
+        *) KERNEL_FLAVOR=vanilla;;
 esac
 
 DISK_MODE=
@@ -1231,8 +987,6 @@ if [ -n "$USE_RAID" ]; then
 	stop_all_raid
 fi
 
-check_dasd
-
 disks=$(find_disks)
 diskdevs=
 
@@ -1247,7 +1001,8 @@ if [ $# -gt 0 ]; then
 	for i in "$@"; do
 		j=$(readlink -f "$i" | sed 's:^/dev/::; s:/:!:g')
 		if ! [ -e "/sys/block/$j/device" ]; then
-			die "$i is not a suitable for partitioning"
+			echo "$i is not a suitable for partitioning"
+			exit 1
 		fi
 		diskdevs="$diskdevs /dev/${j//!//}"
 	done
@@ -1276,7 +1031,7 @@ if [ -n "$diskdevs" ] && [ -z "$DISK_MODE" ]; then
 	while true; do
 		echo "The following $disk_is_or_disks_are selected${USE_LVM:+ (with LVM)}:"
 		show_disk_info $diskdevs
-		_lvm=${USE_LVM:-", 'lvm'"}
+		local _lvm=${USE_LVM:-", 'lvm'"}
 		echon "How would you like to use $it_them? ('sys', 'data'${_lvm#_lvm} or '?' for help) [?] "
 		default_read answer '?'
 		case "$answer" in
@@ -1299,25 +1054,9 @@ if [ -z "$SWAP_SIZE" ]; then
 fi
 
 set -- $diskdevs
-if is_dasd $1 eckd; then
-	DISKLABEL=eckd
-fi
 if [ $# -gt 1 ]; then
 	USE_RAID=1
 fi
-
-if is_efi || [ -n "$USE_EFI" ]; then
-	USE_EFI=1
-	DISKLABEL=gpt
-	BOOTLOADER=grub
-	BOOT_SIZE=512
-	BOOTFS=vfat
-fi
-
-case "$ARCH" in
-	ppc64le) BOOTLOADER=grub;;
-	s390x) BOOTLOADER=zipl;;
-esac
 
 dmesg -n1
 
@@ -1326,9 +1065,7 @@ case "$DISK_MODE" in
 sys) native_disk_install$USE_LVM $diskdevs;;
 data) data_only_disk_install$USE_LVM $diskdevs;;
 none) exit 0;;
-*) die "Not a valid install mode: $DISK_MODE" ;;
+*) echo "Not a valid install mode: $DISK_MODE" >&2; exit 1;;
 esac
 
-RC=$?
 echo "$DISK_MODE" > /tmp/alpine-install-diskmode.out
-exit $RC

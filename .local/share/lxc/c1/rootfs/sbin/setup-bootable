@@ -1,18 +1,7 @@
 #!/bin/sh
 
 prog=${0##*/}
-version=3.8.0-r0
-files_to_move="boot efi apks syslinux.cfg .alpine-release"
-read_only_mounts=
-umounts=
-uninstalls=
-destdir=
-
-cleanup_tmpdata() {
-	if [ -d "$destdir" -a -d "$destdir/.new" ]; then
-		rm -rf "$destdir"/.new
-	fi
-}
+version=3.4.1-r5
 
 cleanup_mounts() {
 	local i=
@@ -22,34 +11,23 @@ cleanup_mounts() {
 	for i in $read_only_mounts; do
 		mount -o remount,ro "$i" || echo "Warning: Failed to remount as read-only. Is modloop mounted?"
 	done
-	read_only_mounts=""
 	if [ -n "$umounts" ]; then
 		umount $umounts
-		umounts=""
 	fi
 }
 
 cleanup_installs() {
 	if [ -n "$uninstalls" ]; then
-		apk del --quiet $uninstalls
-		uninstalls=""
+		apk del --quiet syslinux
 	fi
 }
 
-cleanup() {
-	cleanup_tmpdata
-	cleanup_mounts
-	cleanup_installs
-}
-
-trap cleanup EXIT
-trap "exit 2" INT TERM QUIT
-
 die() {
 	echo "$@" >&2
+	cleanup_mounts
+	cleanup_installs
 	exit 1
 }
-
 
 # find device for mountpoint
 find_dev() {
@@ -63,6 +41,18 @@ on_usb_bus() {
 	[ -e /sys/block/$dev ] || return 1
 	local sysdev=$(readlink -f /sys/block/$dev/device)
 	test "${sysdev##*/usb[0-9]}" != "$sysdev"
+}
+
+# mount source as loopback and set srcdir
+mount_srcdir() {
+	local srcmnt=${MNT:-/mnt}
+	mount -o loop -t iso9660 "$src" $srcmnt \
+		|| die "Failed to mount loopback $src"
+	umounts="$srcmnt"
+	srcdir="$srcmnt"
+	if ! [ -f "$srcdir"/.alpine-release ]; then
+		die "No .alpine-release found on image $src"
+	fi
 }
 
 vecho() {
@@ -108,14 +98,14 @@ find_syslinux_cfg() {
 fix_syslinux_kernel() {
 	echo "Fixing $syslinux_cfg: kernel $1 -> $2"
 		sed -i -e "/^\s*[Kk][Ee][Rr][Nn][Ee][Ll]\s/s|$1|$2|" \
- 			"$destdir/$syslinux_cfg"
+                "$destdir/$syslinux_cfg"
 }
 
 fix_syslinux_initrd() {
 	echo "Fixing $syslinux_cfg: initrd $1 -> $2"
 	sed -i -e "/^\s*[Ii][Nn][Ii][Tt][Rr][Dd]\s/s|$1|$2|" \
 		-e "/^\s*[Aa][Pp][Pp][Ee][Nn][Dd]\s/s|initrd=$1|initrd=$2|" \
-			"$destdir/$syslinux_cfg"
+                "$destdir/$syslinux_cfg"
 }
 
 check_syslinux() {
@@ -170,44 +160,29 @@ check_syslinux() {
 	done
 }
 
-version_check() {
-	local new_dir="$1" old_dir="$2"
-	# check if its same version
-	local to_version=$(cat "$new_dir"/.alpine-release)
-	if [ -n "$upgrade" ] && [ -e "$old_dir"/.alpine-release ]; then
-		local from_version=$(cat "$old_dir"/.alpine-release)
-		if [ -z "$force" ] && [ -n "$to_version" ] && [ "$from_version" = "$to_version" ]; then
-			die "Source and target seems to have same version ($from_version). Aborting."
-		fi
-		echo "Upgrading $dest from $from_version to $to_version"
-	else
-		echo "Installing $dest to $to_version"
-	fi
-}
-
 usage() {
-	cat <<-__EOF__
-		$prog $version
-		usage: $prog [-fhUusv] SOURCE [DEST]
-		       $prog -c DIR
+	cat <<__EOF__
+$prog $version
+usage: $prog [-fhUusv] SOURCE [DEST]
+       $prog -c DIR
 
-		Copy the contents of SOURCE to DEST and make DEST bootable.
+Copy the contents of SOURCE to DEST and make DEST bootable.
 
-		SOURCE can be a directory or a ISO image. DEST can be a mounted directory
-		or a device. If DEST is ommitted /media/usb will be used.
+SOURCE can be a directory or a ISO image. DEST can be a mounted directory
+or a device. If DEST is ommitted /media/usb will be used.
 
-		Options:
-		 -f  Force overwrite existing files. Will overwrite syslinux.cfg if upgrade.
-		 -h  Show this help.
-		 -k  fix kernel and initrd name in syslinux.cfg if needed.
-		 -U  Replace current alpine_dev in syslinux.cfg with UUID if UUID found.
-		 -u  Upgrade mode. Keep existing syslinux.cfg and don't run syslinux.
-		 -s  Force run syslinux, even if upgrade mode.
-		 -v  Verbose mode. Display whats going on.
+Options:
+ -f  Force overwrite existing files. Will overwrite syslinux.cfg if upgrade.
+ -h  Show this help.
+ -k  fix kernel and initrd name in syslinux.cfg if needed.
+ -U  Replace current alpine_dev in syslinux.cfg with UUID if UUID found.
+ -u  Upgrade mode. Keep existing syslinux.cfg and don't run syslinux.
+ -s  Force run syslinux, even if upgrade mode.
+ -v  Verbose mode. Display whats going on.
 
-		 -c  Check syslinux.cfg in destination DIR. Use with -f to fix.
+ -c  Check syslinux.cfg in destination DIR. Use with -f to fix.
 
-	__EOF__
+__EOF__
 	exit 1
 }
 
@@ -236,6 +211,21 @@ if [ -n "$check_syslinux" ]; then
 fi
 
 [ -z "$src" ] && usage
+
+srcdir=
+# Find the srcdir or srcurl. mount loopback if needed
+if [ -f "$src"/.alpine-release ]; then
+	srcdir="`echo $src | sed -r 's,/$,,'`"
+else
+	case "$src" in
+	http://*|ftp://*) srcurl="$src";;
+	*) mount_srcdir;;
+	esac
+fi
+
+if [ -n "$srcdir" ]; then
+	to_version=$(cat "$srcdir"/.alpine-release)
+fi
 
 # find target device
 if [ -d "$dest" ]; then
@@ -278,39 +268,57 @@ parent_dev=$(find_disk_dev $dev)
 
 # check if this files exist and not in upgrade mode
 if [ -z "$upgrade" ] && [ -z "$force" ]; then
-	for i in $files_to_move; do
+	for i in boot apks syslinux.cfg .alpine-release; do
 		[ -e "$destdir"/$i ] && die "$destdir/$i already exists. Use -u to upgrade."
 	done
 fi
 
-# remove partial upgrades if any
+# check if its same version
+if [ -n "$upgrade" ] && [ -e "$destdir"/.alpine-release ]; then
+	from_version=$(cat "$destdir"/.alpine-release)
+	if [ -z "$force" ] && [ -n "$to_version" ] && [ "$from_version" = "$to_version" ]; then
+		die "Source and target seems to have same version ($from_version). Aborting."
+	fi
+fi
+
+# Display what versions we are installing/upgrading
+if [ -n "$from_version" ]; then
+	echo "Upgrading $dest from $from_version to $to_version"
+else
+	echo "Copying $to_version to $dest (mounted on $destdir)"
+fi
+
+# remove partial upgrades if any.
 rm -rf "$destdir"/.new "$destdir"/.old
 mkdir -p "$destdir"/.new || die "Failed to create $destdir/.new"
 
-# copy data from source to .new
-if [ -f "$src"/.alpine-release ]; then
-	srcdir="$(echo $src | sed -r 's,/$,,')"
-	version_check "$srcdir" "$destdir"
-	for i in $files_to_move; do
+# check that we have the space we need
+# we calculate on MB since shell arthimetic gets problems with big disks
+# and bytes.
+free_blocks=$(stat -f -c "%f" "$destdir")
+block_size=$(stat -f -c "%s" "$destdir")
+blocks_per_mb=$(( 1024 * 1024 / $block_size))
+available_space=$(( $free_blocks / $blocks_per_mb ))
+vecho "Available space: $available_space MiB"
+
+if [ -n "$srcdir" ]; then
+	needed_space=$(cd "$srcdir" && du -m -s -c boot apks .alpine-release | awk '$2 == "total" {print $1}')
+	vecho "Needed space:    $needed_space MiB"
+	[ $available_space -lt $needed_space ] \
+		&& die "Not enough space on $destdir. Aborting."
+
+	# copy the files to .new
+	for i in boot apks syslinux.cfg .alpine-release; do
 		if [ -e "$srcdir"/$i ]; then
 			vecho "Copying $srcdir/$i to $destdir/.new/"
-			cp -dR "$srcdir"/$i "$destdir"/.new/
+			cp -a "$srcdir"/$i "$destdir"/.new/
 		fi
 	done
-else
-	vecho "Extracting $src to $destdir/.new/"
-	case "$src" in
-	http://*|ftp://*)
-		${WGET:-wget} -O - "$src" | (cd "$destdir"/.new; exec ${UNISO:-uniso}) \
-			|| die "Failed to download or extract $src"
-		echo ""
-		;;
-	*)
-		(cd "$destdir"/.new; exec ${UNISO:-uniso}) < "$src" \
-			|| die "Failed to download or extract $src"
-		;;
-	esac
-	version_check "$destdir/.new" "$destdir"
+elif [ -n "$srcurl" ]; then
+	cd "$destdir"/.new
+	${WGET:-wget} -O - "$srcurl" | uniso \
+		|| die "Failed to download or extract $srcurl"
+	echo ""
 fi
 
 # find where new syslinux.cfg is
@@ -328,8 +336,10 @@ sync
 vecho "Replacing existing files..."
 mkdir -p "$destdir"/.old || die "Failed to create $destdir/.old"
 
+tomove="boot apks syslinux.cfg .alpine-release"
+
 # move current files to .old
-for i in $files_to_move; do
+for i in $tomove; do
 	if [ -e "$destdir"/$i ]; then
 		mv "$destdir"/$i "$destdir"/.old/ || die "Failed to move $destdir/$i to $destdir/.old/"
 	fi
@@ -348,7 +358,7 @@ elif [ -e "$destdir"/.old/syslinux.cfg ] \
 fi
 
 # move .new to current
-for i in $files_to_move; do
+for i in $tomove; do
 	if [ -e "$destdir"/.new/$i ]; then
 		mv "$destdir"/.new/$i "$destdir"/ \
 			|| die "Failed to move $destdir/.new/ to $destdir"
@@ -368,6 +378,8 @@ check_syslinux
 
 # If we only copy then we are done.
 if [ -n "$upgrade" ] && [ -z "$syslinux" ]; then
+	cleanup_installs
+	cleanup_mounts
 	exit 0
 fi
 
@@ -391,7 +403,9 @@ fsync $dest
 syslinux $dest
 
 if [ -b $parent_dev ]; then
-	dd if=/usr/share/syslinux/mbr.bin of=$parent_dev status=none
+	dd if=/usr/share/syslinux/mbr.bin of=$parent_dev
 else
 	echo "Warning: Could not find the parent device for $dest"
 fi
+cleanup_installs
+

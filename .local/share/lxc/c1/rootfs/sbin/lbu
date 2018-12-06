@@ -4,7 +4,7 @@
 # Copyright (c) 2006-2010 Natanael Copa <ncopa@alpinelinux.org>
 # May be distributed under GPL2 or MIT
 
-VERSION=3.8.0-r0
+VERSION=3.4.1-r5
 sysconfdir=/etc/lbu
 
 if [ ! -f ${libalpine:="./libalpine.sh"} ]; then
@@ -33,29 +33,28 @@ fi
 UMOUNT_LIST=
 
 usage() {
-	cat <<-__EOF__
-		$PROGRAM $VERSION"
-		usage: $PROGRAM <subcommand> [options] [args]
+	echo "$PROGRAM $VERSION"
+	echo "usage: $PROGRAM <subcommand> [options] [args]
 
-		Available subcommands:
-		  commit (ci)
-		  diff
-		  exclude (ex, delete)
-		  include (inc, add)
-		  list (ls)
-		  list-backup (lb)
-		  migrate_include_exclude
-		  package (pkg)
-		  revert
-		  status (stat, st)
-
+Available subcommands:
+  commit (ci)
+  diff
+  exclude (ex, delete)
+  include (inc, add)
+  list (ls)
+  list-backup (lb)
+  migrate_include_exclude
+  package (pkg)
+  revert
+  status (stat, st)
 
 
-		Common options:
-		 -h	Show help for subcommand.
-		 -q	Quiet mode.
-		 -v	Verbose mode.
-	__EOF__
+
+Common options:
+ -h	Show help for subcommand.
+ -q	Quiet mode.
+ -v	Verbose mode.
+"
 	exit 1
 }
 
@@ -207,7 +206,7 @@ unpack_apkovl() {
 		return
 	fi
 	check_openssl
-	while [ $count -lt 3 ]; do
+        while [ $count -lt 3 ]; do
 		$OPENSSL enc -d -$ENCRYPTION -in "$mnt/$f" | tar \
 			-C "$dest" -zx 2>/dev/null && return 0
 		count=$(( $count + 1 ))
@@ -220,18 +219,17 @@ unpack_apkovl() {
 # lbu_include - add/remove files to include list
 #
 usage_include() {
-	cat <<-__EOF__
-		$PROGRAM $VERSION
-		Add filename(s) to include list ($sysconfdir/include)
+	echo "$PROGRAM $VERSION
+Add filename(s) to include list ($sysconfdir/include)
 
-		usage: $PROGRAM include|inc|add [-rv] <file> ...
-		       $PROGRAM include|inc|add [-v] -l
+usage: $PROGRAM include|inc|add [-rv] <file> ...
+       $PROGRAM include|inc|add [-v] -l
 
-		Options:
-		  -l	List contents of include list.
-		  -r	Remove specified file(s) from include list instead of adding.
-		  -v	Verbose mode.
-	__EOF__
+Options:
+  -l	List contents of include list.
+  -r	Remove specified file(s) from include list instead of adding.
+  -v	Verbose mode.
+"
 	exit 1
 }
 
@@ -263,29 +261,28 @@ show_include() {
 # lbu_package - create a package
 #
 usage_package() {
-	cat <<-__EOF__
-		$PROGRAM $VERSION
-		Create backup package.
+	echo "$PROGRAM $VERSION
+Create backup package.
 
-		usage: $PROGRAM package|pkg -v [<dirname>|<filename>]
+usage: $PROGRAM package|pkg -v [<dirname>|<filename>]
 
-		Options:
-		  -v	Verbose mode.
+Options:
+  -v	Verbose mode.
 
-		If <dirname> is a directory, a package named <hostname>.apkovl.tar.gz will
-		be created in the specified directory.
+If <dirname> is a directory, a package named <hostname>.apkovl.tar.gz will
+be created in the specified directory.
 
-		If <filename> is specified, and is not a direcotry, a package with the
-		specified name willbe created.
+If <filename> is specified, and is not a direcotry, a package with the
+specified name willbe created.
 
-		If <dirname> nor <filename> is not specified, a package named
-		<hostname>.apkovl.tar.gz will be created in current work directory.
-	__EOF__
+If <dirname> nor <filename> is not specified, a package named
+<hostname>.apkovl.tar.gz will be created in current work directory.
+"
 	exit 1
 }
 
 _gen_filelist() {
-	apk audit --root ${ROOT:-/} --backup --quiet --recursive --check-permissions
+	apk audit --backup --quiet --recursive --check-permissions
 }
 
 cmd_package() {
@@ -303,7 +300,7 @@ cmd_package() {
 		run-parts "$LBU_PREPACKAGE" >&2 || return 1
 	fi
 
-	[ -n "$ENCRYPTION" ] && [ "x$pkg" != "x-" ] && suff="$suff.$ENCRYPTION"
+	[ -n "$ENCRYPTION" ] && suff="$suff.$ENCRYPTION"
 
 	# find filename
 	if [ -d "$pkg" ] ; then
@@ -332,7 +329,7 @@ cmd_package() {
 		rc=$?
 	fi
 	if [ $rc -eq 0 ]; then
-		if [ -z "$ENCRYPTION" ] || [ "x$pkg" = "x-" ]; then
+		if [ -z "$ENCRYPTION" ]; then
 			_gen_filelist | $tar_create -z >"$tmppkg"
 			rc=$?
 		else
@@ -374,12 +371,11 @@ cmd_package() {
 # lbu list - list files that would go to archive
 #
 usage_list() {
-	cat <<-__EOF__
-		$PROGRAM $VERSION
-		Lists files that would go to tar package. Same as: 'lbu package -v /dev/null'
+	echo "$PROGRAM $VERSION
+Lists files that would go to tar package. Same as: 'lbu package -v /dev/null'
 
-		usage: $PROGRAM list|ls
-	__EOF__
+usage: $PROGRAM list|ls
+"
 	exit 1
 }
 
@@ -392,32 +388,31 @@ cmd_list() {
 # lbu_commit - commit config files to writeable media
 #
 usage_commit() {
-	cat <<-__EOF__
-		$PROGRAM $VERSION
-		Create a backup of config to writeable media.
+	echo "$PROGRAM $VERSION
+Create a backup of config to writeable media.
 
-		usage: $PROGRAM commit|ci [-nv] [<media>]
+usage: $PROGRAM commit|ci [-nv] [<media>]
 
-		Options:
-		  -d	Remove old apk overlay files.
-		  -e	Protect configuration with a password.
-		  -n	Don't commit, just show what would have been commited.
-		  -p <password>	Give encryption password on the command-line
-		  -v	Verbose mode.
+Options:
+  -d	Remove old apk overlay files.
+  -e	Protect configuration with a password.
+  -n	Don't commit, just show what would have been commited.
+  -p <password>	Give encryption password on the command-line
+  -v	Verbose mode.
 
-		The following values for <media> is supported: floppy usb
-		If <media> is not specified, the environment variable LBU_BACKUPDIR or
-		LBU_MEDIA will be used. If LBU_BACKUPDIR is set, nothing will be mounted.
+The following values for <media> is supported: floppy usb
+If <media> is not specified, the environment variable LBU_BACKUPDIR or
+LBU_MEDIA will be used. If LBU_BACKUPDIR is set, nothing will be mounted.
 
-		Password protection will use $DEFAULT_CIPHER encryption. Other ciphers can be
-		used by setting the DEFAULT_CIPHER or ENCRYPTION environment variables.
-		For possible ciphers, try: openssl -v
+Password protection will use $DEFAULT_CIPHER encryption. Other ciphers can be
+used by setting the DEFAULT_CIPHER or ENCRYPTION environment variables.
+For possible ciphers, try: openssl -v
 
-		The password used to encrypt the file, can either be specified with the -p
-		option or using the PASSWORD environment variable.
+The password used to encrypt the file, can either be specified with the -p
+option or using the PASSWORD environment variable.
 
-		The environment variables can also be set in $LBU_CONF
-	__EOF__
+The environment variables can also be set in $LBU_CONF
+"
 	exit 1
 }
 
@@ -482,7 +477,7 @@ cmd_commit() {
 
 	# delete old backups if needed
 	# poor mans 'head -n -N' done with awk.
-	ls "$mnt"/$(hostname).[0-9][0-9][0-9][0-9]*[0-9].tar.gz* 2>/dev/null \
+	ls "$mnt"/$(hostname).[0-9][0-9][0-9][0-9]*[0-9].tar.gz 2>/dev/null \
 		| awk '{ a[++i] = $0; } END {
 			print a[0];
 			while (i-- > '"${BACKUP_LIMIT:-0}"') {
@@ -510,18 +505,17 @@ cmd_commit() {
 # lbu_exclude - add remove file(s) from exclude list
 
 usage_exclude() {
-	cat <<-__EOF__
-		$PROGRAM $VERSION
-		Add filename(s) to exclude list ($sysconfdir/exclude)
+	echo "$PROGRAM $VERSION
+Add filename(s) to exclude list ($sysconfdir/exclude)
 
-		usage: $PROGRAM exclude|ex|delete [-rv] <file> ...
-		       $PROGRAM exclude|ex|delete [-v] -l
+usage: $PROGRAM exclude|ex|delete [-rv] <file> ...
+       $PROGRAM exclude|ex|delete [-v] -l
 
-		Options:
-		  -l	List contents of exclude list.
-		  -r	Remove specified file(s) from exclude list instead of adding.
-		  -v	Verbose mode.
-	__EOF__
+Options:
+  -l	List contents of exclude list.
+  -r	Remove specified file(s) from exclude list instead of adding.
+  -v	Verbose mode.
+"
 	exit 1
 }
 
@@ -552,13 +546,13 @@ show_exclude() {
 #---------------------------------------------------------------------------
 # lbu_listbackup - Show old commits
 usage_listbackup() {
-	cat <<-__EOF__
-		$PROGRAM $VERSION
-		Show old commits.
+	cat <<EOF
+$PROGRAM $VERSION
+Show old commits.
 
-		usage: $PROGRAM list-backup [<media>]
+usage: $PROGRAM list-backup [<media>]
 
-	__EOF__
+EOF
 	exit 1
 }
 
@@ -576,15 +570,15 @@ cmd_listbackup() {
 #---------------------------------------------------------------------------
 # lbu_revert - revert to old config
 usage_revert() {
-	cat <<-__EOF__
-		$PROGRAM $VERSION
-		Revert to older commit.
+	cat <<EOF
+$PROGRAM $VERSION
+Revert to older commit.
 
-		usage: $PROGRAM revert <REVISION> [<media>]
+usage: $PROGRAM revert <REVISION> [<media>]
 
-		The revision should be one of the files listed by 'lbu list-backup'.
+The revision should be one of the files listed by 'lbu list-backup'.
 
-	__EOF__
+EOF
 }
 
 cmd_revert() {
@@ -607,16 +601,15 @@ cmd_revert() {
 #---------------------------------------------------------------------------
 # lbu_status - check what files have been changed since last save
 usage_status() {
-	cat <<-__EOF__
-		$PROGRAM $VERSION
-		Check what files have been changed since last commit.
+	echo "$PROGRAM $VERSION
+Check what files have been changed since last commit.
 
-		usage: $PROGRAM status|st [-av]
+usage: $PROGRAM status|st [-av]
 
-		Options:
-		  -a	Compare all files, not just since last commit.
-		  -v	Also show include and exclude lists.
-	__EOF__
+Options:
+  -a	Compare all files, not just since last commit.
+  -v	Also show include and exclude lists.
+"
 	exit 1
 }
 
@@ -635,7 +628,10 @@ cmd_status() {
 	unpack_apkovl "$tmp/a"
 
 	# generate new apkovl and extract to tmpdir/b
+	local save_encryption="$ENCRYPTION"
+	ENCRYPTION=
 	cmd_package - | tar -C "$tmp/b" -zx
+	ENCRYPTION="$save_encryption"
 
 	# show files that exists in a but not in b as deleted
 	local f
@@ -667,12 +663,11 @@ cmd_status() {
 #-----------------------------------------------------------
 # lbu_diff - run a diff against last commit
 usage_diff() {
-	cat <<-__EOF__
-		$PROGRAM $VERSION
-		Run a diff against last commit
+	echo "$PROGRAM $VERSION
+Run a diff against last commit
 
-		usage: $PROGRAM diff [<media>]
-	__EOF__
+usage: $PROGRAM diff [<media>]
+"
 	exit 1
 }
 
@@ -682,8 +677,9 @@ cmd_diff() {
 	[ -z "$LBU_MEDIA" ] && [ -z "$LBU_BACKUPDIR" ] && usage_diff
 	local tmp
 	init_tmpdir tmp
-	mkdir -p "$tmp/a" "$tmp/b"
+	mkdir -p "$tmpdir/a" "$tmp/b"
 	unpack_apkovl "$tmp/a"
+	ENCRYPTION=
 	cmd_package - | tar -C "$tmp/b" -zx
 	if diff --help 2>&1 | grep -q -- --no-dereference; then
 		diff_opts="--no-dereference"
@@ -727,8 +723,8 @@ cmd_migrate_include_exclude() {
 #-----------------------------------------------------------
 # Main
 
-cmd=$(echo "$PROGRAM" | cut -s -d_ -f2)
-PROGRAM=$(echo "$PROGRAM" | cut -d_ -f1)
+cmd=`echo "$PROGRAM" | cut -s -d_ -f2`
+PROGRAM=`echo "$PROGRAM" | cut -d_ -f1`
 if [ -z "$cmd" ] ; then
 	cmd="$1"
 	[ -z "$cmd" ] && usage
@@ -777,7 +773,7 @@ while getopts "adehlM:np:qrv" opt ; do
 			;;
 	esac
 done
-shift $(expr $OPTIND - 1)
+shift `expr $OPTIND - 1`
 
 trap exit_clean SIGINT SIGTERM
 cmd_$SUBCMD "$@"

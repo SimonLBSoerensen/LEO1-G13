@@ -124,3 +124,686 @@
    lxc-monitord 20181130111001.862 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
    lxc-monitord 20181130111032.691 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
    lxc-monitord 20181130111032.692 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181130114014.140 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181130114014.173 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 2116 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181130114014.180 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181130114046.901 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181130114046.907 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181130114047.432 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181130114047.439 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 2298 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181130114047.568 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181130114047.590 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181130114118.471 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181130114118.471 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181130140244.238 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181130140244.355 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 752 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181130140244.140 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181130140244.159 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181130140315.794 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181130140315.798 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181130140714.809 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181130140714.827 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 1217 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181130140714.935 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181130140714.952 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181130140745.832 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181130140745.832 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204090233.149 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204090233.161 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 1391 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204090233.274 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204090233.283 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204090237.185 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204090237.308 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204090237.323 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204090308.204 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204090308.205 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204091520.106 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204091520.114 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 2651 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204091520.114 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204091527.785 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204091527.909 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204091527.918 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204091558.804 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204091558.805 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204091710.753 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204091710.774 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 3245 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204091710.775 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204091715.585 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204091715.707 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204091715.720 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204091746.534 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204091746.535 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204091831.135 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204091831.142 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 3812 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204091831.142 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204091838.292 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204091838.125 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204091838.134 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204091908.980 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204091908.980 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204092730.869 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204092730.887 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 4648 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204092730.888 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204092734.712 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204092734.836 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204092734.850 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204092805.734 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204092805.735 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204092959.926 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204092959.350 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 5315 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204092959.353 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204093003.353 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204093003.464 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204093003.483 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204093006.637 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204093006.647 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204093014.235 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204093014.350 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204093014.373 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204093045.278 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204093045.278 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204095430.487 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204095430.498 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 701 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204095430.596 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204095430.617 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204095438.126 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204095438.243 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204095438.262 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204095509.150 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204095509.150 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204101912.805 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204101912.823 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 2377 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204101912.823 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204101945.574 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204101945.574 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204102054.943 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204102054.949 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 2679 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204102055.612 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204102055.764 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204102125.939 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204102125.939 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204104846.224 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204104846.233 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 625 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204104846.349 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204104846.358 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204104852.892 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204104853.118 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204104853.228 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204104923.907 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204104923.908 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204112034.823 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204112034.842 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 2414 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204112034.842 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204112042.589 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204112042.712 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204112042.731 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204112113.579 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204112113.580 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204125607.860 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204125607.868 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 5756 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204125607.868 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204125614.906 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204125615.225 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204125615.410 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204125629.785 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204125629.803 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204125633.832 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204125633.953 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204125633.962 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204125704.799 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204125704.800 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204125758.495 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204125758.519 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 6911 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204125758.519 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204125822.285 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204125822.151 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204125822.165 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204125852.981 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204125852.997 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204125900.306 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204125900.428 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204125900.437 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204125931.278 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204125931.279 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204130121.483 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204130121.489 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 8173 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204130121.491 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204130126.176 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204130126.293 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204130126.307 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204130157.152 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204130157.152 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204130217.137 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204130217.159 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 8767 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204130217.159 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204130221.704 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204130221.822 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204130221.840 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204130252.668 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204130252.669 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204130423.938 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204130423.956 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 9471 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204130423.956 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204130428.677 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204130428.788 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204130428.807 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204130459.669 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204130459.670 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204130828.526 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204130828.538 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 10134 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204130828.551 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204130833.230 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204130833.351 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204130833.365 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204130904.203 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204130904.203 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204130917.332 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204130917.359 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 10726 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204130917.359 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204130927.467 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204130927.578 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204130927.597 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204130958.445 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204130958.445 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204132246.199 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204132246.211 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 921 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204132246.309 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204132246.328 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204132252.518 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204132252.701 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204132252.726 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204132324.348 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204132324.348 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204133908.713 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204133908.730 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 2151 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204133908.730 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204133915.741 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204133915.762 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204133949.375 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204133949.375 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204134148.334 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204134148.340 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 2742 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204134148.445 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204134148.468 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204134151.333 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204134151.513 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204134151.533 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204134223.209 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204134223.210 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204134934.842 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204134934.852 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 658 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204134934.966 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204134934.980 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204135005.882 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204135005.882 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204135120.119 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204135120.123 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 1120 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204135120.236 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204135120.245 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204135151.113 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204135151.113 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204135607.271 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204135607.275 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204135607.310 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 344 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204135607.701 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204135607.740 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204135607.762 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204135614.397 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204135614.397 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204135614.625 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204135614.626 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204135614.640 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204135657.129 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204135657.129 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204135657.129 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204135948.695 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204135948.711 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 1517 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204135948.711 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204140005.122 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204140005.141 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 8. Number of accepted file descriptors is now 2.
+   lxc-monitord 20181204140106.388 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204140106.388 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204140111.359 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204140111.455 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 2048 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204140111.151 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204140111.160 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204140112.849 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204140113.289 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204140113.585 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204140144.714 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204140144.714 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204141017.678 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204141017.701 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 3103 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141017.701 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204141024.139 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141024.159 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204141031.657 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141031.775 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141031.792 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204141034.390 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141034.248 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141034.279 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204141055.975 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141055.999 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204141115.336 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141115.462 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141115.471 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204141317.611 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204141317.635 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204141317.738 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 279 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141318.321 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204141318.322 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141318.390 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204141325.469 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204141325.469 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141325.631 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204141325.632 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141325.661 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204141407.727 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204141407.728 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204141407.728 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204141719.879 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204141719.894 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 1614 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141719.895 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204141735.735 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141735.769 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 8. Number of accepted file descriptors is now 2.
+   lxc-monitord 20181204141826.964 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141827.913 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141827.107 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 2.
+   lxc-monitord 20181204141837.979 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141837.221 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141837.236 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204141848.671 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141848.792 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141848.806 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204141919.664 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204141919.664 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204141955.784 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204141955.807 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 3373 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204141955.808 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204142000.871 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204142000.983 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204142000.996 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204142031.874 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204142031.874 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204142131.120 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204142131.138 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 3997 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204142131.138 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204142136.982 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204142137.622 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204142140.775 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204142140.507 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204142140.558 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204142142.143 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204142142.411 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204142142.426 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204142214.270 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204142214.271 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204142642.613 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204142642.643 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 5354 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204142642.644 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204142652.140 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204142652.263 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204142652.276 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204142723.138 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204142723.146 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204142752.793 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204142752.871 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 5948 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204142752.874 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204142756.675 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204142756.799 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204142756.813 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204142827.648 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204142827.648 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204144300.715 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204144300.815 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204144300.122 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 304 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204144300.872 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204144300.962 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204144301.356 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204144307.679 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204144307.679 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204144307.848 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204144307.848 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204144307.881 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204144350.711 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204144350.712 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204144350.712 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204145319.563 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204145319.580 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 1694 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204145319.580 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204145338.441 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204145338.474 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 8. Number of accepted file descriptors is now 2.
+   lxc-monitord 20181204145442.718 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204145442.838 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204145442.847 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204145444.280 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204145444.443 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204145444.468 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204145516.214 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204145516.214 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204150222.592 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204150222.614 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 3079 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204150222.614 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204150230.475 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204150230.604 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204150230.623 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204150301.464 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204150301.465 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204150408.954 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204150408.962 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 3650 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204150408.962 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204150415.684 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204150415.808 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204150415.824 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204150446.644 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204150446.645 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204150922.543 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204150922.564 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 4323 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204150922.564 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204150955.115 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204150955.115 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204151020.218 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204151020.225 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 4694 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204151020.339 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204151020.348 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204151051.197 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204151051.198 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204151510.663 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204151510.684 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 5376 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204151510.684 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204151519.190 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204151519.302 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204151519.323 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204151550.164 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204151550.165 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204152025.895 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204152025.914 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 6152 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204152025.915 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204152034.136 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204152034.142 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204152034.159 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204152105.748 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204152105.751 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204152251.259 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204152251.276 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 6723 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204152251.277 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204152302.492 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204152302.615 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204152302.624 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204152333.444 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181204152333.445 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204154306.846 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204154306.854 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181204154306.867 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 352 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204154307.322 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204154307.337 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204154307.361 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181204154313.883 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204154313.883 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204154314.663 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181204154314.668 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181204154314.855 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205080402.978 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205080402.987 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205080402.987 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205083609.929 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205083609.948 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 5362 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205083609.948 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205083621.308 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205083621.426 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205083621.440 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205083652.306 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205083652.306 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205083802.534 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205083802.542 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 5975 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205083802.542 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205083813.897 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205083814.158 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205083814.263 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205083844.871 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205083844.871 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205083934.364 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205083934.372 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 6574 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205083934.372 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205083940.416 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205083940.537 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205083940.546 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205084011.400 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205084011.408 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205084140.816 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205084140.996 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 7189 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205084140.999 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205084149.425 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205084149.552 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205084149.560 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205084220.391 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205084220.392 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205084347.379 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205084347.392 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 7793 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205084347.392 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205084402.821 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205084402.943 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205084402.957 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205084433.802 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205084433.802 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205084813.492 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205084813.503 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205084813.518 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 375 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205084813.857 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205084813.888 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205084813.908 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205084820.717 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205084820.717 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205084820.904 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205084820.904 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205084820.932 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205085020.124 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205085020.125 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205085020.125 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205085438.669 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205085438.685 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 1591 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205085438.685 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205085513.626 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205085513.740 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205085513.753 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205085544.614 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205085544.615 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205092040.525 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205092040.537 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 691 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205092040.650 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205092040.659 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205092046.781 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205092046.962 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205092046.982 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205092118.560 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205092118.560 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205094421.114 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205094421.122 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 2776 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205094421.122 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205094426.405 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205094426.416 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205094450.677 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205094450.685 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205094450.686 ERROR    lxc_monitord - lxc_monitord.c:lxc_monitord_sock_create:241 - Failed to open unix socket: Address already in use.
+   lxc-monitord 20181205094450.805 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205094450.806 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205094450.806 ERROR    lxc_monitord - lxc_monitord.c:lxc_monitord_sock_create:241 - Failed to open unix socket: Address already in use.
+   lxc-monitord 20181205094450.815 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205094457.156 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205094457.157 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205094457.157 ERROR    lxc_monitord - lxc_monitord.c:lxc_monitord_sock_create:241 - Failed to open unix socket: Address already in use.
+   lxc-monitord 20181205094457.333 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205094457.333 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205094457.334 ERROR    lxc_monitord - lxc_monitord.c:lxc_monitord_sock_create:241 - Failed to open unix socket: Address already in use.
+   lxc-monitord 20181205094457.354 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205094528.490 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205094528.496 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205094936.826 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205094936.837 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205094936.911 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 338 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205094937.565 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205094937.566 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205094937.593 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205094944.489 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205094944.489 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205094944.667 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205094944.668 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205094944.697 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205095157.791 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205095157.795 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205095157.796 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205101322.719 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205101322.738 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 2144 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205101322.738 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205101432.898 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205101433.164 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205101433.254 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205101503.852 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205101503.852 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205102733.169 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205102733.189 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 3648 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205102733.189 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205102743.738 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205102743.857 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205102743.866 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205102814.712 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205102814.712 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205103357.905 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205103357.913 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 4412 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205103357.913 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205103424.126 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205103424.133 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205103424.150 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205103455.364 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205103455.368 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205104922.991 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205104923.120 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205104923.147 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 367 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205104923.363 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205104923.394 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205104923.411 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205104930.418 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205104930.419 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205104930.589 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205104930.589 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205104930.622 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205105143.306 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205105143.306 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205105143.306 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205105717.356 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205105717.363 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205105717.378 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 362 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205105717.730 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205105717.731 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205105717.772 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205105724.959 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205105724.965 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205105725.159 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205105725.159 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205105725.170 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205105937.422 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205105937.423 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205105937.423 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205110334.997 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205110335.486 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205110335.321 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 351 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205110335.596 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205110335.597 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205110335.638 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205110342.495 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205110342.496 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205110342.688 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205110342.709 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205110342.718 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205110554.343 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205110554.343 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205110554.343 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205110927.505 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205110927.515 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205110927.529 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 363 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205110927.912 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205110927.912 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205110927.944 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205110940.159 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205110940.159 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205110940.406 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205110940.407 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205110940.426 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205111052.727 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205111052.731 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205111052.733 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205111842.624 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205111842.764 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205111842.125 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 355 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205111842.562 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205111842.562 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205111842.590 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205111854.236 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205111854.237 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205111854.356 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205111854.356 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205111854.365 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205112106.250 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205112106.250 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205112106.250 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205120629.369 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205120629.380 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205120629.395 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 364 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205120629.766 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205120629.767 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205120629.787 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205120642.811 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205120642.812 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205120643.322 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205120643.322 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205120643.345 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205120854.917 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205120854.917 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205120854.917 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205121150.969 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205121151.128 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205121151.376 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 358 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205121151.276 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205121151.293 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205121151.311 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205121203.310 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205121203.315 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205121203.154 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205121203.154 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205121203.163 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205122819.397 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181205122819.398 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205122819.398 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205141715.304 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205141715.317 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181205141715.377 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 364 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205141715.709 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205141715.709 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205141715.753 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181205141727.543 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205141727.544 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205141727.666 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181205141727.666 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181205141727.679 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181206080106.317 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181206080106.318 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181206080106.318 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181206090503.383 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181206090503.424 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181206090503.457 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 372 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181206090503.704 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181206090503.704 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181206090503.776 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181206090515.974 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181206090515.975 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181206090516.365 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181206090516.365 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181206090516.403 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181206090730.796 NOTICE   lxc_monitord - lxc_monitord.c:main:426 - No remaining clients. lxc-monitord is exiting.
+   lxc-monitord 20181206090730.796 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181206090730.796 INFO     lxc_utils - utils.c:get_rundir:280 - XDG_RUNTIME_DIR isn't set in the environment.
+   lxc-monitord 20181206110859.436 INFO     lxc_monitor - monitor.c:lxc_monitor_sock_name:185 - Using monitor socket name "lxc/78cfadcc1f40c011//home/pi/.local/share/lxc".
+   lxc-monitord 20181206110859.459 NOTICE   lxc_monitord - lxc_monitord.c:main:422 - lxc-monitord with pid 23231 is now monitoring lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181206110859.460 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.
+   lxc-monitord 20181206111006.998 DEBUG    lxc_monitord - lxc_monitord.c:lxc_monitord_fifo_create:108 - lxc-monitord already running on lxcpath /home/pi/.local/share/lxc.
+   lxc-monitord 20181206111007.195 INFO     lxc_monitord - lxc_monitord.c:lxc_monitord_sock_accept:222 - Accepted client file descriptor 5. Number of accepted file descriptors is now 1.

@@ -1,0 +1,20 @@
+      lxc-start 20181204154249.579 ERROR    lxc_start - start.c:lxc_spawn:1207 - Failed to create the configured network.
+      lxc-start 20181204154249.591 ERROR    lxc_start - start.c:__lxc_start:1346 - Failed to spawn container "c1".
+      lxc-start 20181205092122.355 ERROR    lxc_start_ui - tools/lxc_start.c:main:301 - Container is already running.
+      lxc-start 20181205092329.413 ERROR    lxc_start_ui - tools/lxc_start.c:main:301 - Container is already running.
+      lxc-start 20181205092408.922 ERROR    lxc_start_ui - tools/lxc_start.c:main:301 - Container is already running.
+      lxc-start 20181205092842.877 ERROR    lxc_start_ui - tools/lxc_start.c:main:301 - Container is already running.
+      lxc-start 20181205093005.366 ERROR    lxc_start_ui - tools/lxc_start.c:main:301 - Container is already running.
+      lxc-start 20181205093125.334 ERROR    lxc_start_ui - tools/lxc_start.c:main:301 - Container is already running.
+      lxc-start 20181205093218.534 ERROR    lxc_start_ui - tools/lxc_start.c:main:301 - Container is already running.
+      lxc-start 20181205093304.933 ERROR    lxc_start_ui - tools/lxc_start.c:main:301 - Container is already running.
+      lxc-start 20181205093434.335 ERROR    lxc_start_ui - tools/lxc_start.c:main:301 - Container is already running.
+      lxc-start 20181205093505.121 ERROR    lxc_start_ui - tools/lxc_start.c:main:301 - Container is already running.
+      lxc-start 20181205094115.595 ERROR    lxc_start_ui - tools/lxc_start.c:main:301 - Container is already running.
+      lxc-start 20181205094624.909 ERROR    lxc_start_ui - tools/lxc_start.c:main:301 - Container is already running.
+      lxc-start 20181205105600.861 ERROR    lxc_start_ui - tools/lxc_start.c:main:301 - Container is already running.
+      lxc-start 20181205110217.386 ERROR    lxc_start_ui - tools/lxc_start.c:main:301 - Container is already running.
+    lxc-execute 20181205111530.176 ERROR    lxc_commands - commands.c:lxc_cmd_init:992 - Failed to create the command service point /home/pi/.local/share/lxc/c1/command: Address already in use.
+    lxc-execute 20181205111530.185 ERROR    lxc_commands - commands.c:lxc_cmd_init:994 - Container "c1" appears to be already running!
+    lxc-execute 20181205111530.190 ERROR    lxc_start - start.c:__lxc_start:1302 - Failed to initialize container "c1".
+      lxc-start 20181205111715.195 ERROR    lxc_start_ui - tools/lxc_start.c:main:301 - Container is already running.

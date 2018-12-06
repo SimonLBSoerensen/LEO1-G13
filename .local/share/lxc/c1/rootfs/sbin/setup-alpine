@@ -1,7 +1,7 @@
 #!/bin/sh
 
 PROGRAM=setup-alpine
-VERSION=3.8.0-r0
+VERSION=3.4.1-r5
 
 PREFIX=
 . $PREFIX/lib/libalpine.sh
@@ -21,34 +21,32 @@ is_qemu() {
 }
 
 usage() {
-	cat <<-__EOF__
-		usage: setup-alpine [-ahq] [-c FILE | -f FILE]
+	cat <<__EOF__
+usage: setup-alpine [-ahq] [-c FILE | -f FILE]
 
-		Setup Alpine Linux
+Setup Alpine Linux
 
-		options:
-		 -a  Create Alpine Linux overlay file
-		 -c  Create answer file (do not install anything)
-		 -e  Empty root password
-		 -f  Answer file to use installation
-		 -h  Show this help
-		 -q  Quick mode. Ask fewer questions.
-	__EOF__
-	exit 1
+options:
+ -a  Create Alpine Linux overlay file
+ -c  Create answer file (do not install anything)
+ -f  Answer file to use installation
+ -h  Show this help
+ -q  Quick mode. Ask fewer questions.
+__EOF__
+        exit 1
 }
 
-while getopts "aef:c:hq" opt ; do
+while getopts "af:c:hq" opt ; do
 	case $opt in
 		a) ARCHIVE=yes;;
 		f) USEANSWERFILE="$OPTARG";;
 		c) CREATEANSWERFILE="$OPTARG";;
-		e) empty_root_password=1;;
 		h) usage;;
-		q) empty_root_password=1; quick=1; APKREPOSOPTS="-1"; HOSTNAMEOPTS="alpine";;
+		q) quick=1;;
 		*) usage;;
 	esac
 done
-shift $(expr $OPTIND - 1)
+shift `expr $OPTIND - 1`
 
 rc_sys=$(openrc --sys)
 # mount xenfs so we can detect xen dom0
@@ -65,51 +63,51 @@ fi
 
 if [ "$CREATEANSWERFILE" != "" ]; then
 	touch "$CREATEANSWERFILE" || echo "Cannot touch file $CREATEANSWERFILE"
-	cat > "$CREATEANSWERFILE" <<-__EOF__
-		# Example answer file for setup-alpine script
-		# If you don't want to use a certain option, then comment it out
+	cat <<__EOF__ > "$CREATEANSWERFILE"
+# Example answer file for setup-alpine script
+# If you don't want to use a certain option, then comment it out
 
-		# Use US layout with US variant
-		KEYMAPOPTS="us us"
+# Use US layout with US variant
+KEYMAPOPTS="us us"
 
-		# Set hostname to alpine-test
-		HOSTNAMEOPTS="-n alpine-test"
+# Set hostname to alpine-test
+HOSTNAMEOPTS="-n alpine-test"
 
-		# Contents of /etc/network/interfaces
-		INTERFACESOPTS="auto lo
-		iface lo inet loopback
+# Contents of /etc/network/interfaces
+INTERFACESOPTS="auto lo
+iface lo inet loopback
 
-		auto eth0
-		iface eth0 inet dhcp
-		    hostname alpine-test
-		"
+auto eth0
+iface eth0 inet dhcp
+	hostname alpine-test
+"
 
-		# Search domain of example.com, Google public nameserver
-		DNSOPTS="-d example.com 8.8.8.8"
+# Search domain of example.com, Google public nameserver
+DNSOPTS="-d example.com 8.8.8.8"
 
-		# Set timezone to UTC
-		TIMEZONEOPTS="-z UTC"
+# Set timezone to UTC
+TIMEZONEOPTS="-z UTC"
 
-		# set http/ftp proxy
-		PROXYOPTS="http://webproxy:8080"
+# set http/ftp proxy
+PROXYOPTS="http://webproxy:8080"
 
-		# Add a random mirror
-		APKREPOSOPTS="-r"
+# Add a random mirror
+APKREPOSOPTS="-r"
 
-		# Install Openssh
-		SSHDOPTS="-c openssh"
+# Install Openssh
+SSHDOPTS="-c openssh"
 
-		# Use openntpd
-		NTPOPTS="-c openntpd"
+# Use openntpd
+NTPOPTS="-c openntpd"
 
-		# Use /dev/sda as a data disk
-		DISKOPTS="-m data /dev/sda"
+# Use /dev/sda as a data disk
+DISKOPTS="-m data /dev/sda"
 
-		# Setup in /media/sdb1
-		LBUOPTS="/media/sdb1"
-		APKCACHEOPTS="/media/sdb1/cache"
+# Setup in /media/sdb1
+LBUOPTS="/media/sdb1"
+APKCACHEOPTS="/media/sdb1/cache"
 
-	__EOF__
+__EOF__
 	echo "Answer file $CREATEANSWERFILE has been created.  Please add or remove options as desired in that file"
 	exit 0
 fi
@@ -129,21 +127,17 @@ fi
 if [ -n "$INTERFACESOPTS" ]; then
 	printf "$INTERFACESOPTS" | $PREFIX/sbin/setup-interfaces -i
 else
-	$PREFIX/sbin/setup-interfaces ${quick:+-a}
+	$PREFIX/sbin/setup-interfaces
 fi
-# start the networking
-/etc/init.d/networking --quiet start >/dev/null
+# start the networking in background
+/etc/init.d/networking --quiet start &
 
 # setup up dns if no dhcp was configured
 grep '^iface.*dhcp' $ROOT/etc/network/interfaces > /dev/null ||\
 	$PREFIX/sbin/setup-dns ${DNSOPTS}
 
 # set root password
-if [ -z "$NOCOMMIT" ] && [ -z "$empty_root_password" ]; then
-	while ! passwd ; do
-		echo "Please retry."
-	done
-fi
+[ -z "$NOCOMMIT" ] && while ! passwd ; do echo "Please retry." ; done
 
 if [ -z "$quick" ]; then
 	# pick timezone
@@ -178,14 +172,11 @@ _hn=${_hn%%.*}
 
 sed -i -e "s/^127\.0\.0\.1.*/127.0.0.1\t${_hn}.${_dn:-$(get_fqdn)} ${_hn} localhost.localdomain localhost/" /etc/hosts
 
-if [ -z "$quick" ]; then
-	$PREFIX/sbin/setup-proxy -q ${PROXYOPTS}
-fi
+$PREFIX/sbin/setup-proxy -q ${PROXYOPTS}
 # activate the proxy if configured
 if [ -r "$ROOT/etc/profile" ]; then
 	. "$ROOT/etc/profile"
 fi
-
 $PREFIX/sbin/setup-apkrepos ${APKREPOSOPTS}
 
 # lets stop here if in "quick mode"
@@ -208,7 +199,7 @@ if [ "$rc_sys" = "LXC" ]; then
 fi
 
 DEFAULT_DISK=none \
-	$PREFIX/sbin/setup-disk -q ${DISKOPTS} || exit
+	$PREFIX/sbin/setup-disk -q ${DISKOPTS}
 
 diskmode=$(cat /tmp/alpine-install-diskmode.out 2>/dev/null)
 
@@ -220,3 +211,4 @@ if [ "$diskmode" != "sys" ]; then
 		apk cache sync
 	fi
 fi
+

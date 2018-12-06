@@ -14,56 +14,46 @@ description_cgroup_cleanup="Kill all processes in the cgroup"
 
 cgroup_find_path()
 {
-	local OIFS name dir result
+	local OIFS n name dir result
 	[ -n "$1" ] || return 0
 	OIFS="$IFS"
 	IFS=":"
-	while read -r _ name dir; do
+	while read n name dir; do
 		[ "$name" = "$1" ] && result="$dir"
 	done < /proc/1/cgroup
 	IFS="$OIFS"
-	printf "%s" "${result}"
+	echo $result
 }
 
 cgroup_get_pids()
 {
-	local cgroup_procs p pids
-	cgroup_procs="$(cgroup2_find_path)"
-	[ -n "${cgroup_procs}" ] &&
-		cgroup_procs="${cgroup_procs}/${RC_SVCNAME}/cgroup.procs" ||
-		cgroup_procs="/sys/fs/cgroup/openrc/${RC_SVCNAME}/tasks"
-	[ -f "${cgroup_procs}" ] || return 0
-	while read -r p; do
-		[ "$p" -eq $$ ] || pids="${pids} ${p}"
-	done < "${cgroup_procs}"
-	printf "%s" "${pids}"
-	return 0
+	local p
+	pids=
+	while read p; do
+		[ $p -eq $$ ] || pids="${pids} ${p}"
+	done < /sys/fs/cgroup/openrc/${RC_SVCNAME}/tasks
+	[ -n "$pids" ]
 }
 
 cgroup_running()
 {
-	[ -d "/sys/fs/cgroup/unified/${RC_SVCNAME}" ] ||
-			[ -d "/sys/fs/cgroup/${RC_SVCNAME}" ] ||
-			[ -d "/sys/fs/cgroup/openrc/${RC_SVCNAME}" ]
+	[ -d "/sys/fs/cgroup/openrc/${RC_SVCNAME}" ]
 }
 
 cgroup_set_values()
 {
-	[ -n "$1" ] && [ -n "$2" ] && [ -d "/sys/fs/cgroup/$1" ] || return 0
+	[ -n "$1" -a -n "$2" -a -d "/sys/fs/cgroup/$1" ] || return 0
 
-	local controller h
-	controller="$1"
-	h=$(cgroup_find_path "$1")
+	local controller="$1" h=$(cgroup_find_path "$1")
 	cgroup="/sys/fs/cgroup/${1}${h}openrc_${RC_SVCNAME}"
 	[ -d "$cgroup" ] || mkdir -p "$cgroup"
 
 	set -- $2
 	local name val
-	while [ -n "$1" ] && [ "$controller" != "cpuacct" ]; do
+	while [ -n "$1" -a "$controller" != "cpuacct" ]; do
 		case "$1" in
 			$controller.*)
-				if [ -n "${name}" ] && [ -w "${cgroup}/${name}" ] &&
-					[ -n "${val}" ]; then
+				if [ -n "$name" -a -f "$cgroup/$name" -a -n "$val" ]; then
 					veinfo "$RC_SVCNAME: Setting $cgroup/$name to $val"
 					printf "%s" "$val" > "$cgroup/$name"
 				fi
@@ -78,12 +68,12 @@ cgroup_set_values()
 		esac
 		shift
 	done
-	if [ -n "${name}" ] && [ -w "${cgroup}/${name}" ] && [ -n "${val}" ]; then
+	if [ -n "$name" -a -f "$cgroup/$name" -a -n "$val" ]; then
 		veinfo "$RC_SVCNAME: Setting $cgroup/$name to $val"
 		printf "%s" "$val" > "$cgroup/$name"
 	fi
 
-	if [ -w "$cgroup/tasks" ]; then
+	if [ -f "$cgroup/tasks" ]; then
 		veinfo "$RC_SVCNAME: adding to $cgroup/tasks"
 		printf "%d" 0 > "$cgroup/tasks"
 	fi
@@ -98,14 +88,14 @@ cgroup_add_service()
     # cgroups. But may lead to a problems where that inheriting
     # is needed.
 	for d in /sys/fs/cgroup/* ; do
-		[ -w "${d}"/tasks ] && printf "%d" 0 > "${d}"/tasks
+		[ -f "${d}"/tasks ] && printf "%d" 0 > "${d}"/tasks
 	done
 
 	openrc_cgroup=/sys/fs/cgroup/openrc
 	if [ -d "$openrc_cgroup" ]; then
 		cgroup="$openrc_cgroup/$RC_SVCNAME"
 		mkdir -p "$cgroup"
-		[ -w "$cgroup/tasks" ] && printf "%d" 0 > "$cgroup/tasks"
+		[ -f "$cgroup/tasks" ] && printf "%d" 0 > "$cgroup/tasks"
 	fi
 }
 
@@ -144,83 +134,21 @@ cgroup_set_limits()
 	return 0
 }
 
-cgroup2_find_path()
-{
-	if grep -qw cgroup2 /proc/filesystems; then
-		case "${rc_cgroup_mode:-hybrid}" in
-			hybrid) printf "/sys/fs/cgroup/unified" ;;
-			unified) printf "/sys/fs/cgroup" ;;
-		esac
-	fi
-		return 0
-}
-
-cgroup2_remove()
-{
-	local cgroup_path rc_cgroup_path
-	cgroup_path="$(cgroup2_find_path)"
-	[ -z "${cgroup_path}" ] && return 0
-	rc_cgroup_path="${cgroup_path}/${RC_SVCNAME}"
-	[ ! -d "${rc_cgroup_path}" ] ||
-		[ ! -e "${rc_cgroup_path}"/cgroup.events ] &&
-		return 0
-	grep -qx "$$" "${rc_cgroup_path}/cgroup.procs" &&
-		printf "%d" 0 > "${cgroup_path}/cgroup.procs"
-	local key populated vvalue
-	while read -r key value; do
-		case "${key}" in
-			populated) populated=${value} ;;
-			*) ;;
-		esac
-	done < "${rc_cgroup_path}/cgroup.events"
-	[ "${populated}" = 1 ] && return 0
-	rmdir "${rc_cgroup_path}"
-	return 0
-}
-
-cgroup2_set_limits()
-{
-	local cgroup_path
-	cgroup_path="$(cgroup2_find_path)"
-	[ -d "${cgroup_path}" ] || return 0
-	rc_cgroup_path="${cgroup_path}/${RC_SVCNAME}"
-	[ ! -d "${rc_cgroup_path}" ] && mkdir "${rc_cgroup_path}"
-	[ -f "${rc_cgroup_path}"/cgroup.procs ] &&
-		printf 0 > "${rc_cgroup_path}"/cgroup.procs
-	[ -z "${rc_cgroup_settings}" ] && return 0
-	echo "${rc_cgroup_settings}" | while read -r key value; do
-		[ -z "${key}" ] && continue
-		[ -z "${value}" ] && continue
-		[ ! -f "${rc_cgroup_path}/${key}" ] && continue
-		veinfo "${RC_SVCNAME}: cgroups: setting ${key} to ${value}"
-		printf "%s\n" "${value}" > "${rc_cgroup_path}/${key}"
-	done
-	return 0
-}
-
 cgroup_cleanup()
 {
 	cgroup_running || return 0
 	ebegin "starting cgroups cleanup"
-	local pids loops=0
-	pids="$(cgroup_get_pids)"
-	if [ -n "${pids}" ]; then
-		kill -s CONT ${pids} 2> /dev/null
-		kill -s "${stopsig:-TERM}" ${pids} 2> /dev/null
-		yesno "${rc_send_sighup:-no}" &&
-			kill -s HUP ${pids} 2> /dev/null
-		kill -s "${stopsig:-TERM}" ${pids} 2> /dev/null
-		while [ -n "$(cgroup_get_pids)" ] &&
-			[ "${loops}" -lt "${rc_timeout_stopsec:-90}" ]; do
-			loops=$((loops+1))
-			sleep 1
-		done
-		pids="$(cgroup_get_pids)"
-		[ -n "${pids}" ] && yesno "${rc_send_sigkill:-yes}" &&
-			kill -s KILL ${pids} 2> /dev/null
-	fi
-	cgroup2_remove
-	[ -z "$(cgroup_get_pids)" ]
-	eend $? "Unable to stop all processes"
-	return 0
+	for sig in TERM QUIT INT; do
+		cgroup_get_pids || { eend 0 "finished" ; return 0 ; }
+		for i in 0 1; do
+			kill -s $sig $pids
+			for j in 0 1 2; do
+				cgroup_get_pids || { eend 0 "finished" ; return 0 ; }
+				sleep 1
+			done
+		done 2>/dev/null
+	done
+	cgroup_get_pids || { eend 0 "finished" ; return 0; }
+	kill -9 $pids
+	eend $(cgroup_running && echo 1 || echo 0) "fail to stop all processes"
 }

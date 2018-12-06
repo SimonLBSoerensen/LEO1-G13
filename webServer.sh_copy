@@ -1,0 +1,51 @@
+#!/bin/bash/
+N1=$(echo "" | socat - tcp:10.0.3.12:8080)
+N2=$(echo "" | socat - tcp:10.0.3.12:8080)
+N=$(($N1 * $N2))
+
+getColor() {
+	echo $(printf "%06s\n" $(echo "obase=16; $(($N % 16777216))" | bc) | tr ' ' '0')
+}
+
+welcomeString() {
+	echo "Welcome"
+}
+
+tableFunc() {
+	echo ""
+}
+
+
+makeWebsite() 
+{
+	cat <<- _EOF_
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head >
+		<title>"Random" Number Generator</title>
+		<link rel="icon" href="https://www.makerlab-electronics.com/my_uploads/2018/08/raspberry-pi-icon.png">
+		<meta content="da" http-equiv="Content-Language" />
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<title>Your random number is</title>
+	</head>
+	<body style="background-color:#DDDDDD">
+		<div style="margin-left:auto; margin-right:auto">
+			<p align="center" style="margin-bottom:0">Your random number is:</p>
+			<h1 align="center" style="margin-top:0; margin-bottom:3px; color:#$(getColor)">$(randomFunc)</h1>
+			<p align="center" style="font-size:small; margin-top:0">$(welcomeString)</p>
+			<table border="1" style="border-collapse: collapse; margin-left:auto; margin-right:auto">
+				<tr>
+					<th>
+						Value: 
+					</th>
+					<th>
+						Time of Generation: 
+					</th>
+				</tr>
+				$(tableFunc)
+			</table>
+		</div>
+	</body>
+</html>
+_EOF_	
+}

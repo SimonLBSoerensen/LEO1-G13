@@ -14,9 +14,9 @@
 description="Configures static routes."
 __nl="
 "
+
 depend()
 {
-	after clock
 	provide net
 	use network
 	keyword -jail -prefix -vserver

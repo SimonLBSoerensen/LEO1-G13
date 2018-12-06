@@ -5,23 +5,23 @@ PREFIX=
 . "$PREFIX/lib/libalpine.sh"
 
 usage() {
-	cat <<-__EOF__
-		usage: setup-sshd [-h] [-c choice of SSH daemon]
+        cat <<__EOF__
+usage: setup-sshd [-h] [-c choice of SSH daemon]
 
-		Setup sshd daemon
+Setup sshd daemon
 
-		options:
-		 -h  Show this help
-		 -c  Choice of SSH daemon: openssh dropbear none
-	__EOF__
-	exit 1
+options:
+ -h  Show this help
+ -c  Choice of SSH daemon: openssh dropbear none
+__EOF__
+        exit 1
 }
 
 while getopts "hc:" opt; do
-	case $opt in
+        case $opt in
 		h) usage;;
 		c) sshdchoice="$OPTARG";;
-	esac
+        esac
 done
 
 if [ "$sshdchoice" = "" ]; then
@@ -29,7 +29,7 @@ if [ "$sshdchoice" = "" ]; then
 	default_read sshdchoice "openssh"
 fi
 
-if [ "$sshdchoice" = "none" ]; then
+if [ "$sshdchoice" = "none" ]; then 
 	exit 0
 fi
 
@@ -50,3 +50,4 @@ if [ -n "$svc" ]; then
 	rc-update add $svc default
 	rc-service $svc start
 fi
+

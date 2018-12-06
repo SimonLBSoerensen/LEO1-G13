@@ -1,0 +1,2 @@
+lxc.include = LXC_TEMPLATE_CONFIG/alpine.common.conf
+lxc.include = LXC_TEMPLATE_CONFIG/alpine.userns.conf

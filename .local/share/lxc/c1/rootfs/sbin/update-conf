@@ -1,7 +1,8 @@
 #!/bin/sh
 
+
 PREFIX=
-VERSION=3.8.0-r0
+VERSION=3.4.1-r5
 
 . $PREFIX/lib/libalpine.sh
 
@@ -11,22 +12,22 @@ init_tmpdir TMPD
 LBUCACHE="$TMPD/lbucache"
 
 usage() {
-	cat >&2 <<-__EOF__
-		$PROGRAM $VERSION
-		Usage: $PROGRAM [-a|--all] [-i|--initd] [-l|--list] [-h|--help]
-		Options:
-		  -a, --all    Select all updated files
-		  -i, --initd  Use all new init.d scripts
-		  -l, --list   List updated files
-		  -h, --help   Show this help
+	cat >&2 << __EOF__
+$PROGRAM $VERSION
+Usage: $PROGRAM [-a|--all] [-i|--initd] [-l|--list] [-h|--help]
+Options:
+  -a, --all    Select all updated files
+  -i, --initd  Use all new init.d scripts
+  -l, --list   List updated files
+  -h, --help   Show this help
 
-	__EOF__
+__EOF__
 }
 
 
 is_modified() {
 	[ -f "$LBUCACHE" ] || lbu status -a | awk '{print $2}' > "$LBUCACHE"
-	test -n "$( ( echo "$1" ; cat "$LBUCACHE" ) | sort | uniq -d)"
+	test -n "`( echo \"$1\" ; cat \"$LBUCACHE\" ) | sort | uniq -d`"
 }
 
 
@@ -34,7 +35,7 @@ is_initd() {
 	echo "$1" | grep etc/init.d/ > /dev/null
 }
 
-args=$(getopt -o ailh --long all,initd,list,help -n "$PROGRAM" -- "$@")
+args=`getopt -o ailh --long all,initd,list,help -n "$PROGRAM" -- "$@"`
 if [ $? -ne 0 ]; then
 	usage
 	exit 2
@@ -63,19 +64,19 @@ for apknew in $(find "$ROOT/etc" -name '*.apk-new') ; do
 	unset choice
 
 	if [ "$lflag" ] ; then
-
+	
 		# just list the file
 		if [ "$aflag" ] || is_modified "$f" ; then
 			echo "$p"
 		fi
-
+		
 	elif [ "$aflag" ] || is_modified "$f" ; then
 		if [ "$iflag" ] && is_initd "$f" ; then
 			echo "Autoupdating $p"
 			mv "$apknew" "$p"
 			continue
 		fi
-
+			
 		diff -u "$p" "$apknew"
 
 		# ask user what to do with the file
@@ -88,7 +89,7 @@ for apknew in $(find "$ROOT/etc" -name '*.apk-new') ; do
 				n) continue;;
 				s) diff -u "$p" "$apknew" | ${PAGER:-less}
 				   unset choice
-				   ;;
+				   ;;	
 				e) ${EDITOR:-vi} "$apknew" ; unset choice;;
 				v) if [ "$vflag" ]; then
 					vimdiff "$p" "$apknew"
@@ -105,3 +106,4 @@ for apknew in $(find "$ROOT/etc" -name '*.apk-new') ; do
 		mv "$apknew" "$p"
 	fi
 done
+

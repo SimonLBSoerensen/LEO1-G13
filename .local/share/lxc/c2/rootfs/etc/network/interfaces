@@ -1,3 +1,6 @@
 auto eth0
-iface eth0 inet dhcp
-hostname $(hostname)
+iface eth0 inet static
+ address 10.0.3.12
+ netmask 255.255.255.0
+ gateway 10.0.3.255
+ dns-nameservers 8.8.8.8

@@ -11,39 +11,17 @@
 
 depend()
 {
-	after clock
 	before bootmisc logger
 	keyword -prefix -systemd-nspawn -vserver
 }
 
-BSD_sysctl()
+start()
 {
-	[ -e /etc/sysctl.conf ] || return 0
-	local retval=0 var= comments= conf=
-	eindent
-	for conf in /etc/sysctl.conf /etc/sysctl.d/*.conf; do
-		if [ -r "$conf" ]; then
-			vebegin "applying $conf"
-			while read var comments; do
-				case "$var" in
-				""|"#"*) continue;;
-				esac
-				sysctl -w "$var" >/dev/null || retval=1
-			done < "$conf"
-			veend $retval
-		fi
-	done
-	eoutdent
-	return $retval
-}
-
-Linux_sysctl()
-{
-	local quiet retval=0
+	local quiet rc=0
 	yesno $rc_verbose || quiet=-q
 
+	ebegin "Configuring kernel parameters"
 	set --
-	eindent
 	for i in /run/sysctl.d/*.conf \
 			/etc/sysctl.d/*.conf \
 			/usr/local/lib/sysctl.d/*.conf \
@@ -51,25 +29,9 @@ Linux_sysctl()
 			/lib/sysctl.d/*.conf \
 			/etc/sysctl.conf; do
 		if [ -e "$i" ]; then
-			vebegin "applying $conf"
 			sysctl ${quiet} -p "$i"
-			retval=$(( $retval + $? ))
-			veend $retval
+			rc=$(( $rc + $? ))
 		fi
 	done
-	eoutdent
-
-	return $retval
-}
-
-start()
-{
-	local rc=0
-
-	ebegin "Configuring kernel parameters"
-	case "$RC_UNAME" in
-	*BSD|GNU) BSD_sysctl; rc=$? ;;
-	Linux) Linux_sysctl; rc=$? ;;
-	esac
 	eend $rc "Unable to configure some kernel parameters"
 }

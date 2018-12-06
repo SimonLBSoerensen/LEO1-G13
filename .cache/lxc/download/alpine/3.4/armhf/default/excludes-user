@@ -1,0 +1,13 @@
+./dev/console
+./dev/full
+./dev/null
+./dev/ptmx
+./dev/random
+./dev/tty
+./dev/tty0
+./dev/tty1
+./dev/tty2
+./dev/tty3
+./dev/tty4
+./dev/urandom
+./dev/zero

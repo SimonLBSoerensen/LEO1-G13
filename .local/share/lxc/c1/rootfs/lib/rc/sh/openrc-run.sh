@@ -133,10 +133,11 @@ _status()
 	elif service_inactive; then
 		ewarn "status: inactive"
 		return 16
-	elif service_crashed; then
-		eerror "status: crashed"
-		return 32
 	elif service_started; then
+		if service_crashed; then
+			eerror "status: crashed"
+			return 32
+		fi
 		einfo "status: started"
 		return 0
 	else
@@ -145,13 +146,13 @@ _status()
 	fi
 }
 
+# Template start / stop / status functions
 # These functions select the appropriate function to call from the
 # supervisor modules
-default_start()
+start()
 {
 	local func=ssd_start
 	case "$supervisor" in
-		runit) func=runit_start ;;
 		s6) func=s6_start ;;
 		supervise-daemon) func=supervise_start ;;
 		?*)
@@ -161,11 +162,10 @@ default_start()
 	$func
 }
 
-default_stop()
+stop()
 {
 	local func=ssd_stop
 	case "$supervisor" in
-		runit) func=runit_stop ;;
 		s6) func=s6_stop ;;
 		supervise-daemon) func=supervise_stop ;;
 		?*)
@@ -175,11 +175,10 @@ default_stop()
 	$func
 }
 
-default_status()
+status()
 {
 	local func=ssd_status
 	case "$supervisor" in
-		runit) func=runit_status ;;
 		s6) func=s6_status ;;
 		supervise-daemon) func=supervise_status ;;
 		?*)
@@ -189,36 +188,7 @@ default_status()
 	$func
 }
 
-# Template start / stop / status functions
-# package init scripts may override these, but the bodies are as minimal as
-# possible, so that the init scripts can creatively wrap default_*
-# functions.
-start()
-{
-	default_start
-}
-
-stop()
-{
-	default_stop
-}
-
-status()
-{
-	default_status
-}
-
-# Start debug output
 yesno $RC_DEBUG && set -x
-
-# Load configuration settings. First the global ones, then any
-# service-specific settings.
-sourcex -e "/etc/rc.conf"
-if [ -d "/etc/rc.conf.d" ]; then
-	for _f in "/etc"/rc.conf.d/*.conf; do
-		sourcex -e "$_f"
-	done
-fi
 
 _conf_d=${RC_SERVICE%/*}/../conf.d
 # If we're net.eth0 or openvpn.work then load net or openvpn config
@@ -236,14 +206,19 @@ if ! sourcex -e "$_conf_d/$RC_SVCNAME.$RC_RUNLEVEL"; then
 fi
 unset _conf_d
 
+# Load any system overrides
+sourcex -e "/etc/rc.conf"
+if [ -d "/etc/rc.conf.d" ]; then
+	for _f in "/etc"/rc.conf.d/*.conf; do
+		sourcex -e "$_f"
+	done
+fi
+
+
 # load service supervisor functions
-sourcex "/lib/rc/sh/runit.sh"
 sourcex "/lib/rc/sh/s6.sh"
 sourcex "/lib/rc/sh/start-stop-daemon.sh"
 sourcex "/lib/rc/sh/supervise-daemon.sh"
-
-# Load our script
-sourcex "$RC_SERVICE"
 
 # Set verbose mode
 if yesno "${rc_verbose:-$RC_VERBOSE}"; then
@@ -257,25 +232,25 @@ for _cmd; do
 		[ -n "${rc_ulimit:-$RC_ULIMIT}" ] && \
 			ulimit ${rc_ulimit:-$RC_ULIMIT}
 		# Apply cgroups settings if defined
-		if [ "$(command -v cgroup_add_service)" = "cgroup_add_service" ]
+		if [ "$(command -v cgroup_add_service)" = \
+		    "cgroup_add_service" ]
 		then
-			if grep -qs /sys/fs/cgroup /proc/1/mountinfo
-			then
-				if [ -d /sys/fs/cgroup -a ! -w /sys/fs/cgroup ]; then
-					eerror "No permission to apply cgroup settings"
-					break
-				fi
+			if [ -d /sys/fs/cgroup -a ! -w /sys/fs/cgroup ]; then
+				eerror "No permission to apply cgroup settings"
+				break
 			fi
-			cgroup_add_service
+			cgroup_add_service /sys/fs/cgroup/openrc
+			cgroup_add_service /sys/fs/cgroup/systemd/system
 		fi
-		[ "$(command -v cgroup_set_limits)" = "cgroup_set_limits" ] &&
-			cgroup_set_limits
-		[ "$(command -v cgroup2_set_limits)" = "cgroup2_set_limits" ] &&
-			[ "$_cmd" = start ] &&
-			cgroup2_set_limits
+		[ "$(command -v cgroup_set_limits)" = \
+		    "cgroup_set_limits" ] && \
+		    cgroup_set_limits
 		break
 	fi
 done
+
+# Load our script
+sourcex "$RC_SERVICE"
 
 eval "printf '%s\n' $required_dirs" | while read _d; do
 	if [ -n "$_d" ] && [ ! -d "$_d" ]; then
@@ -366,14 +341,10 @@ while [ -n "$1" ]; do
 				then
 					"$1"_post || exit $?
 				fi
-				[ "$(command -v cgroup_cleanup)" = "cgroup_cleanup" ] &&
-					[ "$1" = "stop" ] &&
-					yesno "${rc_cgroup_cleanup}" && \
+				[ "$(command -v cgroup_cleanup)" = "cgroup_cleanup" -a \
+				"$1" = "stop" ] && \
+				yesno "${rc_cgroup_cleanup}" && \
 					cgroup_cleanup
-				if [ "$(command -v cgroup2_remove)" = "cgroup2_remove" ]; then
-					[ "$1" = stop ] || [ -z "${command}" ] &&
-					cgroup2_remove
-				fi
 				shift
 				continue 2
 			else

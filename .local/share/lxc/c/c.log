@@ -1,0 +1,1 @@
+      lxc-start 20181204141114.701 ERROR    lxc_start_ui - tools/lxc_start.c:main:317 - Executing '/sbin/init' with no configuration file may crash the host

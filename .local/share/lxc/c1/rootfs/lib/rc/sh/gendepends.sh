@@ -74,22 +74,11 @@ do
 
 		# Only generate dependencies for OpenRC scripts
 		read one two three <"$RC_SERVICE"
-		case "$one" in
-			\#*/openrc-run) ;;
-			\#*/runscript) ;;
-			\#!)
-				case "$two" in
-					*/openrc-run) ;;
-					*/runscript) ;;
-					*)
-						continue
-						;;
-				esac
-				;;
-			*)
-				continue
-				;;
-		esac
+		[ "$one" = "#!/sbin/runscript" ] || \
+		[ "$one" = "#!/sbin/openrc-run" ] || \
+		[ "$one" = "#!" -a "$two" = "/sbin/runscript" ] || \
+		[ "$one" = "#!" -a "$two" = "/sbin/openrc-run" ] || \
+			continue
 		unset one two three
 
 		RC_SVCNAME=${RC_SERVICE##*/} ; export RC_SVCNAME

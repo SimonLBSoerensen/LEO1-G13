@@ -79,20 +79,20 @@ get_default_gateway() {
 }
 
 ipaddr_help() {
-	cat <<-__EOF__
+	cat <<__EOF__
 
-		Select the ip address for this interface.
+Select the ip address for this interface.
 
-		dhcp				      Dynamic/automatic ip via DHCP
-		none				      Do not add any address
-		n.n.n.n		(ex: 192.168.0.1)     Static ip
-		n.n.n.n/m	(ex: 192.168.0.1/24)  Static ip with mask
-		br[0-9]+	(ex: br0)	      Add this interface to a bridge
-		bridge[0-9]	(ex: bridge0)	      Add this interface to a bridge
+dhcp				      Dynamic/automatic ip via DHCP
+none				      Do not add any address
+n.n.n.n		(ex: 192.168.0.1)     Static ip
+n.n.n.n/m	(ex: 192.168.0.1/24)  Static ip with mask
+br[0-9]+	(ex: br0)	      Add this interface to a bridge
+bridge[0-9]	(ex: bridge0)	      Add this interface to a bridge
 
-		You will be prompted for netmask if not specified with the address.
+You will be prompted for netmask if not specified with the address.
 
-	__EOF__
+__EOF__
 }
 
 bridge_add_port() {
@@ -190,7 +190,7 @@ config_iface() {
 	done
 
 	if [ "$resp" = "yes" ]; then
-		bridge="br$(echo $iface | sed 's/[^0-9]//g')"
+		bridge="br"`echo $iface | sed 's/[^0-9]//g'`
 		ask "Name of the bridge you want add $iface to:" $bridge
 		bridge_add_port $resp $iface
 		return
@@ -208,22 +208,22 @@ config_iface() {
 		raw_device=$(cat $iface.raw_device)
 		echo "raw_device=\"$raw_device\"" >> $conf
 	fi
-	if is_wifi $iface; then
+        if is_wifi $iface; then
 		apk add --quiet --no-progress wireless-tools wpa_supplicant || prompt_for_interfaces
 		echo "Available wireless networks (scanning):"
 		if find_essids $iface; then
 			ask "Type the wireless network name to connect to:"
 			local essid=$resp
-			if wlan_is_not_open $iface "$essid"; then
+			if wlan_is_not_open $iface $essid; then
 				ask "Type the \"$essid\" network Pre-Shared Key:"
 				psk=$resp
 			fi
-			config_wpa_supp $iface "$essid" "$psk"
+			config_wpa_supp $iface $essid $psk
 		else
 			echo -e "\nNo available wireless networks\n"
 			prompt_for_interfaces
 		fi
-	fi
+        fi
 	# use ipcalc to validate the address. we do accept /mask
 	# we are no interested in the result, only error code, so
 	# we send result to /dev/null
@@ -261,7 +261,7 @@ config_iface() {
 	# use ipcalc -m to validate netmask. we dont accept <addr>/mask suffix
 	# so we pass on a dummy mask to ipcalc.
 	while ! ipcalc -s -m $netmask/0 >/dev/null 2>&1; do
-		netmask=$(get_default_mask $address)
+		netmask=`get_default_mask $address`
 		ask "Netmask?" $netmask
 		netmask=$resp
 		[ "$netmask" = "abort" ] && return
@@ -270,7 +270,7 @@ config_iface() {
 	# use ipcalc -m to validate netmask. we dont accept <addr>/mask suffix
 	# so we pass on a dummy mask to ipcalc.
 	while ! ipcalc -s -m $gateway/0 >/dev/null 2>&1; do
-		gateway=$(get_default_gateway $iface)
+		gateway=`get_default_gateway $iface`
 		[ -z "$gateway" ] && gateway=none
 		ask "Gateway? (or 'none')" $gateway
 		gateway=$resp
@@ -407,36 +407,36 @@ config_vlan() {
 }
 
 usage() {
-	cat <<-__EOF__
-		usage: setup-interfaces [-bhi]
+        cat <<__EOF__
+usage: setup-interfaces [-bhi]
 
-		Setup network interfaces
+Setup network interfaces
 
-		options:
-		 -b  Ask for bridging of interfaces
-		 -h  Show this help
-		 -i  Read new contents of ${ROOT}etc/network/interfaces from stdin
-	__EOF__
-	exit 1
+options:
+ -b  Ask for bridging of interfaces
+ -h  Show this help
+ -i  Read new contents of ${ROOT}etc/network/interfaces from stdin
+__EOF__
+        exit 1
 }
 
 iface_help() {
-	cat <<-__EOF__
+	cat <<__EOF__
 
-		Select the interface you wish to configure.
+Select the interface you wish to configure.
 
-		For advanced configurations, you can also enter:
-		br[0-9]+	(ex: br0)	bridge interface
-		bridge[0-9]+	(ex: bridge0)	bridge interface
-		bond[0-9]+	(ex: bond32)	bonded interface
-		vlan[0-9]+	(ex: vlan371)	vlan interface
-		eth?.[0-9]+	(ex: eth0.371)	vlan interface
-		bond?.[0.9]+	(ex: bond0.371)	vlan interface
+For advanced configurations, you can also enter:
+br[0-9]+	(ex: br0)	bridge interface
+bridge[0-9]+	(ex: bridge0)	bridge interface
+bond[0-9]+	(ex: bond32)	bonded interface
+vlan[0-9]+	(ex: vlan371)	vlan interface
+eth?.[0-9]+	(ex: eth0.371)	vlan interface
+bond?.[0.9]+	(ex: bond0.371)	vlan interface
 
-		You will be asked which physical interface(s) to
-		be used for advanced configurations.
+You will be asked which physical interface(s) to
+be used for advanced configurations.
 
-	__EOF__
+__EOF__
 }
 prompt_for_interfaces() {
 	init_tmpdir TMP
@@ -480,7 +480,7 @@ prompt_for_interfaces() {
 	hostname=$(cat $ROOT/etc/hostname 2>/dev/null)
 
 	for i in *.conf ; do
-		iface=$(basename $i .conf)
+		iface=`basename $i .conf`
 		iface=${iface#[0-9]*~}
 		bridge_ports=
 		bond_slaves=
@@ -549,45 +549,21 @@ prompt_for_interfaces() {
 	cp interfaces $ROOT/etc/network/
 }
 
-auto_setup() {
-	local iface
-	local hostname=$(cat $ROOT/etc/hostname 2>/dev/null)
-	for iface in $(available_ifaces); do
-		if [ "$(cat /sys/class/net/$iface/operstate)" = "up" ]; then
-			break
-		fi
-	done
-	[ -z "$iface" ] && return 0
-	cat >$ROOT/etc/network/interfaces <<-EOF
-	auto lo
-	iface lo inet loopback
-
-	auto $iface
-	iface $iface inet dhcp
-	EOF
-	if [ -n "$hostname" ]; then
-		echo -e "\thostname $hostname" >> $ROOT/etc/network/interfaces
-	fi
-}
-
 ask_bridge=
 is_xen_dom0 && ask_bridge=1
 
-while getopts "abhip:" opt; do
-	case $opt in
-		a) auto=1;;
+while getopts "bhip:" opt; do
+        case $opt in
 		b) ask_bridge=1;;
-		h) usage;;
+                h) usage;;
 		i) STDINPUT=1;;
 		p) ROOT=$OPTARG;;
-	esac
+        esac
 done
 
 mkdir -p $ROOT/etc/network
 if [ "$STDINPUT" = "1" ]; then
 	cat > $ROOT/etc/network/interfaces
-elif [ -n "$auto" ]; then
-	auto_setup
 else
 	prompt_for_interfaces
 fi

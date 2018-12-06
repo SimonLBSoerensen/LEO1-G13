@@ -17,3 +17,707 @@ Dec 31 23:59:59 c2 daemon.info init: starting pid 284, tty '/dev/tty2': '/sbin/g
 Dec 31 23:59:59 c2 daemon.info init: starting pid 283, tty '/dev/tty1': '/sbin/getty 38400 tty1'
 Dec 31 23:59:59 c2 daemon.info init: starting pid 282, tty '': '/sbin/getty 38400 console'
 Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 295 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 296 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 daemon.info init: starting pid 306, tty '': '/sbin/openrc shutdown'
+Nov 30 11:40:14 c2 syslog.info syslogd exiting
+Nov 30 11:40:50 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 daemon.info init: starting pid 286, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 285, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 284, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 283, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 282, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 287 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 288 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 289 cmd run-parts /etc/periodic/hourly
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 299 cmd run-parts /etc/periodic/15min
+Nov 30 14:07:17 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 daemon.info init: starting pid 286, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 285, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 284, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 283, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 282, tty '': '/sbin/getty 38400 console'
+Nov 30 14:09:52 c2 syslog.info syslogd exiting
+Nov 30 14:09:59 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 191, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[210]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 daemon.info init: starting pid 259, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info iniDec  4 09:02:36 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 daemon.info init: starting pid 285, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 286, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 284, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 283, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 282, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 365 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 daemon.info init: starting pid 366, tty '': '/sbin/openrc shutdown'
+Dec  4 09:15:20 c2 syslog.info syslogd exiting
+Dec  4 09:15:30 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 daemon.info init: starting pid 287, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 286, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 285, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 284, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 283, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 303, tty '': '/sbin/openrc shutdown'
+Dec  4 09:17:11 c2 syslog.info syslogd exiting
+Dec  4 09:17:18 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[229]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 daemon.info init: starting pid 287, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 286, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 285, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 284, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 283, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 309, tty '': '/sbin/openrc shutdown'
+Dec  4 09:27:31 c2 syslog.info syslogd exiting
+Dec  4 09:27:38 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 210, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[229]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 daemon.info init: starting pid 286, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 285, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 284, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 287, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 283, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 299, tty '': '/sbin/openrc shutdown'
+Dec  4 09:29:59 c2 syslog.info syslogd exiting
+Dec  4 09:30:06 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 daemon.info init: starting pid 282, tty '': '/sbin/openrc shutdown'
+Dec  4 09:30:10 c2 syslog.info syslogd exiting
+Dec  4 09:30:17 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 daemon.info init: starting pid 287, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 286, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 285, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 284, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 283, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 341 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 daemon.info init: reloading /etc/inittab
+Dec  4 09:46:35 c2 syslog.info syslogd exiting
+Dec  4 09:54:41 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 daemon.info init: starting pid 298, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 297, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 296, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 294, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 295, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 301 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 302 cmd run-parts /etc/periodic/hourly
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 395 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 407 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 408 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 daemon.info init: reloading /etc/inittab
+Dec  4 10:45:37 c2 syslog.info syslogd exiting
+Dec  4 10:48:56 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 daemon.info init: starting pid 286, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 285, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 284, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 283, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 282, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 287 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 288 cmd run-parts /etc/periodic/hourly
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 289 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 daemon.info init: starting pid 299, tty '': '/sbin/openrc shutdown'
+Dec  4 11:20:35 c2 syslog.info syslogd exiting
+Dec  4 11:20:45 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 daemon.info init: starting pid 286, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 285, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 284, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 283, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 282, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 300 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 301 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 381 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 382 cmd run-parts /etc/periodic/hourly
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 401 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 411 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 412 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 daemon.info init: starting pid 452, tty '': '/sbin/openrc shutdown'
+Dec  4 12:56:08 c2 syslog.info syslogd exiting
+Dec  4 12:56:17 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd ~/startRandomServer.sh
+Dec 31 23:59:59 c2 daemon.info init: starting pid 290, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 289, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 288, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 287, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 286, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 291, tty '': '/sbin/openrc shutdown'
+Dec  4 12:56:30 c2 syslog.info syslogd exiting
+Dec  4 12:56:36 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 230 cmd ~/startRandomServer.sh
+Dec 31 23:59:59 c2 daemon.info init: starting pid 287, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 286, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 285, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 284, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 283, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 296, tty '': '/sbin/openrc shutdown'
+Dec  4 12:58:53 c2 syslog.info syslogd exiting
+Dec  4 12:59:03 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 daemon.info init: starting pid 288, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 287, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 286, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 285, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 284, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 297 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 298 cmd run-parts /etc/periodic/hourly
+Dec 31 23:59:59 c2 daemon.info init: starting pid 318, tty '': '/sbin/openrc shutdown'
+Dec  4 13:01:21 c2 syslog.info syslogd exiting
+Dec  4 13:01:28 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 230 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd toush /home/pi/$(date +"%H:%M:%S %d/%m/%y %Z" ).log
+Dec 31 23:59:59 c2 daemon.info init: starting pid 291, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 290, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 289, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 288, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 287, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 305, tty '': '/sbin/openrc shutdown'
+Dec  4 13:02:17 c2 syslog.info syslogd exiting
+Dec  4 13:02:24 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 233 cmd touch /home/pi/$(date +"%H:%M:%S %d/%m/%y %Z" ).log
+Dec 31 23:59:59 c2 daemon.info init: starting pid 292, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 291, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 289, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 288, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 290, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 313, tty '': '/sbin/openrc shutdown'
+Dec  4 13:04:24 c2 syslog.info syslogd exiting
+Dec  4 13:04:31 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 210, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[229]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[229]: USER root pid 232 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.info init: starting pid 294, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 293, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 292, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 291, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 290, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 307, tty '': '/sbin/openrc shutdown'
+Dec  4 13:08:28 c2 syslog.info syslogd exiting
+Dec  4 13:08:35 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 233 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.info init: starting pid 293, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 292, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 291, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 290, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 289, tty '': '/sbin/getty 38400 console'
+Dec  4 13:10:01 c2 syslog.info syslogd exiting
+Dec  4 13:10:08 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 191, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[210]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 212 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 214 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.info init: starting pid 266, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 265, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 264, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 263, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 262, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: process '/sbin/getty 38400 tty4' (pid 266) exited. Scheduling for restart.
+Dec  4 13:22:56 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.info init: starting pid 293, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 292, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 291, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 290, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 289, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 295 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 daemon.info init: starting pid 296, tty '': '/sbin/openrc shutdown'
+Dec  4 13:39:09 c2 syslog.info syslogd exiting
+Dec  4 13:41:56 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 230 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.info init: starting pid 293, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 292, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 291, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 290, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 289, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: reloading /etc/inittab
+Dec  4 13:42:57 c2 syslog.info syslogd exiting
+Dec  4 13:49:38 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 210, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[229]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[229]: USER root pid 232 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[229]: USER root pid 233 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.info init: starting pid 294, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 293, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 292, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 291, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 290, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: reloading /etc/inittab
+Dec  4 13:54:22 c2 syslog.info syslogd exiting
+Dec  4 13:56:20 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.info init: starting pid 293, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 292, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 290, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 289, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 291, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 294 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 295 cmd run-parts /etc/periodic/hourly
+Dec 31 23:59:59 c2 daemon.info init: starting pid 296, tty '': '/sbin/openrc shutdown'
+Dec  4 14:00:05 c2 syslog.info syslogd exiting
+Dec  4 14:01:17 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.info init: starting pid 293, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 292, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 291, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 290, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 289, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 294, tty '': '/sbin/openrc shutdown'
+Dec  4 14:10:24 c2 syslog.info syslogd exiting
+Dec  4 14:10:39 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.info init: starting pid 293, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 292, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 291, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 290, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 289, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: reloading /etc/inittab
+Dec  4 14:11:32 c2 syslog.info syslogd exiting
+Dec  4 14:13:30 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.info init: starting pid 293, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 292, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 291, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 290, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 289, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 295 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 daemon.info init: starting pid 297, tty '': '/sbin/openrc shutdown'
+Dec  4 14:17:20 c2 syslog.info syslogd exiting
+Dec  4 14:18:39 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.info init: starting pid 292, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 290, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 289, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 288, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 291, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 296, tty '': '/sbin/openrc shutdown'
+Dec  4 14:21:31 c2 syslog.info syslogd exiting
+Dec  4 14:21:46 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[242]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 287 cmd run-parts /etc/periodic/15min
+Dec  4 14:42:40 c2 syslog.info syslogd exiting
+Dec  4 14:43:14 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 233 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[241]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 273 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 daemon.info init: starting pid 286, tty '': '/sbin/openrc shutdown'
+Dec  4 14:53:38 c2 syslog.info syslogd exiting
+Dec  4 14:54:47 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 234 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[241]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 275 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 276 cmd run-parts /etc/periodic/hourly
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 291 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 daemon.info init: starting pid 292, tty '': '/sbin/openrc shutdown'
+Dec  4 15:20:26 c2 syslog.info syslogd exiting
+Dec  4 15:20:36 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 230 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[242]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 294 cmd run-parts /etc/periodic/15min
+Dec  4 15:42:44 c2 syslog.info syslogd exiting
+Dec  4 15:43:19 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 234 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[240]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.err crond[228]: time disparity of 980 minutes detected
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 289 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 471 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 759 cmd run-parts /etc/periodic/15min
+Dec  5 08:48:01 c2 syslog.info syslogd exiting
+Dec  5 08:48:06 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 191, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[210]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 213 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 215 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[224]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 254, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 253, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 252, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 251, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 250, tty '': '/sbin/getty 38400 console'
+Dec  5 08:48:29 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 233 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[241]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 279 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 280 cmd run-parts /etc/periodic/hourly
+Dec  5 09:02:05 c2 syslog.info syslogd exiting
+Dec  5 09:02:10 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 191, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[210]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 212 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 214 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[224]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 253, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 252, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 251, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 250, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 254, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec  5 09:20:50 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[242]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 273 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 daemon.info init: starting pid 274, tty '': '/sbin/openrc shutdown'
+Dec  5 09:44:26 c2 syslog.info syslogd exiting
+Dec  5 09:45:00 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 233 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[242]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec  5 09:49:25 c2 syslog.info syslogd exiting
+Dec  5 09:49:31 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 191, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[210]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 214 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 216 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[224]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 254, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 253, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 252, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 251, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 250, tty '': '/sbin/getty 38400 console'
+Dec  5 09:49:50 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[241]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 273 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 274 cmd run-parts /etc/periodic/hourly
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 313 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 319 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 320 cmd run-parts /etc/periodic/15min
+Dec  5 10:49:11 c2 syslog.info syslogd exiting
+Dec  5 10:49:16 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 191, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[210]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 213 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 215 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[224]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 254, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 253, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 252, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 251, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 250, tty '': '/sbin/getty 38400 console'
+Dec  5 10:49:37 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[241]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec  5 10:57:05 c2 syslog.info syslogd exiting
+Dec  5 10:57:11 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 191, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[210]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 212 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 213 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[224]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 254, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 253, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 252, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 251, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 250, tty '': '/sbin/getty 38400 console'
+Dec  5 10:57:33 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 233 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[241]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 273 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 274 cmd run-parts /etc/periodic/hourly
+Dec  5 11:03:22 c2 syslog.info syslogd exiting
+Dec  5 11:03:29 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 191, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[210]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 214 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 216 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[224]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 254, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 253, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 252, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 251, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 250, tty '': '/sbin/getty 38400 console'
+Dec  5 11:03:50 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 233 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[240]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec  5 11:09:14 c2 syslog.info syslogd exiting
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Dec  5 11:09:45 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[241]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 277 cmd run-parts /etc/periodic/15min
+Dec  5 11:18:30 c2 syslog.info syslogd exiting
+Dec  5 11:18:37 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 191, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[210]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 213 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 215 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[224]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 254, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 253, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 252, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 251, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 250, tty '': '/sbin/getty 38400 console'
+Dec  5 11:18:57 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[241]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 273 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 280 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 281 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 282 cmd run-parts /etc/periodic/hourly
+Dec  5 12:06:16 c2 syslog.info syslogd exiting
+Dec  5 12:06:23 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 191, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[210]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 214 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 216 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[222]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 254, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 253, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 252, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 251, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 250, tty '': '/sbin/getty 38400 console'
+Dec  5 12:06:47 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[242]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec  5 12:11:38 c2 syslog.info syslogd exiting
+Dec  5 12:11:45 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 191, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[210]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 213 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 214 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[224]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 254, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 253, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 252, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 251, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 250, tty '': '/sbin/getty 38400 console'
+Dec  5 12:12:08 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 234 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[240]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 273 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 274 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 315 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 322 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 323 cmd run-parts /etc/periodic/hourly
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 324 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 325 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 326 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 327 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 328 cmd run-parts /etc/periodic/hourly
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 329 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 330 cmd run-parts /etc/periodic/15min
+Dec  5 14:17:35 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[241]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.err crond[228]: time disparity of 1063 minutes detected
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 277 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 278 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 281 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 304 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 305 cmd run-parts /etc/periodic/hourly
+Dec  6 09:04:51 c2 syslog.info syslogd exiting
+Dec  6 09:04:58 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 191, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[210]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 213 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[210]: USER root pid 215 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[224]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 254, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 253, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 252, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 251, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 250, tty '': '/sbin/getty 38400 console'
+Dec  6 09:05:22 c2 syslog.info syslogd started: BusyBox v1.29.3
+Dec 31 23:59:59 c2 daemon.info init: starting pid 209, tty '': '/sbin/openrc default'
+Dec 31 23:59:59 c2 cron.info crond[228]: crond (busybox 1.29.3) started, log level 8
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 231 cmd sh /home/pi/startRandomServer.sh
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 232 cmd $(echo "log lavet $(date +"%H:%M:%S %d/%m/%y %Z" )" | tee /home/pi/log.log)
+Dec 31 23:59:59 c2 daemon.err /etc/init.d/networking[241]: ERROR: networking failed to start
+Dec 31 23:59:59 c2 daemon.info init: starting pid 272, tty '/dev/tty4': '/sbin/getty 38400 tty4'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 271, tty '/dev/tty3': '/sbin/getty 38400 tty3'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 270, tty '/dev/tty2': '/sbin/getty 38400 tty2'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 269, tty '/dev/tty1': '/sbin/getty 38400 tty1'
+Dec 31 23:59:59 c2 daemon.info init: starting pid 268, tty '': '/sbin/getty 38400 console'
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 311 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 392 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 641 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 748 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 749 cmd run-parts /etc/periodic/hourly
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 836 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 879 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 892 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 921 cmd run-parts /etc/periodic/15min
+Dec 31 23:59:59 c2 cron.info crond[228]: USER root pid 922 cmd run-parts /etc/periodic/hourly
+Dec 31 23:59:59 c2 daemon.info init: starting pid 934, tty '': '/sbin/openrc shutdown'
+Dec  6 11:10:07 c2 syslog.info syslogd exiting

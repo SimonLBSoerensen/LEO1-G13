@@ -14,9 +14,8 @@ description="Initializes the random number generator."
 
 depend()
 {
-	after clock
 	need localmount
-	keyword -docker -jail -lxc -openvz -prefix -systemd-nspawn
+	keyword -jail -lxc -openvz -prefix -systemd-nspawn
 }
 
 save_seed()

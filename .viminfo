@@ -11,24 +11,30 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
+:q
+|2,0,1544092976,,"q"
+:q!
+|2,0,1544091107,,"q!"
+:wq
+|2,0,1544091102,,"wq"
+:!
+|2,0,1544008621,,"!"
+:w!
+|2,0,1544007408,,"w!"
+:w
+|2,0,1544007397,,"w"
+:wq!
+|2,0,1543931916,,"wq!"
+:!q
+|2,0,1543930289,,"!q"
 :x
 |2,0,1543569460,,"x"
-:q
-|2,0,1543569361,,"q"
-:q!
-|2,0,1543492053,,"q!"
-:wq
-|2,0,1543492042,,"wq"
-:!q
-|2,0,1543485535,,"!q"
 :!wq
 |2,0,1543485073,,"!wq"
 :1
 |2,0,1543484837,,"1"
 :.
 |2,0,1539609355,,"."
-:w
-|2,0,1539609338,,"w"
 :!exit
 |2,0,1539599792,,"!exit"
 :exit
@@ -50,240 +56,394 @@
 
 # Registers:
 ""1	LINE	0
-	pi veth lxcbr0 2
-|3,1,1,1,1,0,1543485063,"pi veth lxcbr0 2"
+	dhcp-host=c1,10.0.3.11
+|3,1,1,1,1,0,1544091098,"dhcp-host=c1,10.0.3.11"
 "2	LINE	0
+	sleep 30
+|3,0,2,1,1,0,1544011847,"sleep 30"
+"3	LINE	0
+	echo "Starting server on c1" | tee -a /home/pi/log_sudo_crontab.log
+|3,0,3,1,1,0,1544011845,"echo \"Starting server on c1\" | tee -a /home/pi/log_sudo_crontab.log"
+"4	LINE	0
+	sudo -H -u pi bash -c 'lxc-attach -Fn c1 -- sh startServer.sh' 
+|3,0,4,1,1,0,1544011843,"sudo -H -u pi bash -c 'lxc-attach -Fn c1 -- sh startServer.sh' "
+"5	LINE	0
+	# m h  dom mon dow   command
+|3,0,5,1,1,0,1544000343,"# m h  dom mon dow   command"
+"6	LINE	0
+	@reboot sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:80
+|3,0,6,1,1,0,1544000341,"@reboot sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:80"
+"7	LINE	0
+	@reboot ./bin/startC.sh | tee /home/pi/log_crontab.log
+|3,0,7,1,1,0,1544000339,"@reboot ./bin/startC.sh | tee /home/pi/log_crontab.log"
+"8	LINE	0
+	pi veth lxcbr0 2
+|3,0,8,1,1,0,1543485063,"pi veth lxcbr0 2"
+"9	LINE	0
 	## Warning this represents a security risk, as it allow to execute any file
-|3,0,2,1,1,0,1539599778,"## Warning this represents a security risk, as it allow to execute any file"
+|3,0,9,1,1,0,1539599778,"## Warning this represents a security risk, as it allow to execute any file"
 "-	CHAR	0
-	e
-|3,0,36,0,1,0,1539599836,"e"
+	CTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|3,0,36,0,1,0,1543929550,"CTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">"
 
 # File marks:
-'0  2  28  ~/.config/lxc/default.conf
-|4,48,2,28,1543569460,"~/.config/lxc/default.conf"
-'1  1  0  /etc/default/lxc-net
-|4,49,1,0,1543569361,"/etc/default/lxc-net"
-'2  1  29  ~/.config/lxc/default.conf
-|4,50,1,29,1543569311,"~/.config/lxc/default.conf"
-'3  1  29  ~/.config/lxc/default.conf
-|4,51,1,29,1543569311,"~/.config/lxc/default.conf"
-'4  4  30  /etc/lxc/default.conf
-|4,52,4,30,1543569261,"/etc/lxc/default.conf"
-'5  1  29  ~/.config/lxc/default.conf
-|4,53,1,29,1543492053,"~/.config/lxc/default.conf"
-'6  1  29  ~/.config/lxc/default.conf
-|4,54,1,29,1543492053,"~/.config/lxc/default.conf"
-'7  4  24  ~/.config/lxc/default.conf
-|4,55,4,24,1543491908,"~/.config/lxc/default.conf"
-'8  4  24  ~/.config/lxc/default.conf
-|4,56,4,24,1543491908,"~/.config/lxc/default.conf"
-'9  4  24  ~/.config/lxc/default.conf
-|4,57,4,24,1543491908,"~/.config/lxc/default.conf"
+'0  1  0  /tmp/crontab.rP6KNe/crontab
+|4,48,1,0,1544092976,"/tmp/crontab.rP6KNe/crontab"
+'1  1  0  /etc/lxc/dnsmasq.conf
+|4,49,1,0,1544091107,"/etc/lxc/dnsmasq.conf"
+'2  1  0  /etc/lxd/dnsmasq.conf
+|4,50,1,0,1544091091,"/etc/lxd/dnsmasq.conf"
+'3  10  0  ~/bin/startC.sh
+|4,51,10,0,1544011851,"~/bin/startC.sh"
+'4  11  35  ~/bin/startC.sh
+|4,52,11,35,1544009512,"~/bin/startC.sh"
+'5  13  35  ~/bin/startC.sh
+|4,53,13,35,1544009512,"~/bin/startC.sh"
+'6  11  7  ~/bin/startC.sh
+|4,54,11,7,1544009476,"~/bin/startC.sh"
+'7  13  7  ~/bin/startC.sh
+|4,55,13,7,1544009476,"~/bin/startC.sh"
+'8  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,56,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+'9  11  7  ~/bin/startC.sh
+|4,57,11,7,1544008699,"~/bin/startC.sh"
 
 # Jumplist (newest first):
--'  2  28  ~/.config/lxc/default.conf
-|4,39,2,28,1543569460,"~/.config/lxc/default.conf"
--'  1  29  ~/.config/lxc/default.conf
-|4,39,1,29,1543569424,"~/.config/lxc/default.conf"
--'  1  0  /etc/default/lxc-net
-|4,39,1,0,1543569361,"/etc/default/lxc-net"
--'  1  0  /etc/default/lxc-net
-|4,39,1,0,1543569361,"/etc/default/lxc-net"
--'  1  29  ~/.config/lxc/default.conf
-|4,39,1,29,1543569311,"~/.config/lxc/default.conf"
--'  1  29  ~/.config/lxc/default.conf
-|4,39,1,29,1543569311,"~/.config/lxc/default.conf"
--'  4  30  /etc/lxc/default.conf
-|4,39,4,30,1543569261,"/etc/lxc/default.conf"
--'  4  30  /etc/lxc/default.conf
-|4,39,4,30,1543569261,"/etc/lxc/default.conf"
--'  4  30  /etc/lxc/default.conf
-|4,39,4,30,1543569261,"/etc/lxc/default.conf"
--'  4  30  /etc/lxc/default.conf
-|4,39,4,30,1543569261,"/etc/lxc/default.conf"
--'  4  30  /etc/lxc/default.conf
-|4,39,4,30,1543569261,"/etc/lxc/default.conf"
--'  4  30  /etc/lxc/default.conf
-|4,39,4,30,1543569261,"/etc/lxc/default.conf"
--'  4  30  /etc/lxc/default.conf
-|4,39,4,30,1543569261,"/etc/lxc/default.conf"
--'  4  30  /etc/lxc/default.conf
-|4,39,4,30,1543569261,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543569254,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543569254,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543569254,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543569254,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543569254,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543569254,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543569254,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543569254,"/etc/lxc/default.conf"
--'  1  29  ~/.config/lxc/default.conf
-|4,39,1,29,1543492053,"~/.config/lxc/default.conf"
--'  1  29  ~/.config/lxc/default.conf
-|4,39,1,29,1543492053,"~/.config/lxc/default.conf"
--'  1  29  ~/.config/lxc/default.conf
-|4,39,1,29,1543492053,"~/.config/lxc/default.conf"
--'  1  29  ~/.config/lxc/default.conf
-|4,39,1,29,1543492053,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543492021,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543492021,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543492021,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543492021,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543492021,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543492021,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543492021,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543491908,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543491908,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543491908,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543491908,"~/.config/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  1  0  /etc/lxc/default.conf
-|4,39,1,0,1543491853,"/etc/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543488944,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543488944,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543488944,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543488944,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543488944,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543488944,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543488944,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543488944,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543485542,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543485542,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543485542,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543485542,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543485542,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543485542,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543485542,"~/.config/lxc/default.conf"
--'  4  24  ~/.config/lxc/default.conf
-|4,39,4,24,1543485542,"~/.config/lxc/default.conf"
--'  1  0  /etc/lxc/lxc-usernet
-|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
--'  1  0  /etc/lxc/lxc-usernet
-|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
--'  1  0  /etc/lxc/lxc-usernet
-|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
--'  1  0  /etc/lxc/lxc-usernet
-|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
--'  1  0  /etc/lxc/lxc-usernet
-|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
--'  1  0  /etc/lxc/lxc-usernet
-|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
--'  1  0  /etc/lxc/lxc-usernet
-|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
--'  1  0  /etc/lxc/lxc-usernet
-|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
--'  1  0  /etc/lxc/lxc-usernet
-|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
--'  1  0  /etc/lxc/lxc-usernet
-|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
--'  1  0  /etc/lxc/lxc-usernet
-|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
--'  1  0  /etc/lxc/lxc-usernet
-|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
--'  1  0  /etc/lxc/lxc-usernet
-|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
--'  1  0  /etc/lxc/lxc-usernet
-|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
--'  1  0  /etc/lxc/lxc-usernet
-|4,39,1,0,1543485456,"/etc/lxc/lxc-usernet"
+-'  1  0  /tmp/crontab.rP6KNe/crontab
+|4,39,1,0,1544092976,"/tmp/crontab.rP6KNe/crontab"
+-'  1  0  /etc/lxc/dnsmasq.conf
+|4,39,1,0,1544091107,"/etc/lxc/dnsmasq.conf"
+-'  1  0  /etc/lxc/dnsmasq.conf
+|4,39,1,0,1544091107,"/etc/lxc/dnsmasq.conf"
+-'  1  0  /etc/lxd/dnsmasq.conf
+|4,39,1,0,1544091091,"/etc/lxd/dnsmasq.conf"
+-'  1  0  /etc/lxd/dnsmasq.conf
+|4,39,1,0,1544091091,"/etc/lxd/dnsmasq.conf"
+-'  1  0  /etc/lxd/dnsmasq.conf
+|4,39,1,0,1544091091,"/etc/lxd/dnsmasq.conf"
+-'  1  0  /etc/lxd/dnsmasq.conf
+|4,39,1,0,1544091091,"/etc/lxd/dnsmasq.conf"
+-'  10  0  ~/bin/startC.sh
+|4,39,10,0,1544011851,"~/bin/startC.sh"
+-'  10  0  ~/bin/startC.sh
+|4,39,10,0,1544011851,"~/bin/startC.sh"
+-'  10  0  ~/bin/startC.sh
+|4,39,10,0,1544011851,"~/bin/startC.sh"
+-'  10  0  ~/bin/startC.sh
+|4,39,10,0,1544011851,"~/bin/startC.sh"
+-'  10  0  ~/bin/startC.sh
+|4,39,10,0,1544011851,"~/bin/startC.sh"
+-'  10  0  ~/bin/startC.sh
+|4,39,10,0,1544011851,"~/bin/startC.sh"
+-'  10  0  ~/bin/startC.sh
+|4,39,10,0,1544011851,"~/bin/startC.sh"
+-'  10  0  ~/bin/startC.sh
+|4,39,10,0,1544011851,"~/bin/startC.sh"
+-'  11  35  ~/bin/startC.sh
+|4,39,11,35,1544011836,"~/bin/startC.sh"
+-'  11  35  ~/bin/startC.sh
+|4,39,11,35,1544011836,"~/bin/startC.sh"
+-'  11  35  ~/bin/startC.sh
+|4,39,11,35,1544011836,"~/bin/startC.sh"
+-'  11  35  ~/bin/startC.sh
+|4,39,11,35,1544011836,"~/bin/startC.sh"
+-'  11  35  ~/bin/startC.sh
+|4,39,11,35,1544011836,"~/bin/startC.sh"
+-'  11  35  ~/bin/startC.sh
+|4,39,11,35,1544011836,"~/bin/startC.sh"
+-'  11  35  ~/bin/startC.sh
+|4,39,11,35,1544011836,"~/bin/startC.sh"
+-'  11  35  ~/bin/startC.sh
+|4,39,11,35,1544011836,"~/bin/startC.sh"
+-'  13  35  ~/bin/startC.sh
+|4,39,13,35,1544009512,"~/bin/startC.sh"
+-'  13  35  ~/bin/startC.sh
+|4,39,13,35,1544009512,"~/bin/startC.sh"
+-'  13  35  ~/bin/startC.sh
+|4,39,13,35,1544009512,"~/bin/startC.sh"
+-'  13  35  ~/bin/startC.sh
+|4,39,13,35,1544009512,"~/bin/startC.sh"
+-'  13  35  ~/bin/startC.sh
+|4,39,13,35,1544009512,"~/bin/startC.sh"
+-'  13  35  ~/bin/startC.sh
+|4,39,13,35,1544009512,"~/bin/startC.sh"
+-'  13  35  ~/bin/startC.sh
+|4,39,13,35,1544009512,"~/bin/startC.sh"
+-'  13  35  ~/bin/startC.sh
+|4,39,13,35,1544009512,"~/bin/startC.sh"
+-'  13  7  ~/bin/startC.sh
+|4,39,13,7,1544009476,"~/bin/startC.sh"
+-'  13  7  ~/bin/startC.sh
+|4,39,13,7,1544009476,"~/bin/startC.sh"
+-'  13  7  ~/bin/startC.sh
+|4,39,13,7,1544009476,"~/bin/startC.sh"
+-'  13  7  ~/bin/startC.sh
+|4,39,13,7,1544009476,"~/bin/startC.sh"
+-'  13  7  ~/bin/startC.sh
+|4,39,13,7,1544009476,"~/bin/startC.sh"
+-'  13  7  ~/bin/startC.sh
+|4,39,13,7,1544009476,"~/bin/startC.sh"
+-'  13  7  ~/bin/startC.sh
+|4,39,13,7,1544009476,"~/bin/startC.sh"
+-'  13  7  ~/bin/startC.sh
+|4,39,13,7,1544009476,"~/bin/startC.sh"
+-'  11  7  ~/bin/startC.sh
+|4,39,11,7,1544009378,"~/bin/startC.sh"
+-'  11  7  ~/bin/startC.sh
+|4,39,11,7,1544009378,"~/bin/startC.sh"
+-'  11  7  ~/bin/startC.sh
+|4,39,11,7,1544009378,"~/bin/startC.sh"
+-'  11  7  ~/bin/startC.sh
+|4,39,11,7,1544009378,"~/bin/startC.sh"
+-'  11  7  ~/bin/startC.sh
+|4,39,11,7,1544009378,"~/bin/startC.sh"
+-'  11  7  ~/bin/startC.sh
+|4,39,11,7,1544009378,"~/bin/startC.sh"
+-'  11  7  ~/bin/startC.sh
+|4,39,11,7,1544009378,"~/bin/startC.sh"
+-'  11  7  ~/bin/startC.sh
+|4,39,11,7,1544009378,"~/bin/startC.sh"
+-'  11  7  ~/bin/startC.sh
+|4,39,11,7,1544009378,"~/bin/startC.sh"
+-'  11  7  ~/bin/startC.sh
+|4,39,11,7,1544009378,"~/bin/startC.sh"
+-'  11  7  ~/bin/startC.sh
+|4,39,11,7,1544009378,"~/bin/startC.sh"
+-'  11  7  ~/bin/startC.sh
+|4,39,11,7,1544009378,"~/bin/startC.sh"
+-'  11  7  ~/bin/startC.sh
+|4,39,11,7,1544009378,"~/bin/startC.sh"
+-'  11  7  ~/bin/startC.sh
+|4,39,11,7,1544009378,"~/bin/startC.sh"
+-'  11  7  ~/bin/startC.sh
+|4,39,11,7,1544009378,"~/bin/startC.sh"
+-'  11  7  ~/bin/startC.sh
+|4,39,11,7,1544009378,"~/bin/startC.sh"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
+-'  1  0  /tmp/crontab.Dm7DSe/crontab
+|4,39,1,0,1544009346,"/tmp/crontab.Dm7DSe/crontab"
 
 # History of marks within files (newest to oldest):
+
+> /tmp/crontab.rP6KNe/crontab
+	*	1544092975	0
+	"	1	0
+
+> /etc/lxc/dnsmasq.conf
+	*	1544091105	0
+	"	1	0
+	^	1	22
+	.	1	0
+	+	1	0
+
+> /etc/lxd/dnsmasq.conf
+	*	1544091090	0
+	"	1	0
+
+> ~/bin/startC.sh
+	*	1544011850	0
+	"	10	0
+	.	11	0
+	+	11	8
+	+	11	38
+	+	11	99
+	+	4	7
+	+	11	32
+	+	11	7
+	+	11	0
+
+> /tmp/crontab.Dm7DSe/crontab
+	*	1544009344	0
+	"	1	0
+
+> /tmp/crontab.tl6a2m/crontab
+	*	1544007191	0
+	"	1	0
+
+> /tmp/crontab.fwn8CT/crontab
+	*	1544001611	0
+	"	1	0
+
+> /tmp/crontab.J6RTlf/crontab
+	*	1544001295	0
+	"	21	0
+
+> /tmp/crontab.UkAcEW/crontab
+	*	1544000356	0
+	"	1	0
+
+> /tmp/crontab.R6bByd/crontab
+	*	1544000343	0
+	"	21	0
+	.	22	0
+	+	22	0
+
+> /tmp/crontab.M1ULTO/crontab
+	*	1543998748	0
+	"	24	106
+	^	24	107
+	.	24	106
+	+	24	106
+
+> /tmp/crontab.ekJdza/crontab
+	*	1543998713	0
+	"	1	0
+
+> /etc/network/interfaces
+	*	1543932575	0
+	"	26	0
+	^	26	0
+	.	26	0
+	+	25	8
+	+	26	0
+
+> /tmp/crontab.Sp4E2x/crontab
+	*	1543931427	0
+	"	23	9
+	^	23	10
+	.	23	10
+	+	23	10
+
+> /tmp/crontab.fRGExW/crontab
+	*	1543931376	0
+	"	1	0
+
+> /tmp/crontab.F3ozLf/crontab
+	*	1543931204	0
+	"	23	61
+	^	23	62
+	.	23	61
+	+	23	61
+
+> ~/webserverScript.sh
+	*	1543930785	0
+	"	1	1
+	^	49	19
+	.	49	18
+	+	41	6
+	+	4	0
+	+	2	0
+	+	1	21
+	+	6	0
+	+	30	83
+	+	4	0
+	+	8	0
+	+	13	0
+	+	17	0
+	+	13	1
+	+	4	43
+	+	8	11
+	+	12	7
+	+	49	18
+
+> /etc/lxc/dhcp.conf
+	*	1543930291	0
+	"	1	1
+	^	1	2
+	.	1	0
+	+	1	0
+
+> /tmp/crontab.DM5gIE/crontab
+	*	1543930048	0
+	"	23	30
+	^	23	31
+	.	23	30
+	+	23	30
+
+> /bin/startC.sh
+	*	1543929466	0
+	"	6	8
+	^	6	9
+	.	6	8
+	+	5	7
+	+	6	8
 
 > ~/.config/lxc/default.conf
 	*	1543569458	0

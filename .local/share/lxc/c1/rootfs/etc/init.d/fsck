@@ -15,9 +15,8 @@ _IFS="
 
 depend()
 {
-	after clock
 	use dev clock modules
-	keyword -docker -jail -lxc -openvz -prefix -systemd-nspawn -timeout -vserver -uml
+	keyword -jail -openvz -prefix -systemd-nspawn -timeout -vserver -lxc -uml
 }
 
 _abort() {
@@ -82,16 +81,13 @@ start()
 		local skiptypes
 		skiptypes=$(printf 'no%s,' ${net_fs_list} ${extra_net_fs_list})
 		[ "${skiptypes}" = "no," ] && skiptypes=""
-		fsck_opts="$fsck_opts -T -t ${skiptypes}noopts=_netdev"
+		fsck_opts="$fsck_opts -C0 -T -t ${skiptypes}noopts=_netdev"
 		if [ -z "$fsck_passno" -a -z "$fsck_mnt" ]; then
 			fsck_args=${fsck_args:--A -p}
 			if echo 2>/dev/null >/.test.$$; then
 				rm -f /.test.$$
 				fsck_opts="$fsck_opts -R"
 			fi
-		fi
-		if [ "$(readlink -f $(which fsck))" != "/bin/busybox" ]; then
-			fsck_opts="$fsck_opts -C0"
 		fi
 	fi
 

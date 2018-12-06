@@ -1,5 +1,5 @@
 # Template used to create this container: /usr/share/lxc/templates/lxc-download
-# Parameters passed to the template:
+# Parameters passed to the template: -d alpine -r 3.4 -a armhf
 # Template script checksum (SHA-1): 740c51206e35463362b735e68b867876048a8baf
 # For additional config options, please look at lxc.container.conf(5)
 
@@ -11,11 +11,12 @@
 # Distribution configuration
 lxc.include = /usr/share/lxc/config/alpine.common.conf
 lxc.include = /usr/share/lxc/config/alpine.userns.conf
-lxc.arch = linux32
 
 # Container specific configuration
 lxc.id_map = u 0 100000 65536
 lxc.id_map = g 0 100000 65536
+lxc.start.auto = 1
+lxc.start.delay = 5
 lxc.rootfs = /home/pi/.local/share/lxc/c1/rootfs
 lxc.rootfs.backend = dir
 lxc.utsname = c1

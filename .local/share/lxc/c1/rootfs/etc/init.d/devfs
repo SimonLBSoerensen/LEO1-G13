@@ -15,17 +15,14 @@ depend()
 {
 	provide dev-mount
 	before dev
-	keyword -docker -lxc -prefix -systemd-nspawn -vserver
+	keyword -prefix -systemd-nspawn -vserver -lxc
 }
 
 mount_dev()
 {
-	local action conf_d_dir devfstype msg mountopts
-	action=--mount
-	conf_d_dir="${RC_SERVICE%/*/*}/conf.d"
-	msg=Mounting
+	local action=--mount devfstype msg=Mounting
 	# Some devices require exec, Bug #92921
-	mountopts="exec,nosuid,mode=0755"
+	local mountopts="exec,nosuid,mode=0755"
 	if yesno ${skip_mount_dev:-no} ; then
 		einfo "/dev will not be mounted due to user request"
 		return 0
@@ -36,7 +33,7 @@ mount_dev()
 		msg=Remounting
 	fi
 	if fstabinfo -q /dev; then
-		ebegin "$msg /dev according to fstab"
+		ebegin "$msg /dev according to /etc/fstab"
 		fstabinfo -q $action /dev
 		eend $?
 		return 0
@@ -57,7 +54,7 @@ mount_dev()
 		ewarn "is no entry for /dev in fstab."
 		ewarn "This means /dev will not be mounted."
 		ewarn "To avoid this message, set CONFIG_DEVTMPFS or CONFIG_TMPFS to y"
-		ewarn "in your kernel configuration or see ${conf_d_dir}/${RC_SVCNAME}"
+		ewarn "in your kernel configuration or see /etc/conf.d/devfs"
 	fi
 	return 0
 }

@@ -71,8 +71,7 @@ cleanup_var_run_dir()
 	ebegin "Cleaning /var/run"
 	for x in $(find /var/run ! -type d ! -name utmp \
 		! -name random-seed ! -name dev.db \
-		! -name ld-elf.so.hints ! -name ld-elf32.so.hints \
-		! -name ld.so.hints);
+		! -name ld-elf.so.hints ! -name ld.so.hints);
 	do
 		# Clean stale sockets
 		if [ -S "$x" ]; then
@@ -241,7 +240,7 @@ stop()
 {
 	# Write a halt record if we're shutting down
 	if [ "$RC_RUNLEVEL" = shutdown ]; then
-		[ "$RC_UNAME" = Linux ] && openrc-shutdown -w
+		[ "$RC_UNAME" = Linux ] && halt -w
 		if [ "$RC_SYS" = OPENVZ ]; then
 			yesno $RC_REBOOT && printf "" >/reboot
 		fi

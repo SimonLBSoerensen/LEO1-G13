@@ -1,30 +1,3 @@
-sudo raspi-config
-ls
-ls -l
-ls
-pwd
-cd /boot/
-ls
-sudo vim config.txt 
-sudo vi config.txt 
-sudo vim
-sudo apt-get sim
-sudo apt-get vim
-sudo apt-install vim
-sudo apt-get install vim
-sudo apt-get update
-sudo vi config.txt 
-sudo vi cmdline.txt 
-exit
-sodu shoutdown now
-sudo shoutdown now
-sudo shutdown now
-sudo dmesg
-sudo systemctl enable getty@ttyGSO.service
-sudo systemctl is-active gettyy@ttyGSO.service
-sudo systemctl enable getty@ttyGSO.service
-sudo systemctl is-active gettyy@ttyGSO.service
-sudo systemctl enable getty@ttyGSO.service
 sudo systemctl is-active gettyy@ttyGSO.service
 sudo ifconfig -a
 sudo ifconfig usb0
@@ -1078,3 +1051,950 @@ lxc-ls --fancy
 lxc-stop -n c1
 lxc-stop -n c2
 lxc-start -F -n c1
+lxc-ls --fancy
+lxc-start -n c1
+lxc-attach -n c1
+sudo vim FILENAME
+sudo vim $FILENAME
+echo $FILENAME
+lxc-ls
+echo kill me now
+lxc-stop -n c2
+lxc-ls --fancy
+lxc-start -n c2
+lxc-ls --fancy
+avahi-brose
+avahi-browse
+avahi -browse
+talk pi@10.126.78.248 abe
+sudo apt-get install talk
+talk pi@10.126.78.248 abe
+man talk
+talk pi@10.126.78.248
+talk 10.126.78.248
+talk pi@10.126.78.248
+talk pi@10.126.69.216
+rfkill unblock wifi
+iw wlan0 set type ibss
+sudo iw wlan0 set type ibss
+rfkill block wifi
+sudo iw wlan0 set type ibss
+rfkill unblock wifi
+ipconfig
+ifconfig
+sudo dhcpcd stop
+sudo service dhcpcd stop
+iw interface set type ibss
+iw wlan0 set type ibss
+sudo iw wlan0 set type ibss
+ip link set wlan0 up
+sudo ip link set wlan0 up
+iw wlan0 ibss join leo1 2412
+sudo iw wlan0 ibss join leo1 2412
+ip addr add 192.168.101.13/24 dev wlan0
+sudo ip addr add 192.168.101.13/24 dev wlan0
+ping 192.168.101.40
+sudo iw wlan0 set type ibss
+sudo ip link set wlan0 up
+sudo iw wlan0 ibss join leo1 2412
+sudo iw wlan0 ibss leave
+sudo iw wlan0 ibss join leo1 2412
+sudo ip addr add 192.168.101.13/24 dev wlan0
+ping 192.168.101.40
+ping 192.168.101.14
+ping 192.168.101.19
+ping 192.168.101.40
+ping 192.168.101.14
+ping 192.168.101.40
+socat tcp-listen:8001,fork,reuseaddr exec:cat
+socat tcp-listen:8001 exec:cat
+ping 192.168.101.40 . &
+ping 192.168.101.40 . 
+jobs
+ping 192.168.101.40 &
+jobs
+bgbg
+bg
+fg
+ls
+ssh 192.168.101.19
+socat tcp-listen:8001 exec:cat
+socat tcp-listen:8001,fork,reuseaddr exec:cat
+socat tcp-listen:8002,fork,reuseaddr exec:cat
+sudo shoutdown now
+sudo shoutdow now
+sudo shutdown now
+ls
+sudo systemctl stop dhcpcd.service
+iw wlan0 set type ibss
+sudo iw wlan0 set type ibss
+sudo ip link set wlan0 up
+sudo iw wlan0 ibss join leo1 2412
+sudo ip addr add 192.168.101.13/24 dev wlan0
+pink 192.168.101.40
+ping 192.168.101.40
+socat -v tcp-listen:8001,fork,reuseaddr exec:cat
+rfkill unblock wifi
+socat -v tcp-listen:8001,fork,reuseaddr exec:cat
+socat -v tcp-listen:8010,fork,reuseaddr exec:cat
+tcpdump -i Io -s0 -XX
+sudo tcpdump -i Io -s0 -XX
+sudo tcpdump -i wlan0 -s0 -XX
+socat -v tcp-listen:8010,fork,reuseaddr exec:cat
+socat -v tcp-listen:8001,fork,reuseaddr exec:cat
+socat -v tcp-listen:8001,fork,reuseaddr exec:'echo world'
+socat -v tcp-listen:8001,fork,reuseaddr exec:echo
+man socat
+man socat - tcp-listen
+socat -v tcp-listen:8001,fork,reuseaddr exec:cat
+socat -v tcp-listen:800w,fork,reuseaddr exec:cat
+socat -v tcp-listen:8002,fork,reuseaddr exec:cat
+man bc
+bc 
+sudo apt-get install bc
+bc
+"1 + 2" | bc
+"1 + 2" >> bc
+echo "1 + 2" | bc
+socat -v tcp-listen:8002,fork,reuseaddr exec:"cat | bc + 1"
+socat -v tcp-listen:8002,fork,reuseaddr exec:"cat + 1 | bc"
+sudo service dhcpcd start
+systemctl daemon-reload
+sudo systemctl daemon-reload
+sudo shutdown now
+echo feels good man
+socat tcp-listen:8080,fork,reuseaddr exec:cat
+socat -v tcp-listen:8080,fork,reuseaddr exec:cat
+lxc-ls -f
+echo Hello | socat - tcp:10.0.3.6:8080
+lxc-start -n c2
+lxc-attach -n c2
+sudo shutdown now
+echo Hello World | socat - tcp:localhost:8080
+lxc-ls -f
+lxc-start -n c1
+lxc-attach -n c1
+echo $RANDOM
+dhcpcd service start
+sudo dhcpcd service start
+hostname -I
+lxc-ls -f
+sudo lxc-ls -f
+rfkill unblock wifi
+sudo reboot now
+sudo config-raspberry
+raspi-config
+sudo raspi-config
+dhclient -r wlan0
+sudo reboot now
+hostname -I
+ifconfig
+nm -tool
+nm-tool
+sudo apt-get -y nm-tool
+sudo apt-get install -y nm-tool
+man mncli
+man nmcli
+sudo apt-get install nmcli
+iw dev wlan0 link
+ls 
+cd ..
+ls
+cd boot/
+ls
+toush ssh
+touch ssh
+sudo touch ssh
+ls
+sudo reboot now
+top
+hostname -I
+sudo reboot now
+lxc-ls --fancy
+lxc-start -n c2
+lxc-start -n c1
+lxc-attach -n c2
+lxc-stop -n c2
+lxc-start -n c2
+lxc-attach -n c2
+lxc-stop -n c2
+lxc-start -n c2
+lxc-attach -n c2
+lxc-stop -n c2
+lxc-start -n c2
+lxc-attach -n c2
+lxc-stop -n c2
+lxc-start -n c2
+lxc-stop -n c2
+lxc-start -n c2
+lxc-attach -n c2
+lxc-ls --fancy
+echo "fisk" | socat - tcp:10.0.3.162:8080
+echo "fisk" | socat - tcp:10.0.3.162:8001
+lxc-ls --fancy
+echo "fisk" | socat - tcp:10.0.3.236:8001
+echo "fisk" | socat - tcp:10.0.3.162:8001
+lxc-ls --fancy
+echo "fisk" | socat - tcp:10.0.3.183:8001
+echo "fisk" | socat - tcp:10.0.3.183:8080
+echo "fisk" | socat - tcp:10.0.3.183:8001
+echo "fisk" | socat - tcp:10.0.3.183:8080
+lxc-stop -n c1 && lxc-start -n c1
+lxc-stop -n c2 && lxc-start -n c2
+lxc-ls --fancy
+lxc-start -n c1
+lxc-start -n c2
+lxc-ls --fancy
+ifconfig
+rc-status
+lxc-attach -n c1
+iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:80
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:80
+lxc-attach -n C1 -- apk update
+lxc-attach -n c1 -- apk update
+lxc-attach -n c1 -- apk add lighttpd php5 php5-cgi php5-curl php5-fpm
+lxc-attach -n c1
+lxc-create -n c1 -t download -- -d alpine -r 3.4 -a armhf
+lxc-start -n c1
+lxc-attach -n c1
+ping 10.0.3.11:80
+ping 10.0.3.11
+lxc-ls --fancy
+sudo vim /etc/lxc/dhcp.conf
+cat /etc/default/lxc-net
+systemctl restart lxc-net
+sudo systemctl restart lxc-net
+lxc-ls -f
+echo "fisk" | socat - tcp:10.0.3.183:8080
+lxc-attach -n c2
+top
+sudo reboot now
+lxc-ls --fancy
+echo "fisk" | socat - tcp:10.0.3.12:8080
+echo "fisk" | socat -v - tcp:10.0.3.12:8080
+echo "fisk" | socat -v -u - tcp:10.0.3.12:8080
+echo "fisk" | socat -v - tcp:10.0.3.12:8080
+echo "fisk" | socat - tcp:10.0.3.12:8080
+echo "fisk" | socat - tcp:c2:8080
+echo "fisk" | socat - tcp:10.0.3.12:8080
+lxc-attach -n c1
+lxc-stop -n c1
+lxc-destrou
+lxc-destroy -n c1
+echo "fisk" | socat -v - tcp:10.0.3.12:8080
+lxc-ls -f
+lxc-attach -n c2
+echo " " | socat - tcp:10.0.3.6:8080
+xc-attach -n c1
+lxc-attach -n c1
+sudo iptables -t nat -L
+lxc-ls -f
+sysctl net.ipv4.ip_forward
+lxc-attach -n c1
+sudo iptables -t nat -L
+lxc-ls -f
+lxc-attach -n c1
+lxc-stop -n c1
+lxc-start -n c1
+lxc-attach -n c1
+exit
+lxc-ls -f
+lxc-attach -n c2
+lxc-ls -f
+exit
+lxc-attach -n c1
+lxc-ls -f
+lxc-stop -n c2
+lxc-start -n c2
+lxc-ls -f
+sudo iptables -t nat -L --line-numbers
+iptables -t nat -D PREROUTING 1
+sudo iptables -t nat -D PREROUTING 1
+iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:80
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:80
+sudo iptables -t nat -L --line-numbers
+sudo iptables -t nat -A PREROUTING -i wlan0 -p udp --dport 80 -j DNAT --to-destination 10.0.3.11:80
+sudo iptables -t nat -L --line-numbers
+sudo iptables -t nat -D PREROUTING 2
+sudo iptables -t nat -L --line-numbers
+sudo iptables -t nat -A PREROUTING -i wlan0 -p udp --dport 80 -j DNAT --to-destination 10.0.3.11:8080
+sudo iptables -t nat -L --line-numbers
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:8080
+sudo iptables -t nat -L --line-numbers
+sudo iptables -t nat -D PREROUTING 2
+sudo iptables -t nat -D PREROUTING 1
+sudo iptables -t nat -L --line-numbers
+sudo iptables -t nat -D PREROUTING 1
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:80
+sudo iptables -t nat -L --line-numbers
+ls /var/log/lighttpd/
+sudo 
+sudo sudo 
+sudols /var/log/lighttpd/
+sudo ls /var/log/lighttpd/
+sudo cat /var/log/lighttpd/error.log
+lxc-attach -n c1
+ifconfig
+ls bin/
+cat bin/sysinfo.sh 
+sudo vim ~/.config/lxc/default.conf
+wc
+wc ~/.config/lxc/default.conf 
+wc ~/.config/lxc/default.conf -l
+wc -l ~/.config/lxc/default.conf 
+wc -l ~/.config/lxc/default.conf 2>&1 /dev/null
+wc -l ~/.config/lxc/default.conf &2>1 /dev/null
+wc -l ~/.config/lxc/default.conf | /dev/null
+wc -l ~/.config/lxc/default.conf 
+echo $((10%5))
+echo $((10%7))
+echo "obase=16; 34" | bc
+echo "obase=16; 16" | bc
+echo "obase=16; 15" | bc
+echo "obase=16; $(($RANDOM%16777216))" | bc
+echo "obase=16; $((($RANDOM*$RANDOM)%16777216))" | bc
+echo "obase=16; $((($RANDOM*$RANDOM+1)%16777216))" | bc
+echo "obase=16; $((($RANDOM*$RANDOM+1)%16777216))" | bc | printf
+printf "%06s" $(echo "obase=16; $((($RANDOM*$RANDOM+1)%16777216))" | bc) | tr ' ' '0'
+printf "%06s\n" $(echo "obase=16; $((($RANDOM*$RANDOM+1)%16777216))" | bc) | tr ' ' '0'
+printf "%06s\n" $(echo "obase=16; $((($RANDOM)%16777216))" | bc) | tr ' ' '0'
+printf "%06s\n" $(echo "obase=16; $((($RANDOM*$RANDOM)%16777216))" | bc) | tr ' ' '0'
+
+lxc-attach -n c2
+lxc-ls -f
+lxc-stop -n c1
+lxc-start -n c1
+lxc-ls -f
+sudo reboot now
+lxc-start -n c1
+lxc-start -n c2
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:81
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:80
+man iptables 
+sudo iptables -t nat 
+sudo iptables -t nat -l
+sudo iptables -h
+sudo iptables --list
+sudo iptables -t nat --list
+man iptables
+iptables --help
+sudo iptables -t nat --list
+sudo iptables -t nat -dD 1
+sudo iptables -t nat -dD 
+sudo iptables -t nat -D 
+sudo iptables -t nat -D 1
+sudo iptables -t nat --list
+iptables -t nat -L --line-numbers
+sudo iptables -t nat -L --line-numbers
+sudo iptables -t nat -D PREROUTING 1
+sudo iptables -t nat -L --line-numbers
+sudo iptables -t nat -D PREROUTING 2
+sudo iptables -t nat -D PREROUTING 1
+sudo iptables -t nat -L --line-numbers
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:8080
+sudo iptables -t nat -L --line-numbers
+sudo iptables -t nat -D PREROUTING 1
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:80
+lxc-ls -f
+sudo iptables -t nat -L --line-numbers
+sudo iptables -t nat -D PREROUTING 1
+lxc-ls -f
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.209:80
+lxc-attach -n c1
+hostname -I
+lxc-attach -n c1
+lxc-ls -f
+lxc-attach -n c1
+lxc-stop -n c2
+lxc-start -n c2
+lxc-stop -n c2
+lxc-start -n c2
+lxc-attach -n c2
+lxc-attach -n c1
+lxc-stop -n c2
+lxc-start -n c2
+lxc-attach -n c2
+lxc-stop -n c2
+lxc-start -n c2
+lxc-attach -n c2
+lxc-stop -n c2
+lxc-start -n c2
+lxc-attach -n c2
+lxc-stop -n c2
+lxc-start -n c2
+lxc-attach -n c2
+lxc-stop -n c2
+lxc-start -n c2
+touch webserverScript.sh
+vim webserverScript.sh 
+ls
+vim webserverScript.sh
+echo webserverScript.sh
+sh webserverScript.sh
+vim webserverScript.sh
+sudo vim webserverScript.sh
+cat webserverScript.sh
+sudo vim webserverScript.sh
+exit
+exit
+cat bin/sysinfo.sh
+socat tcp-listen:8080,fork,reuseaddr exec:cat
+socat -v tcp-listen:8080,fork,reuseaddr exec:cat
+exit
+lxc-ls -f
+vim /bin/startC.sh
+sudo vim /bin/startC.sh
+chmod a+x /bin/
+mv /bin/startC.sh ~/bin/
+sudo mv /bin/startC.sh ~/bin/
+ls ~/bin
+chmod a+x startC.sh
+chmod a+x ~/bin/startC.sh
+sudo chmod a+x ~/bin/startC.sh
+ls ~/bin
+lxc-ls -f
+./bin/startC.sh 
+crontab -e
+lxc-attach -n c2
+lxc-ls -f
+curl -I https://angristan.xyz/
+vim /etc/lxc/dhcp.conf
+sudo vim /etc/lxc/dhcp.conf
+echo "printf "%06s\n" $(echo "obase=16; $((($RANDOM*$RANDOM)%16777216))" | bc) | tr ' ' '0'" | socat - tcp:127.0.0.1:8080
+echo "printf "%06s\n" $(echo "obase=16; $((($RANDOM*$RANDOM)%16777216))" | bc) | tr ' ' '0'" | socat - tcp:10.126.78.248:8080
+echo 'printf "%06s\n" $(echo "obase=16; $((($RANDOM*$RANDOM)%16777216))" | bc) | tr ' ' '0'' | socat - tcp:10.126.78.248:8080
+sudo vim /etc/lxc/dhcp.conf
+sudo vim /etc/default/lxc-net
+lxc-stop -n c2
+lxc-stop -n c1
+sudo systemctl restart lxc-net
+lxc-start -n c1
+lxc-start -n c2
+lxc-ls -f
+lxc-attach -n c2
+lxc-attach -n c1
+lxc-ls -f
+sudo reboot now 
+ls
+ls /home/pi/bin/
+echo "ABE" | socat STDIO UDP4-DATAGRAM:10.0.3.255:8080,broadcast,range=10.0.3/24
+ifconfig
+echo "ABE" | socat STDIO UDP4-DATAGRAM:10.126.95.255:8080,broadcast,range=10.126.95/24
+echo "HACK MIG" | socat STDIO UDP4-DATAGRAM:10.126.95.255:8080,broadcast,range=10.126.95/24
+tcpdumo
+tcpdump
+lxc-ls -f
+crontab -e
+sudo reboot now
+ls
+cat log_crontab.log 
+lxc-ls -f
+crontab -e
+
+crontab -e
+sudo reboot now
+lxc-start -n c1
+lxc-attach -n c1
+lxc-attach -n c2
+lxc-start -n c2
+lxc-attach -n c2
+ping c1
+ping c2
+lxc-ls -f
+vim /etc/lxc/dnsmasq.conf
+ls
+cat log_crontab.log 
+man lxc-attach 
+lxc-attach -d -n c1
+lxc-attach -dn c1
+lxc-ls -f
+lxc-stop -n c1
+lxc-stop -n c2
+lxc-stop -n c1
+lxc-stop -n cw
+lxc-stop -n c2
+sudo systemctl restart lxc-net
+lxc-start -n c1
+lxc-ls -f
+cat /etc/lxc/dhcp.conf
+cat /etc/default/lxc-net
+cat /etc/lxc/default.conf 
+cat /etc/lxc/dnsmasq.conf 
+cat /etc/lxc/dhcp.conf 
+cat /etc/lxc/lxc-usernet 
+lxc-ls -f
+cat /etc/lxc/default.conf 
+cat /etc/resolv.conf
+lxc-ls -f
+sudo vim /etc/lxc/dnsmasq.conf
+lxc-restart -n c1
+lxc-stop -n c1
+lxc-start -n c2
+lxc-ls -f
+/etc/lxc/lxc-net
+/etc/lxc/
+cd/etc/lxc/
+cd /etc/lxc/
+ls
+cd lxc-usernet
+cat lxc-usernet
+vim /etc/network/interfaces
+sudo vim /etc/network/interfaces
+lxc-stop -n 1
+lxc-stop -n c1
+lxc-stop -n c2
+lxc-start -n c1
+lxc-start -n c2
+lxc-ls -f
+lxc-stop -n c1
+lxc-start -n c
+lxc-start -n c1
+lxc-ls -f
+sudo reboot now
+cat /bin/
+cat ~/bin/sysinfo.sh 
+iptables -t nat -L --line-numbers
+sudo iptables -t nat -L --line-numbers
+lxc-ls -f
+sudo reboot now
+hostname -I
+sudo /vim/etc/interfaces
+sudo vim /etc/network/interfaces
+lxc-attach -n c2
+lxc-stop -n c2
+lxc-start -n c1
+lxc-start -n c2
+lxc-ls -f
+lxc-attach -n c1
+lxc-attach -n c2
+lxc-stop -n c2
+lxc-start -n c2
+lxc-ls -f
+c1="10.0.3.11"
+echo $c1
+iptables -t nat -L --line-numbers
+sudo iptables -t nat -L --line-numbers
+lxc-attach -n c1
+lxc-start -n c1
+lxc-attach -n c1
+lxc-start -n c1
+lxc-attach -n c1
+ls
+cat webserverScript.sh | socat -v - tcp:10.0.3.11:8080
+lxc-ls -f
+cat webserverScript.sh | socat -v - tcp:10.0.3.11:8080
+lxc-attach -n c1
+iptables -t nat -L --line-numbers
+sudo iptables -t nat -L --line-numbers
+lxc-attach -n c1
+lxd-stop -n c1
+
+lxd-stop -n c1
+lxc-attach -n c1
+lxc-stop -n c1
+lxc-start -n c1
+lxc-ls -f
+lxc-attach -n c2
+lxc-attach -n c1
+lxc-rename
+lxc --help
+lxc-start --help
+lxc-attach -n c1
+lxc-ls -f
+sudo iptables -t nat -L --line-numbers
+lxc-ls -f
+top
+cat bin/sysinfo.sh i
+cat <<- _EOF_
+
+        _EOF_
+{
+        cat <<- _EOF_
+        sysinfo: sysinfo [-p]
+                Print system information about the system
+
+                Options:
+                        -p      print the system information in plain ASCCI, suitable for terminal
+
+                By default, 'sysinfo' prints the system information in HTML format.
+
+                Exit Status:
+                Returns 0 unless an invalid option is given
+
+                Script verison: v$VERSION
+        _EOF_
+}
+{
+        cat <<- _EOF_
+        sysinfo: sysinfo [-p]
+                Print system information about the system
+
+                Options:
+                        -p      print the system information in plain ASCCI, suitable for terminal
+
+                By default, 'sysinfo' prints the system information in HTML format.
+
+                Exit Status:
+                Returns 0 unless an invalid option is given
+
+                Script verison: v$VERSION
+        _EOF_
+}
+
+cat bin/sysinfo.sh 
+make_help() {
+        cat <<- _EOF_
+        sysinfo: sysinfo [-p]
+                Print system information about the system
+
+                Options:
+                        -p      print the system information in plain ASCCI, suitable for terminal
+
+                By default, 'sysinfo' prints the system information in HTML format.
+
+                Exit Status:
+                Returns 0 unless an invalid option is given
+
+                Script verison: v$VERSION
+        _EOF_
+}
+
+echo "" | socat - tcp:10.0.3.11:8080
+echo "" | socat - tcp:10.0.3.11:80
+lxc-attach -n c2
+echo "" | socat - tcp:10.0.3.11:80
+echo "" | socat - tcp:10.0.3.12:8080
+echo "" | socat - tcp:10.0.3.11:80
+lxc-stop -n c2
+lxc-start -n c2
+echo "" | socat - tcp:10.0.3.12:8080
+lxc-ls -f
+echo "" | socat - tcp:10.0.3.12:8080
+echo "" | socat - tcp:10.0.3.11:80
+systemctl lighttpd stop
+lighttpd kill
+lxc-attach -n c1
+echo "" | socat - tcp:10.0.3.11:80
+socat tcp-listen:8080,fork,reuseaddr exec:"tee webServer.sh_copy"
+lighttpd killall
+killall lighttpd
+sudo killall lighttpd
+socat tcp-listen:8080,fork,reuseaddr exec:"tee webServer.sh_copy"
+socat -v tcp-listen:8080,fork,reuseaddr exec:"tee webServer.sh_copy"
+cat webServer.sh_copy
+lxc-attach -n c1
+lxc-ls -f
+sudo iptables -t nat -L --line-numbers
+iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:80
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:80
+sudo iptables -t nat -L --line-numbers
+ping 10.0.3.11
+sudo iptables -t nat -L --line-numbers
+lxc-attach -n c1
+lxc-stop -n c1
+lxc-start -n c1
+lxc-ls -f
+hostname -I
+lxc-attach -n c1
+lxc-start -n c1
+lxc-attach -n c1
+sudo iptables -t nat -L --line-numbers
+lxc-stop -n c1
+lxc-destroy -n c1
+lxc-create -n C1 -t download -- -d alpine -r 3.4 -a armhf
+lxc-destroy -n C1
+lxc-create -n c1 -t download -- -d alpine -r 3.4 -a armhf
+lxc-start -n c1
+lxc-attach -n c1
+lxc-ls -f
+sudo iptables -t nat -L --line-numbers
+iptables -t nat -D PREROUTING 1
+sudo iptables -t nat -D PREROUTING 1
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.140:80
+sudo iptables -t nat -L --line-numbers
+lxc-attach -n c1
+lxc-stop -n c1
+lxc-start -n c1
+sudo iptables -t nat -L --line-numbers
+lxc-ls -f
+sudo iptables -t nat -D PREROUTING 1
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:80
+lxc-ls -f
+sudo iptables -t nat -L --line-numbers
+echo "hej" | socat - tcp:10.0.3.12:8080
+lxc-stop -n c2
+lxc-start -n c2
+echo "hej" | socat - tcp:10.0.3.12:8080
+lxc-attach -n c2
+lxc-ls -f
+lxc-stop -n c1
+lxc-start -n c1
+lxc-ls -f
+lxc-attach -n c1
+cat webServer.sh_copy | socat - tcp:10.0.3.11:8080
+lxc-attach -n c1
+sudo shutdown now
+lxc-attach -n c1
+time
+date
+lxc-attach -n c2
+lxu-ls -f
+lux-ls -f
+lxc-ls -f
+lxc-attach -n c1
+lxc-attach -n c2
+lxc-attach -n c1
+sudo iptables -t nat -L --line-numbers
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:80
+crontab -e
+lxc-ls -f
+lxc-attach -n c1
+lxc-attach -n c2
+lxc-ls -f
+lxc-attach -n c1
+lxc-stop -n c1
+lxc-start -n c1
+lxc-attach -n c1
+sudo reboot now
+lxc-ls -f
+lxc-attach -n c1
+bc
+lxc-attach -n c1
+lxc-stop -n c1
+lxc-start -n c1
+lxc-attach -n c1
+lxc-stop -n c1
+lxc-start -n c1
+lxc-attach -n c1
+lxc-stop -n c1
+lxc-start -n c1
+lxc-attach -n c1
+lxc-stop -n c1
+lxc-start -n c1
+lxc-attach -n c1
+lxc-ls -f
+echo "abe" | socat - tcp:10.0.3.71:80
+lxc-attach -n c1
+lxc-attach -n c2
+lxc-attach -n c1
+lxc-stop -n c1
+lxc-start -n c1
+echo "abe" | socat - tcp:10.0.3.132:80
+lxc-attach -n c1
+cat /home/pi/bin/sysinfo.sh 
+crontab -e
+sudo crontab -e
+sudo reboot now
+lxc-ls -f
+ls
+cd bin/
+cd 
+sudo iptables -t nat -L --line-numbers
+iptables -t nat -D PREROUTING 1
+sudo iptables -t nat -D PREROUTING 1
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.71:80
+hostname -I
+lxc-ls -f | awk 'NR == 2 {print $2}'
+lxc-ls -f | awk 'NR == 2 {print $5}'
+lxc-ls -f | awk 'NR == 2 {print $4}'
+lxc-ls -f | awk 'NR == 2 {print $6}'
+lxc-ls -f | awk 'NR == 2 {print $1}'
+lxc-ls -f | awk 'NR == 2 {print $2}'
+lxc-ls -f | awk 'NR == 2 {print $3}'
+lxc-ls -f | awk 'NR == 2 {print $4}'
+lxc-ls -f | awk 'NR == 2 {print $5}'
+sudo vim /home/pi/bin/startC.sh 
+lxc-ls -f
+exho "abe" | socat - tc:10.0.3.132:80
+exho "abe" | socat - tcp:10.0.3.132:80
+lxc-attach -n c1
+exho "abe" | socat - tcp:10.0.3.132:80
+sudo iptables -t nat -L --line-numbers
+sudo vim /home/pi/bin/startC.sh 
+lxc-ls -f
+sudo reboot now
+ls
+cat log_crontab.log 
+hostname -I
+sudo vim /home/pi/bin/startC.sh 
+sudo crontab -e
+crontab -e
+sudo crontab -e
+sudo vim /home/pi/bin/startC.sh 
+sudo crontab -e
+sudo vim /home/pi/bin/startC.sh 
+sudo reboot now
+crontab -e
+sudo crontab -e
+sudo vim /home/pi/bin/startC.sh 
+cat /home/pi/log_sudo_crontab.log 
+ls
+lxc-ls -f
+hostname -I
+./home/pi/bin/startC.sh | tee /home/pi/log_crontab.log
+bash /home/pi/bin/startC.sh | tee /home/pi/log_crontab.log
+./startC.sh | tee /home/pi/log_crontab.log
+./bin/startC.sh | tee /home/pi/log_crontab.log
+sudo ./bin/startC.sh | tee /home/pi/log_crontab.log
+sudo -H -u pi bash -c "lxc-ls -f | awk 'NR == 2 {print $5}'"
+sudo -H -u pi bash -c "lxc-ls -f | awk 'NR == 2'"
+sudo -H -u pi bash -c "lxc-ls -f | awk 'NR == 3'"
+sudo -H -u pi bash -c "lxc-ls -f | awk 'NR == 2"
+sudo -H -u pi bash -c "lxc-ls -f | awk 'NR == 2'"
+sudo -H -u pi bash -c "lxc-ls -f | awk 'NR == 2 {print $5}'"
+sudo -H -u pi bash -c "lxc-ls -f | awk 'NR == | awk 'NR == 2'2'"
+sudo -H -u pi bash -c "lxc-ls -f | awk 'NR == 2 {print $5}'" | awk 'NR == 2'
+sudo -H -u pi bash -c "lxc-ls -f | awk 'NR == 2'
+"
+sudo -H -u pi bash -c "lxc-ls -f | awk 'NR == 2'"
+sudo -H -u pi bash -c "lxc-ls -f | awk 'NR == 2'" | awk '{pr
+
+"
+'
+sudo -H -u pi bash -c "lxc-ls -f | awk 'NR == 2'" | awk '{print $5}'
+sudo ./bin/startC.sh | tee /home/pi/log_crontab.log
+sudo iptables -t nat -L --line-numbers
+iptables -t nat -D PREROUTING {1..3}
+iptables -t nat -D PREROUTING ${1..3}
+iptables -t nat -D PREROUTING 1
+sudo iptables -t nat -D PREROUTING 1
+sudo iptables -t nat -D PREROUTING 2
+sudo iptables -t nat -D PREROUTING 1
+sudo iptables -t nat -L --line-numbers
+lxc-ls -f
+lxc-stop -n c1
+lxc-stop -n c2
+sudo iptables -t nat -L --line-numbers
+sudo ./bin/startC.sh | tee /home/pi/log_crontab.log
+sudo iptables -t nat -L --line-numbers
+sudo crontab -e
+./home/pi/bin/startC.sh | tee /home/pi/log_crontab.log
+sudo ./home/pi/bin/startC.sh | tee /home/pi/log_crontab.log
+sudo bash /home/pi/bin/startC.sh | tee /home/pi/log_crontab.log
+sudo crontab -e
+sudo reboot now
+lxc-ls -f
+lxc-attach -n c2
+lxc-ls -f
+lxc-attach -n c2
+lxc-ls -f
+ls
+lxc-attach -n c1
+lxc-attach -n c2
+lxc-attach -n c1
+ls
+lxc-ls -f
+lxc-attach -n c1
+lxc-stop -n c1
+lxc-start -n c1
+lxc-ls -f
+lxc-attach -n c1
+lxc-stop -n c1
+lxc-start -n c1
+lxc-attach -n c1
+lxc-ls 
+lxc-attach -n c1
+sudo crontab -e
+sudo vim /home/pi/bin/startC.sh 
+sudo reboot now
+ls
+lxc-ls -f
+sudo iptables -t nat -L --line-numbers
+lxc-attach -n c1
+crontab -e
+vim /home/pi/bin/startC.sh 
+sudo -H -u pi bash -c 'lxc-attach -n c1 -- sh startServer.sh'
+man lxc-attach 
+sh bin/startC.sh 
+sudo reboot now
+ls
+vim bin/startC.sh 
+bin/startC.sh 
+lxc-ls -f
+cat log_sudo_crontab.log 
+sudo reboot now
+lxc-ls -f
+sudo iptables -t nat -L --line-numbers
+vim bin/startC.sh 
+cat log_sudo_crontab.log 
+lxc-attach -n c1
+reboot now
+sudo reboot now
+cat log_sudo_crontab.log 
+lxc-attach -n c1
+cat log_sudo_crontab.log 
+vim bin/startC.sh 
+bin/startC.sh 
+vim bin/startC.sh 
+sudo reboot now
+vim bin/startC.sh 
+lxc-attach -n c1 -- ls -lh /home
+lxc-attach -n c1 -- startServer.sh
+lxc-attach -n c1 -- ls
+lxc-attach -n c1 -- startServer.sh
+lxc-attach -n c1 -- sh startServer.sh
+lxc-execute -n c1 -- sh startServer.sh
+cat bin/startC.sh 
+lxc-attach -n c1
+sudo reboot
+vim bin/startC.sh 
+lxc-attach -n c1
+sudo shotdown now
+sudo shutdown now
+ls
+lxc-attach -n c1
+for i in {1..5}; do echo  $i | tee temp.table; done
+cat temp.table 
+for i in {1..5}; do echo  $i | tee -a temp.table; done
+cat temp.table 
+cat temp.table | taile -n 5
+cat temp.table | tail -n 5
+cat temp.table | tail -n 5 | tee temp.table
+cat temp.table 
+cat temp.table | tail -n 5 | tee temp.table
+for i in {1..5}; do echo  $i | tee -a temp.table; done
+cat temp.table 
+cat temp.table | tail -n 5 | tee temp.table
+cat temp.table 
+cat bin/sysinfo.sh 
+$(date +"%H:%M:%S %d/%m/%y %Z" )
+$(date "%H:%M:%S %d/%m/%y %Z" )
+echo $(date +"%H:%M:%S %d/%m/%y %Z" )
+echo $(date +"%H:%M:%S-%d/%m/%y-%Z")
+lxc-attach -n c1
+man tail
+lxc-attach -n c1
+man wc
+wc $TABLE_PATH
+
+lxc-attach -n c1
+lxc-ls -f
+sudo iptables -t nat -L --line-numbers
+sudo reboot now
+cat /home/pi/bin/sysinfo.sh 
+lxc-attach -n c1
+socat -v -u tcp-listen:8001,fork,reuseaddr exec:"tee "
+mkdir assignment2
+socat -v -u tcp-listen:8001,fork,reuseaddr exec:"tee /home/pi/assignment2/webserver.sh"
+socat -v -u tcp-listen:8001,fork,reuseaddr exec:"tee /home/pi/assignment2/startserver.sh"
+lxc-attach -n c1
+socat -v -u tcp-listen:8001,fork,reuseaddr exec:"tee /home/pi/assignment2/autostartserver"
+socat -v -u tcp-listen:8001,fork,reuseaddr exec:"tee /home/pi/assignment2/startserver_2.sh"
+socat -v -u tcp-listen:8001,fork,reuseaddr exec:"tee /home/pi/assignment2/startserver_2_real.sh"
+socat -v -u tcp-listen:8001,fork,reuseaddr exec:"tee /home/pi/assignment2/randomizer.sh"
+exit
+lxc-ls -f
+sudo iptables -t nat -L --line-numbers
+lxc-ls -f
+sudo iptables -t nat -D PREROUTING 1
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 10.0.3.11:80
+sudo iptables -t nat -L --line-numbers
+lxc-ls -f
+psd
+psw
+pds
+conrtab -e
+crontab -e
+sudo crontab -e
+ls
+lxc-attach -n c1

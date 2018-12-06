@@ -2,6 +2,42 @@
 # Copyright (c) 2007-2009 Roy Marples <roy@marples.name>
 # Released under the 2-clause BSD license.
 
+has_addon()
+{
+	[ -e /lib/rc/addons/"$1".sh -o -e /lib/rcscripts/addons/"$1".sh ]
+}
+
+_addon_warn()
+{
+	eindent
+	ewarn "$RC_SVCNAME uses addon code which is deprecated"
+	ewarn "and may not be available in the future."
+	eoutdent
+}
+
+import_addon()
+{
+	if [ -e /lib/rc/addons/"$1".sh ]; then
+		_addon_warn
+		. /lib/rc/addons/"$1".sh
+	elif [ -e /lib/rcscripts/addons/"$1".sh ]; then
+		_addon_warn
+		. /lib/rcscripts/addons/"$1".sh
+	else
+		return 1
+	fi
+}
+
+start_addon()
+{
+	( import_addon "$1-start" )
+}
+
+stop_addon()
+{
+	( import_addon "$1-stop" )
+}
+
 net_fs_list="afs ceph cifs coda davfs fuse fuse.sshfs gfs glusterfs lustre
 ncpfs nfs nfs4 ocfs2 shfs smbfs"
 is_net_fs()
@@ -47,47 +83,6 @@ get_bootparam()
 	done
 
 	return 1
-}
-
-get_bootparam_value()
-{
-	local match="$1" which_value="$2" sep="$3" result value
-	if [ -n "$match" -a -r /proc/cmdline ]; then
-		set -- $(cat /proc/cmdline)
-		while [ -n "$1" ]; do
-			case "$1" in
-				$match=*)
-					value="${1##*=}"
-					case "$which_value" in
-						all)
-							[ -z "$sep" ] && sep=' '
-							if [ -z "$result" ]; then
-								result="$value"
-							else
-								result="${result}${sep}${value}"
-							fi
-							;;
-						last)
-							result="$value"
-							;;
-						*)
-							result="$value"
-							break
-							;;
-					esac
-					;;
-			esac
-			shift
-		done
-	fi
-	echo $result
-}
-
-need_if_exists()
-{
-	for x; do
-		rc-service --exists "${x}" && need "${x}"
-	done
 }
 
 # Called from openrc-run.sh or gendepends.sh

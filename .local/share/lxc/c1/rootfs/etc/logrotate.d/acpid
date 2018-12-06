@@ -3,6 +3,6 @@
 	notifempty
 	sharedscripts
 	postrotate
-		/etc/init.d/acpid --quiet --ifstarted restart || true
+		/etc/init.d/acpid -q restart
 	endscript
 }

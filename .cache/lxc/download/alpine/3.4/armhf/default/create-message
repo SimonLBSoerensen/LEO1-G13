@@ -1,0 +1,7 @@
+You just created an Alpine Linux container (release=v3.4, arch=armhf, variant=default)
+
+For security reason, container images ship without user accounts
+and without a root password.
+
+Use lxc-attach or chroot directly into the rootfs to set a root password
+or create user accounts.

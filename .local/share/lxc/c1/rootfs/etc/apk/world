@@ -1,6 +1,10 @@
 alpine-base
-alpine-baselayout
-alpine-keys
-apk-tools
-busybox
-libc-utils
+bc
+lighttpd
+php5
+php5-cgi
+php5-curl
+php5-fpm
+socat
+tzdata
+vim

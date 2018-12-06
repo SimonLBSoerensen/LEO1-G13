@@ -11,16 +11,6 @@ if [ -d "/etc/rc.conf.d" ]; then
 	done
 fi
 
-# check for md5sum, and probably /usr too
-if command -v md5sum >/dev/null; then
-	got_md5sum=true
-else
-	eerror "md5sum is missing, which suggests /usr is not mounted"
-	eerror "If you have separate /usr, it must be mounted by initramfs"
-	eerror "If not, you should check coreutils is installed correctly"
-	got_md5sum=false
-fi
-
 # By default VServer already has /proc mounted, but OpenVZ does not!
 # However, some of our users have an old proc image in /proc
 # NFC how they managed that, but the end result means we have to test if
@@ -31,12 +21,9 @@ fi
 mountproc=true
 f=/proc/self/environ
 if [ -e $f ]; then
-	if $got_md5sum && [ "$(VAR=a md5sum $f)" = "$(VAR=b md5sum $f)" ]; then
+	if [ "$(VAR=a cat $f)" = "$(VAR=b cat $f)" ]; then
 		eerror "You have cruft in /proc that should be deleted"
 	else
-		# If they don't have md5sum, this will fail in pretty ways if
-		# /proc isn't really mounted.  Oh well, their system is busted
-		# anyway, and they get to keep the pieces.
 		einfo "/proc is already mounted"
 		mountproc=false
 	fi
@@ -44,9 +31,11 @@ fi
 unset f
 
 if $mountproc; then
+	procfs="proc"
+	[ "$RC_UNAME" = "GNU/kFreeBSD" ] && proc="linprocfs"
 	ebegin "Mounting /proc"
 	if ! fstabinfo --mount /proc; then
-		mount -n -t proc -o noexec,nosuid,nodev proc /proc
+		mount -n -t "$procfs" -o noexec,nosuid,nodev proc /proc
 	fi
 	eend $?
 fi
@@ -83,7 +72,6 @@ elif ! mountinfo -q /run; then
 	fi
 fi
 
-[ -x /sbin/restorecon ] && /sbin/restorecon -rF /run
 checkpath -d $RC_SVCDIR
 checkpath -d -m 0775 -o root:uucp /run/lock
 
@@ -97,7 +85,7 @@ if grep -Eq "[[:space:]]+xenfs$" /proc/filesystems; then
 	eend $?
 fi
 
-if [ -e "$RC_LIBEXECDIR"/cache/softlevel ]; then
+if [ -e "$RC_LIBEXECDIR"/cache/deptree ]; then
 	cp -p "$RC_LIBEXECDIR"/cache/* "$RC_SVCDIR" 2>/dev/null
 fi
 

@@ -5,17 +5,17 @@ PREFIX=
 . "$PREFIX/lib/libalpine.sh"
 
 usage() {
-	cat <<-__EOF__
-		usage: setup-apkcache [-h] [DIR]
+        cat <<__EOF__
+usage: setup-apkcache [-h] [DIR]
 
-		Setup apk caching.
+Setup apk caching.
 
-		If DIR is not specified user will be asked for location.
+If DIR is not specified user will be asked for location.
 
-		options:
-		 -h  Show this help
-	__EOF__
-	exit 1
+options:
+ -h  Show this help
+__EOF__
+        exit 1
 }
 
 is_mounted() {
@@ -85,21 +85,21 @@ mount_fstype() {
 }
 
 apk_cache_help() {
-	cat <<-__EOF__
+	cat <<__EOF__
 
-		Packages installed from network can be cached locally to be available during
-		boot, before the network is started. Specifying a directory here will make apk
-		cache the packages locally in this directory.
+Packages installed from network can be cached locally to be available during
+boot, before the network is started. Specifying a directory here will make apk
+cache the packages locally in this directory.
 
-		Enter 'none' if you do not want to cache packages from network.
+Enter 'none' if you do not want to cache packages from network.
 
-	__EOF__
+__EOF__
 }
 
 while getopts "h" opt; do
-	case $opt in
+        case $opt in
 		h) usage;;
-	esac
+        esac
 done
 shift $(( $OPTIND - 1 ))
 
@@ -165,3 +165,4 @@ case "$cleanup" in
 	umount) umount $mount;;
 	remount) mount -o remount,ro $mount;;
 esac
+
