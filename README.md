@@ -1,6 +1,6 @@
 # LEO1-G13
 
-See the folder [/assignment2](/assignment2/) for the scripts used to solve this assignment.
+See the folder [/assignment2/](/assignment2/) for the scripts used to solve this assignment.
 
 ----------------
 [pi_crontab](/assignment2/pi_crontab)
@@ -18,12 +18,12 @@ Relevant functions:
 - iptables: Used to route the communication through port 80 to the container.
 
 ------------------------
-[autostartserver_c1]((/assignment2/autostartserver_c1)
+[autostartserver_c1](/assignment2/autostartserver_c1)
 ------------------------
 This script is used to start an OpenRC service that calls startserver_c1.sh on container 1 boot.
 
 -----------------------
--- startserver_c1.sh --
+[startserver_c1.sh](/assignment2/startserver_c1.sh)
 -----------------------
 This script starts the webserver in the container c1. The webserver is just a socat tcp server listening on port 80. 
 Whenever the server is polled, it executes the webserver_c1.sh script. The option pktinfo is used to store the ip-address of
@@ -33,7 +33,7 @@ Relevant functions:
 - socat: The webserver used.
 
 ---------------------
--- webserver_c1.sh --
+[webserver_c1.sh](/assignment2/webserver_c1.sh)
 ---------------------
 This script generates the html code of the site. It polls container 2 for a random number and saves it as a variable. 
 Then the data to be displayed is collected. The html code is created by calling the makeHTML function, while the
@@ -71,12 +71,12 @@ Relevant functions
 - awk: To select the correct element in a row in the numbers table.
 
 ----------------------------
--- startserver_c2_crontab --
+[startserver_c2_crontab](/assignment2/startserver_c2_crontab)
 ----------------------------
 Whenever container 2 reboots, this aautomatically starts the server by executing the script startserver_c2.sh.
 
 -----------------------
--- startserver_c2.sh --
+[startserver_c2.sh](/assignment2/startserver_c2.sh)
 -----------------------
 This script runs a tcp server on port 8080 which replies with a random number when polled by executing the script randomizer_c2.sh.
 
@@ -84,6 +84,6 @@ Relevant functions:
 - socat: To maintain a tcp server to transfer a random number.
 
 ----------------------
--- randomizer_c2.sh --
+[randomizer_c2.sh](/assignment2/randomizer_c2.sh)
 ----------------------
 This scripts echoes a random number using the $RANDOM function.
