@@ -21,7 +21,7 @@ This script executes  whenever the pi is rebooted.
 This script starts the two containers, waits for them to get an ip address, finds the ip address of container 1 and routes any 
 port 80 (http) communication to container 1.
 
-Relevant functions:
+*Relevant functions:*
 - sudo -H -u pi bash -c: This is to execute a command as the user 'pi'.
 - iptables: Used to route the communication through port 80 to the container.
 
