@@ -3,7 +3,7 @@
 See the folder /assignment2 for the scripts used to solve this assignment.
 
 ----------------
--- pi_crontab --
+/assignment2/pi_crontab
 ----------------
 This script executes  whenever the pi is rebooted.
 
