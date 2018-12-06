@@ -10,8 +10,6 @@ See the folder [/assignment2/](/assignment2/) for the scripts used to solve this
 <p align="center">
   <img src="https://github.com/SimonLBSoerensen/LEO1-G13/blob/master/WebsiteImage.png" title="Screenshot of website in action"></p>
 
-<marquee> <p> ABE </p> </marquee>
-
 ----------------
 [pi_crontab](/assignment2/pi_crontab)
 ----------------
